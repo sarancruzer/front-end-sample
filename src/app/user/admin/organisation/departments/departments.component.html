@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header card-header-icon" data-background-color="blue">
+    <i class="material-icons">business</i>
+  </div>
+  <div class="card-content">
+    <h4 class="card-title" i18n="Title">Manage Organisation Departments</h4>
+    <div>
+      <nb-tagsinput
+        [tags]="departments"
+        (updated)="onUpdated($event)"
+        placeholder="add new"
+        i18n-placeholder
+        *ngIf="!isBusy"
+      ></nb-tagsinput>
+    </div>
+    <button class="btn btn-primary btn-sm" *ngIf="hasMore()" (click)="loadMore()" i18n="Button label">
+      Load More
+    </button>
+  </div>
+
+  <nb-loader *ngIf="isBusy"></nb-loader>
+</div>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching_departments" i18n>Failed to fetch departments!</span>
+  <span id="msg_nothing_to_save" i18n>Nothing to save!</span>
+  <span id="msg_departments_saved" i18n="Department, e.g. Marketing was added successfully.">{{'{department}'}} was added successfully.</span>
+  <span id="err_failed_saving_department" i18n="Department, e.g. Failed to add Marketing">Failed to add {{'{department}'}}.</span>
+  <span id="err_details_department" i18n="Detailed error message">Error: {{'{err_msg}'}}</span>
+  <span id="msg_department_deleted" i18n="Department, e.g. Marketing was deleted successfully.">{{'{department}'}} was deleted successfully.</span>
+  <span id="err_failed_deleting_department" i18n="Department, e.g. Failed to delete Marketing">Failed to delete {{'{department}'}}.</span>
+</div>

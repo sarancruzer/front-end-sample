@@ -1,0 +1,32 @@
+<div class="register-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="card card-signup">
+          <h2 class="card-title text-center" i18n="Header">Register</h2>
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div *ngIf="forms.organisation">
+                  <h3 i18n="Header">Organisation</h3>
+                  <nb-organisation-form (done)="onOrganisationFormDone($event)"
+                    [organisation]="organisation"
+                    [submitName]="'Next'"></nb-organisation-form>
+                </div>
+
+                <div *ngIf="forms.admin">
+                  <h3 i18n="Header">Administrator</h3>
+                  <nb-admin-form (done)="onAdminFormDone($event)" [admin]="admin"></nb-admin-form>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <nb-loader *ngIf="isBusy"></nb-loader>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="full-page-background"></div>

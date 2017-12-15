@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">time_to_leave</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Vehicles</h4>
+        <div class="toolbar">
+          <button class="btn btn-primary btn-sm btn-simple" (click)="addVehicle()">
+            <i class="fa fa-plus-circle"></i>
+            <ng-container i18n="button label">Add Vehicle</ng-container>
+          </button>
+          <button class="btn btn-primary btn-sm btn-simple" (click)="onUploadPopupShown()">
+            <i class="fa fa-upload"></i>
+            <ng-container i18n="button label">Upload CSV File</ng-container>
+          </button>
+        </div>
+        <div class="material-datatables">
+          <table
+            id="vehicles-datatable"
+            class="table table-striped table-no-bordered table-hover"
+            cellspacing="0"
+            width="100%"
+            style="width:100%"
+          >
+            <thead>
+              <tr>
+                <th i18n="table header">
+                  Image
+                </th>
+                <th i18n="table header">
+                  ID
+                </th>
+                <th i18n="table header">
+                  Tracker ID
+                </th>
+                <th i18n="table header">
+                  Type
+                </th>
+                <th i18n="table header">
+                  Manufacturer
+                </th>
+                <th i18n="table header">
+                  Model
+                </th>
+                <th i18n="table header">
+                  Location
+                </th>
+                <th i18n="table header" class="disabled-sorting text-right" style="width: 10%">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let vehicle of vehicles">
+                <td>
+                  <img src="{{vehicle.image}}" style="width: 32px" *ngIf="vehicle.image">
+                  <img src="assets/img/{{vehicle.type.key|lowercase}}-64x64.png" style="width: 32px" *ngIf="!vehicle.image">
+                </td>
+                <td>{{vehicle.vehicleId}}</td>
+                <td>{{vehicle.trackerId}}</td>
+                <td>{{vehicle.type.name}}</td>
+                <td>{{vehicle.manufacturer}}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.location}}</td>
+                <td class="text-right">
+                  <a (click)="editVehicle(vehicle)" class="btn btn-simple btn-primary btn-icon edit">
+                    <i class="material-icons">mode_edit</i>
+                  </a>
+                  <a (click)="deleteVehicle(vehicle)" class="btn btn-simple btn-danger btn-icon remove">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
+              </tr>
+              <tr *ngIf="vehicles.length === 0">
+                <td colspan="8" class="text-center text-muted" i18n>There are no vehicles to show!</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nb-vehicle-editor
+  [vehicle]="vehicle"
+  [visible]="editorToggler"
+  (shown)="onEditorShown()"
+  (hidden)="onEditorHidden()"
+  (update)="onUpdate($event)"
+></nb-vehicle-editor>
+
+<nb-confirm-popup
+  [title]="deleteDialogTitle"
+  [message]="deleteConfirmationMsg"
+  (onConfirm)="onDeletionConfirmed()"
+></nb-confirm-popup>
+
+<nb-upload-file-popup
+  [visible]="uploadToggler"
+  [actionText]="uploadActionText"
+  (shown)="onUploadPopupShown()"
+  (hidden)="onUploadPopupHidden()"
+  (upload)="onFileUpload($event)"
+>
+  <div class="card">
+    <div class="card-content">
+      <h4 class="card-title" i18n="Title">CSV File Format</h4>
+      <p i18n>Please make sure the format of the CSV file is as shown in the example below:</p>
+      <pre>
+"Vehicle ID";"Vehicle Type";"Vehicle Model";"Location"
+"AJ 1937";"Truck";"M2";"Koyambedu"
+"IF 4583";"Electric";"X1";"Koyambedu"
+"MK 3729";"Sedan";"K2";"Nerkundrum"
+      </pre>
+    </div>
+  </div>
+</nb-upload-file-popup>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="vehicles_csv" i18n="CSV file name for importing vehicles">vehicles.csv</span>
+  <span id="msg_v_delete_confirm" i18n="Button label">Do you really want to delete this vehicle?</span>
+  <span id="ttl_v_delete_confirm" i18n="Dialog title">Confirm Vehicle Deletion</span>
+  <span id="msg_vehicles_list_expanded" i18n>Please note that vehicles list has just been extended.</span>
+  <span id="err_failed_fetching_vehicles" i18n>Failed to get vehicles list! Please try again.</span>
+  <span id="err_failed_finding_datatable_v" i81n>Failed to find DataTable! This is an unexpected error. Please try again by reloading the page.</span>
+  <span id="err_failed_deleting_vehicle" i18n>Failed to delete the vehicle!</span>
+  <span id="msg_csv_file_uploaded_v" i18n>File uploaded successfully. However, it will take a while before the vehicles are available in the system.</span>
+  <span id="err_failed_uploading_csv_file_v" i18n>Failed to upload the file! Please try again.</span>
+</div>

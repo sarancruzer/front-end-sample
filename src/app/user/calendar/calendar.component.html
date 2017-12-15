@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="card card-calendar">
+      <div class="card-content" class="ps-child">
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_fetch_events_failed" i18n="Error message">Failed to fetch events!</span>
+  <span id="fc_today" i18n="Calendar">Today</span>
+  <span id="fc_month" i18n="Calendar">Month</span>
+  <span id="fc_week" i18n="Calendar">Week</span>
+  <span id="fc_day" i18n="Calendar">Day</span>
+</div>

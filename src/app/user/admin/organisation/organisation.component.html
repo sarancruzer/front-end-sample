@@ -1,0 +1,38 @@
+<div class="row">
+  <!-- Organisation Profile -->
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">business</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Organisation Profile</h4>
+        <nb-organisation-form
+          (done)="onOrganisationFormDone($event)"
+          [organisation]="organisation"
+          [submitName]="getOrgFormSubmitName()"
+        ></nb-organisation-form>
+        <nb-loader *ngIf="isBusy"></nb-loader>
+      </div>
+    </div>
+  </div>
+  <!-- END Organisation Profile -->
+
+  <!-- Departments & Locations -->
+  <div class="col-md-6">
+    <!-- Departments -->
+    <nb-departments></nb-departments>
+    <!-- END Departments -->
+
+    <!-- Locations -->
+    <nb-locations></nb-locations>
+    <!-- END Locations -->
+  </div>
+  <!-- END Departments & Locations -->
+</div>
+
+<div nbLang hidden>
+  <span id="org_save_changes" i18n="Button label">Save Changes</span>
+  <span id="msg_changes_saved" i18n>Your changes were saved successfully.</span>
+  <span id="err_failed_saving_changes" i18n>Failed to update your organisation profile! Please try again.</span>
+</div>

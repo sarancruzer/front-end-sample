@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "/da/**",
+        "destination": "/da/index.html"
+      },
+      {
+        "source": "/en/**",
+        "destination": "/en/index.html"
+      }
+    ]
+  }
+}

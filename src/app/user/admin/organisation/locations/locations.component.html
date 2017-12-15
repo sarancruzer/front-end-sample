@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header card-header-icon" data-background-color="blue">
+    <i class="material-icons">location_on</i>
+  </div>
+  <div class="card-content">
+    <h4 class="card-title" i18n="Title">Manage Organisation Locations</h4>
+    <div>
+      <nb-tagsinput
+        [tags]="locations"
+        (updated)="onUpdated($event)"
+        placeholder="add new"
+        i18n-placeholder
+        *ngIf="!isBusy"
+      ></nb-tagsinput>
+    </div>
+  </div>
+
+  <nb-loader *ngIf="isBusy"></nb-loader>
+</div>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching" i18n>Failed to fetch locations!</span>
+  <span id="msg_nothing_to_save" i18n>Nothing to save!</span>
+  <span id="msg_location_saved" i18n="Location, e.g. Copenhagen was added successfully.">{{'{location}'}} was added successfully.</span>
+  <span id="err_failed_saving" i18n="Location, e.g. Failed to add Copenhagen">Failed to add {{'{location}'}}.</span>
+  <span id="err_details" i18n="Detailed error message">Error: {{'{err_msg}'}}</span>
+  <span id="msg_location_deleted" i18n="Location, e.g. Copenhagen was deleted successfully.">{{'{location}'}} was deleted successfully.</span>
+  <span id="err_failed_deleting" i18n="Location, e.g. Failed to delete Copenhagen">Failed to delete {{'{location}'}}.</span>
+</div>

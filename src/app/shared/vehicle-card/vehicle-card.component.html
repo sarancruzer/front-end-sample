@@ -1,0 +1,32 @@
+<div class="card card-product">
+  <div class="card-image">
+    <img class="img" [src]="vehicle.image"
+      *ngIf="vehicle.image">
+    <img class="img" src="assets/img/{{vehicle.type.key|lowercase}}.png"
+      *ngIf="!vehicle.image && vehicle.type !== null">
+    <img class="img" src="assets/img/other.png"
+      *ngIf="!vehicle.image && !vehicle.type">
+  </div>
+  <div class="card-content">
+    <h4 class="card-title">
+      {{vehicle.vehicleId}}
+    </h4>
+    <div class="stats">
+      <p class="category" style="text-align: left">
+        <i class="material-icons">directions_car</i>
+        {{vehicle.type.name}}
+      </p>
+      <p class="category" style="text-align: left">
+        <i class="material-icons">place</i>
+        {{vehicle.location|location}}
+      </p>
+    </div>
+  </div>
+  <div class="card-footer" *ngIf="footer">
+    <div class="pull-right">
+      <button class="btn btn-primary btn-sm" (click)="startBooking()" i18n="Button label">
+        Start booking
+      </button>
+    </div>
+  </div>
+</div>

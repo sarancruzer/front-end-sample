@@ -1,0 +1,93 @@
+<div class="col-sm-10 col-sm-offset-1">
+  <!--      Wizard container        -->
+  <div class="wizard-container">
+    <div class="card wizard-card" data-color="blue" id="wizardBookVehicle">
+      <form action="" method="">
+        <div class="wizard-header">
+          <h3 class="wizard-title" i18n="Title">Book a Vehicle</h3>
+          <h5 i18n>Use the following steps to book a vehicle.</h5>
+        </div>
+        <div class="wizard-navigation">
+          <ul class="nav nav-pills nav-justified">
+            <li *ngFor="let step of wizard.getSteps()"
+              [ngClass]="{active: wizard.isStepActive(step)}">
+              <a href="#{{step.id}}"
+                (click)="$event.preventDefault()">{{step.name}}</a>
+              <div class="moving-tab"
+                style="width: 100%;"
+                *ngIf="wizard.isStepActive(step)">{{step.name}}</div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <!-- FILTER STEP -->
+          <div class="tab-pane"
+            id="filter"
+            [ngClass]="{active: wizard.isStepActive(steps[0])}">
+            <nb-filter-vehicle (filtered)="onFilterVehicle($event)"></nb-filter-vehicle>
+          </div>
+          <!-- END FILTER STEP -->
+
+          <!-- SELECTION STEP -->
+          <div class="tab-pane"
+            id="select"
+            [ngClass]="{active: wizard.isStepActive(steps[1])}">
+            <div class="row">
+              <nb-select-vehicle *ngIf="wizard.isStepActive(steps[1])"
+                [filter]="filter"
+                [vehicles]="bookableVehicles"
+                (select)="onVehicleSelected($event)"></nb-select-vehicle>
+            </div>
+          </div>
+          <!-- END SELECTION STEP -->
+
+          <!-- CONFIRM STEP -->
+          <div class="tab-pane"
+            id="confirm"
+            [ngClass]="{active: wizard.isStepActive(steps[2])}">
+            <nb-confirm-booking *ngIf="vehicle &&  wizard.isStepActive(steps[2])"
+              [filter]="filter"
+              [vehicle]="vehicle"></nb-confirm-booking>
+          </div>
+          <!-- END CONFIRM STEP -->
+
+          <nb-loader *ngIf="isBusy"></nb-loader>
+        </div>
+        <div class="wizard-footer">
+          <div class="pull-right">
+            <input type="button"
+              class="btn btn-next btn-fill btn-primary btn-wd"
+              value="{{wizard.getNextButtonLabel()}}"
+              (click)="moveForward()"
+              *ngIf="wizard.hasNextButton()"
+              [disabled]="isBusy" />
+          </div>
+          <div class="pull-left">
+            <input type="button"
+              class="btn btn-previous btn-fill btn-default btn-wd"
+              value="{{wizard.getPrevButtonLabel()}}"
+              (click)="moveBackward()"
+              *ngIf="wizard.hasPrevButton()"
+              [disabled]="isBusy" />
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- wizard container -->
+</div>
+
+<div nbLang hidden>
+  <span id="bv_filter" i18n>1. Filter Vehicles</span>
+  <span id="bv_select" i18n>2. Select Available Vehicle</span>
+  <span id="bv_confirm" i18n>3. Confirm Booking</span>
+  <span id="bv_btn_next" i18n>Next</span>
+  <span id="bv_btn_prev" i18n>Previous</span>
+  <span id="bv_btn_confirm" i18n>Confirm</span>
+  <span id="msg_no_match" i18n>Got no match!</span>
+  <span id="err_no_bookable_vehicles" i18n>Failed to find bookable vehicles!</span>
+  <span id="err_failed_drafting_booking" i18n>Failed to create a booking for the selected vehicle!</span>
+  <span id="err_failed_confirming_booking" i18n>Failed to confirm the booking!</span>
+  <span id="err_failed_cancelling_booking" i18n>Failed to cancel the drafted booking!</span>
+</div>

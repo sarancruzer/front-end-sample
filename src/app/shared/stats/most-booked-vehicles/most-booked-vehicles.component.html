@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">directions_car</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Most Booked Vehicles</h4>
+        <div class="material-datatables">
+          <table
+            id="most-booked-vehicles-datatable"
+            class="table table-striped table-no-bordered table-hover"
+            cellspacing="0"
+            width="100%"
+            style="width:100%"
+          >
+            <thead>
+              <tr>
+                <th i18n="table header">
+                  Image
+                </th>
+                <th i18n="table header">
+                  ID
+                </th>
+                <th i18n="table header">
+                  Number of bookings
+                </th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr *ngIf="vehicles.length === 0">
+                <td colspan="3" class="text-center text-muted" i18n>There are no vehicles to show!</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr *ngFor="let vehicle of vehicles">
+                <td>
+                  <img src="{{vehicle.image}}" style="width: 32px" *ngIf="vehicle.image">
+                  <img src="assets/img/{{vehicle.type.key|lowercase}}-64x64.png" style="width: 32px" *ngIf="!vehicle.image">
+                </td>
+                <td>{{vehicle.vehicleId}}</td>
+                <td>{{vehicle.numberOfBookings}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching_vehicles" i18n>Failed to get most booked vehicles! Please try again.</span>
+  <span id="err_failed_finding_datatable_v" i81n>Failed to find DataTable! This is an unexpected error. Please try again by reloading the page.</span>
+</div>

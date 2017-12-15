@@ -1,0 +1,9 @@
+<ng-template ngFor let-lang [ngForOf]="languages">
+<li *ngIf="lang.code !== localeId">
+  <a href="/{{ lang.code }}">
+    <div class="flag">
+      <img src="assets/img/flags/{{ lang.code }}.png"> {{ lang.label }}
+    </div>
+  </a>
+</li>
+</ng-template>

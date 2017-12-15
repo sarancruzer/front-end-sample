@@ -1,0 +1,14 @@
+<div class="card card-chart">
+  <div class="card-header" data-background-color="orange">
+    <div id="bookingsPerDayChart" class="ct-chart"></div>
+  </div>
+  <div class="card-content">
+    <h4 class="card-title" i18n="statistics title">Bookings per day</h4>
+  </div>
+</div>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching_bookings" i18n>Failed to get data for "Bookings per day" chart! Please try again.</span>
+</div>

@@ -1,0 +1,50 @@
+image: softence/angular-firebase:latest
+
+cache:
+  untracked: true
+  key: "$CI_BUILD_REF_NAME"
+  paths:
+    - node_modules/
+    - dist/
+
+stages:
+  - test
+  - deploy
+
+run_unit_tests:
+  stage: test
+  script:
+    - npm install
+    - ng test --single-run --code-coverage
+  tags:
+    - angular2
+
+deploy_to_staging:
+  stage: deploy
+  script:
+    - npm run build:da -- --env=staging
+    - npm run build:en -- --env=staging
+    - cp src/index.html.dist dist/index.html
+    - firebase deploy --only hosting --token "$FIREBASE_TOKEN_APPUDVIKLEREN" --project nextbooking-backend-staging
+  only:
+    - master@next-group/nextbooking-angular2
+  environment:
+    name: staging
+    url: https://nextbooking-backend-staging.firebaseapp.com
+  tags:
+    - angular2
+
+deploy_to_production:
+  stage: deploy
+  script:
+    - npm run build:da -- --env=prod
+    - npm run build:en -- --env=prod
+    - cp src/index.html.dist dist/index.html
+    - firebase deploy --only hosting --token "$FIREBASE_TOKEN_APPUDVIKLEREN"
+  only:
+    - tags@next-group/nextbooking-angular2
+  environment:
+    name: production
+    url: https://bookingapp.worldtrackgroup.com
+  tags:
+    - angular2

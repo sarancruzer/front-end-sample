@@ -1,0 +1,5 @@
+<span
+  class="label"
+  [ngClass]="{'label-primary': isActive(), 'label-default': !isActive() && !isCancelled() && !isCompleted(), 'label-danger': isCancelled(), 'label-success': isCompleted()}">
+  {{booking.state|bookingState:booking}}
+</span>

@@ -1,0 +1,15 @@
+<select
+  class="selectpicker"
+  *ngIf="departments"
+  data-style="btn btn-primary btn-round"
+  title="Select a Department"
+  i18n-title
+  [(ngModel)]="selectedDepartment"
+  (ngModelChange)="onChangeDepartment($event)"
+>
+  <option [ngValue]="department" *ngFor="let department of departments">
+    {{department.name}}
+  </option>
+</select>
+
+<nb-loader *ngIf="isBusy"></nb-loader>

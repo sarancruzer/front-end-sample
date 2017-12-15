@@ -1,0 +1,38 @@
+#nb-backdrop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 999;
+  background-color: #fff;
+  opacity: 0.8;
+}
+
+#nb-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9991;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0px 0px -32px;
+  border: 0px solid #fff;
+  border-radius: 50%;
+  border-top: 3px solid #00bcd4;
+  border-right: 3px solid #00bcd4;
+  border-bottom: 3px solid #00bcd4;
+  border-left: 3px solid #fff;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

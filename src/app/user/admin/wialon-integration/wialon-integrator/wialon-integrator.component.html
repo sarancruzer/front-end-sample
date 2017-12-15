@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header card-header-icon" data-background-color="blue">
+    <i class="material-icons">extension</i>
+  </div>
+  <div class="card-content">
+    <h4 class="card-title" i18n="Title">Integrator</h4>
+    <p *ngIf="!wialonAccessToken" i18n>
+      Your account is not integrated with WorldTrack yet.
+      You can integrate it using the below button.
+      Once clicked, the button will launch a popup window
+      with a login form where you can login to your WorldTrack account.
+    </p>
+
+    <p *ngIf="wialonAccessToken">
+      <ng-container i18n>
+      Your account has been successfully integrated with WorldTrack.
+      The following access token is currently being used:
+      </ng-container>
+      <span class="label label-default" *ngIf="wialonAccessToken">
+        {{wialonAccessToken}}
+      </span>
+    </p>
+
+    <button
+      type="button"
+      class="btn btn-fill btn-primary"
+      (click)="integrate()"
+      [disabled]="isBusy || wialonAccessToken"
+      i18n="Button label"
+    >Integrate</button>
+
+  </div>
+</div>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_wialon_access_token" i18n>It was not possible to receive token from Wialon! Please try again.</span>
+  <span id="msg_wialon_token_stored" i18n>The token has been stored successfully.</span>
+  <span id="err_storing_wialon_token" i18n>Due to an error, it was not possible to store the token!</span>
+</div>

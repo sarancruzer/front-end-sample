@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-md-2">
+    <ul class="nav nav-pills nav-pills-icons nav-pills-primary nav-stacked" role="tablist">
+      <li class="active">
+        <a href="#scheduled" role="tab" data-toggle="tab">
+          <i class="material-icons">schedule</i>
+          <ng-container i18n="Button label">Scheduled</ng-container>
+        </a>
+      </li>
+      <li>
+        <a href="#history" role="tab" data-toggle="tab">
+          <i class="material-icons">history</i>
+          <ng-container i18n="Button label">History</ng-container>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <div class="tab-content">
+      <!-- Active Bookings -->
+      <div class="tab-pane active" id="scheduled">
+        <div class="row" *ngIf="bookings.scheduled">
+          <div class="col-md-6" *ngFor="let booking of bookings.scheduled; let i = index">
+            <div class="card">
+              <div class="card-header card-header-text" data-background-color="blue">
+                <h4 class="card-title">{{booking.vehicle.vehicleId}}</h4>
+                <p class="category">{{booking.vehicle.type.name}}</p>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label class="label-control" i18n="Pick up time">Pick up</label>
+                      <input type="text" class="form-control" value="{{booking.startTime}}" disabled />
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                  <div class="form-group">
+                    <label class="label-control" i18n="Delivery time">Delivery</label>
+                    <input type="text" class="form-control" value="{{booking.endTime}}" disabled />
+                  </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-xs-12">
+                    <p class="category" style="text-align: left">
+                      <i class="material-icons">place</i>
+                      <ng-container i18n>Location</ng-container>
+                    </p>
+                    <input type="text" class="form-control" value="{{booking.vehicle.location|location}}" disabled />
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-danger btn-sm" (click)="cancelBooking(booking, i)" i18n>Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Active Bookings -->
+
+      <!-- History -->
+      <div class="tab-pane" id="history">
+        <div class="row" *ngIf="bookings.history">
+          <div class="col-md-6" *ngFor="let booking of bookings.history">
+            <div class="card">
+              <div class="card-header card-header-text" data-background-color="gray">
+                <h4 class="card-title">{{booking.vehicle.vehicleId}}</h4>
+                <p class="category">{{booking.vehicle.type.name}}</p>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <div class="form-group">
+                      <label class="label-control" i18n="Pick up time">Pick up</label>
+                      <input type="text" class="form-control" value="{{booking.startTime}}" disabled />
+                    </div>
+                  </div>
+                  <div class="col-xs-6">
+                  <div class="form-group">
+                    <label class="label-control" i18n="Delivery time">Delivery</label>
+                    <input type="text" class="form-control" value="{{booking.endTime}}" disabled />
+                  </div>
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-xs-12">
+                    <p class="category" style="text-align: left">
+                      <i class="material-icons">place</i>
+                      <ng-container i18n>Location</ng-container>
+                    </p>
+                    <input type="text" class="form-control" value="{{booking.vehicle.location|location}}" disabled />
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-xs-12" [ngSwitch]="booking.state">
+                    <div class="label label-success" i18n="Booking state" *ngSwitchCase="2">Completed</div>
+                    <div class="label label-danger" i18n="Booking state" *ngSwitchCase="3">Cancelled</div>
+                    <div class="label label-danger" i18n="Booking state" *ngSwitchDefault>Unknown</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END History -->
+    </div>
+  </div>
+</div>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching_bookings" i18n>Failed to get your bookings! Please try again.</span>
+  <span id="err_failed_cancelling_booking" i18n>Failed to cancel booking!</span>
+</div>

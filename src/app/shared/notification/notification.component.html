@@ -1,0 +1,13 @@
+<div *ngFor="let notification of notifications"
+  class="alert"
+  [ngClass]="setClasses(notification)">
+  <i class="material-icons" data-notify="icon" *ngIf="notification.icon">
+    {{notification.icon}}
+  </i>
+  <button type="button"
+    class="close"
+    data-dismiss="alert"
+    aria-label="Close"
+    (click)="remove(notification)">x</button>
+  <span data-notify="message" [innerHTML]="notification.message"></span>
+</div>

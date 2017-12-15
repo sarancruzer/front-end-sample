@@ -1,0 +1,56 @@
+<form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+  <!-- Initials -->
+  <div class="form-group label-floating">
+    <label class="control-label" i18n="Input label">Initials</label>
+    <input type="text" formControlName="initials" class="form-control">
+  </div>
+
+  <!-- Full Name -->
+  <div class="form-group label-floating">
+    <label class="control-label" i18n="Input label">Full Name</label>
+    <input type="text" formControlName="name" class="form-control">
+  </div>
+
+  <!-- Email Address -->
+  <div class="form-group label-floating">
+    <label class="control-label" i18n="Input label">Email Address</label>
+    <input type="email" formControlName="email" class="form-control">
+  </div>
+
+  <!-- Phone -->
+  <div class="form-group label-floating">
+    <label class="control-label" i18n="Input label">Phone</label>
+    <input type="text" formControlName="phone" class="form-control">
+  </div>
+
+  <!-- Job Title -->
+  <div class="form-group label-floating">
+    <label class="control-label" i18n="Job Title">Job Title</label>
+    <input type="text" formControlName="jobTitle" class="form-control">
+  </div>
+
+  <!-- Department -->
+  <div class="form-group label-floating" *ngIf="loggedInUser.isAdmin">
+    <nb-select-department (done)="onSelectDeperatmentDone($event)"></nb-select-department>
+  </div>
+
+  <div *ngIf="userForm.errors" i18n>
+    The form contains one or more error! Please correct these.
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="!userForm.valid"
+    class="btn btn-primary pull-right"
+    i18n="Button label"
+  >
+    Save
+  </button>
+
+  <div class="clearfix"></div>
+
+</form>
+
+<div nbLang hidden>
+  <span id="err_failed_fetching_departments" i18n>Failed to get departments!</span>
+</div>

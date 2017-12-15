@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-1">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">perm_identity</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Edit Profile</h4>
+        <nb-user-form (done)="onUserFormDone($event)" [user]="user">
+        </nb-user-form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">security</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Change Password</h4>
+        <nb-change-password-form (done)="onChangePasswordDone($event)"></nb-change-password-form>
+      </div>
+    </div>
+  </div>
+
+  <nb-loader *ngIf="isBusy"></nb-loader>
+</div>

@@ -1,0 +1,131 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="card">
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Select Time Frame</h4>
+        <div class="row">
+          <!-- Select Predefined Time Frames -->
+          <div class="col-md-4">
+            <select class="selectpicker"
+              data-style="btn btn-primary btn-round"
+              name="predefinedTimeFrame"
+              [(ngModel)]="predefinedTimeFrame"
+              (ngModelChange)="changeTimeFrame()">
+              <option
+                value="LAST_30_DAYS"
+                [selected]="predefinedTimeFrame === 'LAST_30_DAYS'"
+                i18n>Last 30 days</option>
+              <option
+                value="LAST_7_DAYS"
+                [selected]="predefinedTimeFrame === 'LAST_7_DAYS'"
+                i18n>Last 7 days</option>
+              <option
+                value="LAST_3_MONTHS"
+                [selected]="predefinedTimeFrame === 'LAST_3_MONTHS'"
+                i18n>Last 3 months</option>
+            </select>
+          </div>
+          <!-- Select Custom Time Frame: start -->
+          <div class="col-md-4">
+            <div class="form-group" style="margin-top: 6px">
+              <label class="label-control" i18n="Input label for time frame">Start</label>
+              <input type="text"
+                class="form-control datetimepicker"
+                name="startTime"
+                [dpMax]="timeFrame.end"
+                [dpDefault]="timeFrame.start"
+                [dpValue]="timeFrame.start"
+                (ngModel)="timeFrame.start"
+                (ngModelChange)="onStartTimeChange($event)">
+            </div>
+          </div>
+          <!-- Select Custom Time Frame: end -->
+          <div class="col-md-4">
+            <div class="form-group" style="margin-top: 6px">
+              <label class="label-control" i18n="Input label for time frame">End</label>
+              <input type="text"
+                class="form-control datetimepicker"
+                name="endTime"
+                [dpMin]="timeFrame.start"
+                [dpDefault]="timeFrame.end"
+                [dpValue]="timeFrame.end"
+                (ngModel)="timeFrame.end"
+                (ngModelChange)="onEndTimeChange($event)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Most popular booking time -->
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <nb-single-value-stats
+      headerBackgroundColor="blue"
+      headerIcon="timer"
+      [category]="mostPopularBookingTimeCat"
+      [value]="mostPopularBookingTime"
+      footerIcon="play_arrow"
+      [footerText]="mostPopularBookingTimeText"></nb-single-value-stats>
+    <nb-loader *ngIf="loadingMostPopularBookingTime"></nb-loader>
+  </div>
+  <!-- Average booking duration -->
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <nb-single-value-stats
+      headerBackgroundColor="blue"
+      headerIcon="timer"
+      [category]="avgBookingDurationCat"
+      [value]="avgBookingDuration"
+      footerIcon="date_range"
+      [footerText]="avgBookingDurationText"></nb-single-value-stats>
+    <nb-loader *ngIf="loadingAvgBookingDuration"></nb-loader>
+  </div>
+  <!-- Unused vehicles count -->
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <nb-single-value-stats
+      headerBackgroundColor="red"
+      headerIcon="info_outline"
+      [category]="unusedVehiclesCountCat"
+      [value]="unusedVehiclesCount"
+      footerIcon="bookmark"
+      [footerText]="unusedVehiclesCountText"></nb-single-value-stats>
+    <nb-loader *ngIf="loadingUnusedVehiclesCount"></nb-loader>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Mose booked vehicles -->
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <nb-most-booked-vehicles [timeFrame]="timeFrame"></nb-most-booked-vehicles>
+  </div>
+  <!-- Most active users -->
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <nb-most-active-users [timeFrame]="timeFrame"></nb-most-active-users>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Bookings status overview -->
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <nb-bookings-status-overview [timeFrame]="timeFrame"></nb-bookings-status-overview>
+  </div>
+  <!-- Bookings per day -->
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <nb-bookings-per-day [timeFrame]="timeFrame"></nb-bookings-per-day>
+  </div>
+</div>
+
+<div nbLang hidden>
+  <span id="cat_most_popular_booking_time" i18n>Most popular booking time</span>
+  <span id="msg_most_popular_booking_time_txt" i18n>Based on the start time of the bookings</span>
+  <span id="err_most_popular_bookings_time" i18n>Failed to fetch the most popular booking time for the selected time frame!</span>
+  <span id="cat_avg_booking_duration" i18n>Average booking duration</span>
+  <span id="avg_booking_duration_tmpl" i18n="average booking duration, e.g. 2h 35min">{{'{__hours__}'}}h {{'{__minutes__}'}}min</span>
+  <span id="msg_avg_booking_duration_txt" i18n>In the selected time frame</span>
+  <span id="err_avg_booking_duration" i18n>Failed to fetch average booking duration for the selected time frame!</span>
+  <span id="cat_unused_vehicles_count" i18n>Unused vehicles count</span>
+  <span id="msg_unused_vehicles_count_txt" i18n>Not booked in the selected time frame</span>
+  <span id="err_unused_vehicles_count" i18n>Failed to fetch unused vehicles count for the selected time frame!</span>
+</div>

@@ -1,0 +1,59 @@
+<div class="row">
+
+  <div class="col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">schedule</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Time</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label-control" i18n="Input label for pick up time">Pick up</label>
+              <input type="text"
+                class="form-control"
+                value="{{filter?.pickUpTime|amDateFormat:'DD-MM-YYYY HH:mm'}}"
+                disabled />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label-control" i18n="Input label for delivery time">Delivery</label>
+              <input type="text"
+                class="form-control"
+                value="{{filter?.deliveryTime|amDateFormat:'DD-MM-YYYY HH:mm'}}"
+                disabled />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-sm-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">location_on</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Location</h4>
+        <div class="form-group">
+          <div class="form-group">
+            <label class="label-control" i18n>Selected</label>
+            <input type="text"
+              class="form-control"
+              value="{{ vehicle?.location | location }}"
+              disabled />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-lg-offset-4">
+    <nb-vehicle-card [vehicle]="vehicle"></nb-vehicle-card>
+  </div>
+</div>

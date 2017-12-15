@@ -1,0 +1,27 @@
+<div class="row" *ngFor="let row of vehicleTypes|chunk:5">
+  <div class="col-md-1 col-lg-1"></div>
+  <div class="col-md-2 col-lg-2" *ngFor="let type of row">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"
+          name="vehicleType"
+          value="{{type.key}}"
+          (change)="toggleChoice(type)">
+        {{type.name}}
+      </label>
+    </div>
+  </div>
+</div>
+
+<div nbLang hidden>
+  <span id="vt_electric_car" i18n="Vehicle type">Electric</span>
+  <span id="vt_mini_car" i18n="Vehicle type">Minicar</span>
+  <span id="vt_sedan" i18n="Vehicle type">Sedan</span>
+  <span id="vt_suv" i18n="Vehicle type">SUV</span>
+  <span id="vt_pickup" i18n="Vehicle type">Pickup</span>
+  <span id="vt_truck" i18n="Vehicle type">Truck</span>
+  <span id="vt_minibus" i18n="Vehicle type">Minibus</span>
+  <span id="vt_bus" i18n="Vehicle type">Bus</span>
+  <span id="vt_van" i18n="Vehicle type">Van</span>
+  <span id="vt_other" i18n="Vehicle type">Other</span>
+</div>

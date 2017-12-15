@@ -1,0 +1,229 @@
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+  <!-- name -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('name') && isFormControlDirty('name'),
+                'has-success': isFormControlValid('name')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">face</i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Name"
+      formControlName="name"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('name') && isFormControlDirty('name')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('name') && !isFormControlValid('name')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('name') && isFormControlDirty('name')"
+      i18n="Admin registration form"
+    >
+      Name is required!
+    </p>
+  </div>
+  <!-- END name -->
+
+  <!-- email -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('email') && isFormControlDirty('email'),
+                'has-success': isFormControlValid('email')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">email</i>
+    </span>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Email"
+      formControlName="email"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('email') && isFormControlDirty('email')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('email') && !isFormControlValid('email')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('email') && isFormControlDirty('email')"
+      i18n="Admin registration form"
+    >
+      Email is required!
+    </p>
+  </div>
+  <!-- END email -->
+
+  <!-- phone -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('phone') && isFormControlDirty('phone'),
+                'has-success': isFormControlValid('phone')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">contact_phone</i>
+    </span>
+    <input
+      type="tel"
+      class="form-control"
+      placeholder="Phone number"
+      formControlName="phone"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('phone') && isFormControlDirty('phone')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('phone') && !isFormControlValid('phone')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('phone') && isFormControlDirty('phone')"
+      i18n="Admin registration form"
+    >
+      Phone number is required!
+    </p>
+  </div>
+  <!-- END phone -->
+
+  <!-- jobTitle -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('jobTitle') && isFormControlDirty('jobTitle'),
+                'has-success': isFormControlValid('jobTitle')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">work</i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Job Title"
+      formControlName="jobTitle"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('jobTitle') && isFormControlDirty('jobTitle')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('jobTitle') && !isFormControlValid('jobTitle')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('jobTitle') && isFormControlDirty('jobTitle')"
+      i18n="Admin registration form"
+    >
+      Job title is required!
+    </p>
+  </div>
+  <!-- END jobTitle -->
+
+  <!-- password -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('password') && isFormControlDirty('password'),
+                'has-success': isFormControlValid('password')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">lock_outline</i>
+    </span>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      formControlName="password"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('password') && isFormControlDirty('password')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('password') && !isFormControlValid('password')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('password') && isFormControlDirty('password')"
+      i18n="Admin registration form"
+    >
+      Password is required!
+    </p>
+  </div>
+  <!-- END password -->
+
+  <!-- confirmPassword -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('confirmPassword') && isFormControlDirty('confirmPassword'),
+                'has-success': isFormControlValid('confirmPassword')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">lock_outline</i>
+    </span>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Confirm Password"
+      formControlName="confirmPassword"
+      i18n-placeholder="Form input label"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('confirmPassword') && isFormControlDirty('confirmPassword')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('confirmPassword') && !isFormControlValid('confirmPassword')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('confirmPassword') && isFormControlDirty('confirmPassword')"
+      i18n="Admin registration form"
+    >
+      Password confirmation is required!
+    </p>
+  </div>
+  <!-- END confirmPassword -->
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="optionsCheckboxes" formControlName="termsAccepted" />
+      <ng-container i18n="Registration text before 'terms and conditions'">
+        I agree to the
+      </ng-container>
+      <a href="#something" i18n="Link text">terms and conditions</a>.
+    </label>
+  </div>
+
+  <div class="pull-right">
+    <button
+      type="submit"
+      class="btn btn-fill btn-primary"
+      [disabled]="!adminForm.valid"
+      i18n="Admin registration form button"
+    >Get Started</button>
+  </div>
+  <div class="clearfix"></div>
+</form>
+
+<div nbLang hidden>
+  <span id="err_pass_no_match" i18n="Error message">Passwords do not match!</span>
+</div>

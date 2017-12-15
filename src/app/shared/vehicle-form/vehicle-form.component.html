@@ -1,0 +1,132 @@
+<form [formGroup]="vehicleForm" novalidate (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Manufacturer -->
+      <div class="form-group">
+        <label class="control-label" i18n="Vehicle property">Manufacturer</label>
+        <input type="text" formControlName="manufacturer" class="form-control">
+        <span
+          *ngIf="vehicleForm.controls['manufacturer'].hasError('required')"
+          class="help-block text-danger"
+          i18n
+        >
+          Manufacturer is required.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- Model -->
+      <div class="form-group">
+        <label class="control-label" i18n="Vehicle property">Model</label>
+        <input type="text" formControlName="model" class="form-control">
+        <span
+          *ngIf="vehicleForm.controls['model'].hasError('required')"
+          class="help-block text-danger"
+          i18n
+        >
+          Model is required.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Vehicle Id -->
+      <div class="form-group">
+        <label class="control-label" i18n="Vehicle property">Vehicle Id</label>
+        <input type="text" formControlName="vehicleId" class="form-control">
+        <span
+          *ngIf="vehicleForm.controls['vehicleId'].hasError('required')"
+          class="help-block text-danger"
+          i18n
+        >
+          Vehicle Id is required.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- Tracker Id -->
+      <div class="form-group">
+        <label class="control-label" i18n="Vehicle property">Tracker Id</label>
+        <input type="text" formControlName="trackerId" class="form-control">
+        <span
+          *ngIf="vehicleForm.controls['trackerId'].hasError('required')"
+          class="help-block text-danger"
+          i18n
+        >
+          Tracker Id is required.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Vehicle Type -->
+      <div class="form-group">
+        <label class="control-label" i18n>Select Vehicle Type</label>
+        <select
+          class="selectpicker"
+          data-style="btn btn-primary btn-round"
+          [attr.title]="vehicle.type ? vehicle.type.name : null"
+          formControlName="type"
+        >
+          <option *ngFor="let vehicleType of vehicleTypes" [ngValue]="vehicleType">
+            {{vehicleType.name}}
+          </option>
+        </select>
+        <span *ngIf="!vehicle.type" class="help-block text-danger" i18n>
+          You must select a vehicle type.
+        </span>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- Location -->
+      <div class="form-group">
+        <label class="control-label" i18n="Vehicle property">Select Location</label>
+        <select
+          class="selectpicker"
+          data-style="btn btn-primary btn-round"
+          [attr.title]="vehicle.location|location"
+          formControlName="location"
+        >
+          <option *ngIf="!vehicle.location" [ngValue]="null" selected>N/A</option>
+          <option *ngFor="let location of locations" [ngValue]="location">
+            {{location.name}}
+          </option>
+        </select>
+        <span *ngIf="!vehicle.location" class="help-block text-danger" i18n>
+          You must select a location.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Is Available? -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="form-group">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" formControlName="isAvailable" />
+            <ng-container i18n="Vehicle editor">Is Available?</ng-container>
+          </label>
+        </div>
+        <span class="text-muted">
+          <strong i18n>
+            All vehicles are by default available.
+            If the vehicle is not available for booking, please check off this option.
+            This will remove the vehicle from the booking pool.
+          </strong>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!vehicleForm.valid" class="btn btn-primary pull-right">
+    {{ buttonText || 'Update Vehicle' }}
+  </button>
+
+  <div class="clearfix"></div>
+</form>

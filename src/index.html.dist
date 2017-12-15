@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script type="text/javascript">
+      function normalize(lang) {
+        return lang ? lang.substr(0, 2) : 'en';
+      }
+
+      var href = window.location.href;
+      var languages = ['da', 'en'];
+      var userLang = navigator.language || navigator.userLanguage;
+
+      userLang = normalize(userLang);
+
+      var targetLang = (languages.indexOf(userLang) === -1) ? 'en' : userLang;
+
+      // redirect the user to the target language
+      var app = href + targetLang;
+      window.location.replace(app);
+    </script>
+  </body>
+</html>

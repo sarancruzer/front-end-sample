@@ -1,0 +1,325 @@
+<form [formGroup]="organisationForm" (ngSubmit)="onSubmit()">
+  <!-- Organisation Name -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('name') && isFormControlDirty('name'),
+                'has-success': isFormControlValid('name')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">business</i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      i18n-placeholder
+      placeholder="Organisation Name"
+      formControlName="name"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('name') && isFormControlDirty('name')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('name') && !isFormControlValid('name')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('name') && isFormControlDirty('name')"
+      i18n
+    >
+      Organisation name is required!
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Website -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('website') && isFormControlDirty('website'),
+                    'has-success': isFormControlValid('website')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">web</i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          i18n-placeholder
+          placeholder="Website"
+          formControlName="website"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('website') && isFormControlDirty('website')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('website') && !isFormControlValid('website')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('website') && isFormControlDirty('website')"
+          i18n
+        >
+          Website is required!
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- Phone number -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('phone') && isFormControlDirty('phone'),
+                    'has-success': isFormControlValid('phone')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">contact_phone</i>
+        </span>
+        <input
+          type="number"
+          class="form-control"
+          i18n-placeholder
+          placeholder="Phone number"
+          formControlName="phone"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('phone') && isFormControlDirty('phone')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('phone') && !isFormControlValid('phone')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('phone') && isFormControlDirty('phone')"
+          i18n
+        >
+          Phone number is required!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('address') && isFormControlDirty('address'),
+                'has-success': isFormControlValid('address')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">edit_location</i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      i18n-placeholder
+      placeholder="Address"
+      formControlName="address"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('address') && isFormControlDirty('address')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('address') && !isFormControlValid('address')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('address') && isFormControlDirty('address')"
+      i18n
+    >
+      Address is required!
+    </p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- Zip/Postal Code -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('zipCode') && isFormControlDirty('zipCode'),
+                    'has-success': isFormControlValid('zipCode')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">edit</i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          i18n-placeholder
+          placeholder="Zip/Postal Code"
+          formControlName="zipCode"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('zipCode') && isFormControlDirty('zipCode')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('zipCode') && !isFormControlValid('zipCode')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('zipCode') && isFormControlDirty('zipCode')"
+          i18n
+        >
+          Zip/Postal Code is required!
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- City -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('city') && isFormControlDirty('city'),
+                    'has-success': isFormControlValid('city')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">edit_location</i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          i18n-placeholder
+          placeholder="City"
+          formControlName="city"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('city') && isFormControlDirty('city')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('city') && !isFormControlValid('city')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('city') && isFormControlDirty('city')"
+          i18n
+        >
+          City is required!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <!-- State/Province -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('province') && isFormControlDirty('province'),
+                    'has-success': isFormControlValid('province')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">edit_location</i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          i18n-placeholder
+          placeholder="State/Province"
+          formControlName="province"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('province') && isFormControlDirty('province')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('province') && !isFormControlValid('province')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('province') && isFormControlDirty('province')"
+          i18n
+        >
+          State/Province is required!
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <!-- Country -->
+      <div
+        class="input-group form-group"
+        [ngClass]="{'has-error': !isFormControlValid('country') && isFormControlDirty('country'),
+                    'has-success': isFormControlValid('country')}"
+      >
+        <span class="input-group-addon">
+          <i class="material-icons">flag</i>
+        </span>
+        <input
+          type="text"
+          class="form-control"
+          i18n-placeholder
+          placeholder="Country"
+          formControlName="country"
+        />
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlValid('country') && isFormControlDirty('country')"
+        >done</span>
+        <span
+          class="material-icons form-control-feedback"
+          *ngIf="isFormControlDirty('country') && !isFormControlValid('country')"
+        >clear</span>
+        <p
+          class="text-danger"
+          *ngIf="!isFormControlValid('country') && isFormControlDirty('country')"
+          i18n
+        >
+          Country is required!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Number of Employees -->
+  <div
+    class="input-group form-group"
+    [ngClass]="{'has-error': !isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees'),
+                'has-success': isFormControlValid('numberOfEmployees')}"
+  >
+    <span class="input-group-addon">
+      <i class="material-icons">people</i>
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      i18n-placeholder
+      placeholder="Number of Employees"
+      formControlName="numberOfEmployees"
+    />
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees')"
+    >done</span>
+    <span
+      class="material-icons form-control-feedback"
+      *ngIf="isFormControlDirty('numberOfEmployees') && !isFormControlValid('numberOfEmployees')"
+    >clear</span>
+    <p
+      class="text-danger"
+      *ngIf="!isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees')"
+      i18n
+    >
+      Number of Employees is required!
+    </p>
+  </div>
+
+  <div class="pull-right">
+      <button
+        type="submit"
+        class="btn btn-fill btn-primary"
+        [disabled]="!organisationForm.valid"
+      >
+        {{ submitName }}
+      </button>
+  </div>
+
+  <div class="clearfix"></div>
+</form>

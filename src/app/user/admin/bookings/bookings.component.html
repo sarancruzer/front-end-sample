@@ -1,0 +1,80 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">bookmark</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Bookings</h4>
+        <div class="material-datatables">
+          <table id="bookings-datatable" class="table table-striped table-no-bordered table-hover"
+                cellspacing="0"
+                width="100%"
+                style="width:100%">
+            <thead>
+              <tr>
+                <th i18n="Bookings table header">
+                  Start
+                </th>
+                <th i18n="Bookings table header">
+                  End
+                </th>
+                <th i18n="Bookings table header">
+                  Status
+                </th>
+                <th i18n="Bookings table header">
+                  Vehicle
+                </th>
+                <th i18n="Bookings table header">
+                  Location
+                </th>
+                <th i18n="Bookings table header">
+                  Owner
+                </th>
+                <th i18n="Bookings table header" class="disabled-sorting text-right" style="width: 10%">Actions</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="bookings">
+              <tr *ngFor="let booking of bookings">
+                <td>{{booking.startTime|date:'dd/MM y HH:mm'}}</td>
+                <td>{{booking.endTime|date:'dd/MM y HH:mm'}}</td>
+                <td>
+                  <nb-booking-state [booking]="booking"></nb-booking-state>
+                </td>
+                <td>{{booking.vehicle.vehicleId}}</td>
+                <td>{{booking.vehicle.location}}</td>
+                <td>{{booking.owner.initials}}</td>
+                <td class="text-right">
+                  <a (click)="cancelBooking(booking)"
+                      class="btn btn-simple btn-danger btn-icon remove"
+                      i18n-title
+                      title="Cancel"
+                      *ngIf="isBookingCancelable(booking)">
+                    <i class="material-icons">cancel</i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nb-confirm-popup
+  [title]="confirmDialogTitle"
+  [message]="confirmDialogMsg"
+  (onConfirm)="onDeletionConfirmed()"
+></nb-confirm-popup>
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="ttl_b_confirm_cancel" i18n>Confirm Booking Cancellation</span>
+  <span id="msg_b_confirm_cancel" i18n>Do you really want to cancel this booking?</span>
+  <span id="err_no_datatable" i18n>Failed to find DataTable! This is an unexpected error. Please try again by reloading the page.</span>
+  <span id="msg_list_extended" i18n>Please note that vehicles list has just been extended.</span>
+  <span id="err_failed_fetching_list" i18n>Failed to get vehicles list! Please try again.</span>
+  <span id="err_failed_cancelling_booking" i18n>Failed to cancel booking!</span>
+</div>

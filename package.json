@@ -40,6 +40,7 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
+    "extract-text-webpack-plugin": "^2.1.2",
     "jasmine-core": "2.5.2",
     "karma": "1.2.0",
     "karma-cli": "^1.0.1",
@@ -54,6 +55,7 @@
     "tslint": "^4.0.2",
     "typescript": "2.3.3",
     "webdriver-manager": "10.2.5",
-    "webpack": "^2.5.1"
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^1.9.0"
   }
 }

@@ -1,5 +1,4 @@
-const baseUrl = 'https://nextbooking-backend.appspot.com';
-
+const baseUrl = 'https://ctl-next-booking.appspot.com';
 export const environment = {
   production: true,
   baseUrl: baseUrl,

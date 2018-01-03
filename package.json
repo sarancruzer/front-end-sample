@@ -40,6 +40,7 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "jasmine-core": "2.5.2",
     "karma": "1.2.0",
     "karma-cli": "^1.0.1",

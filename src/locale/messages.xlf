@@ -4,7 +4,6 @@
     <body>
       <trans-unit id="cfc2f436ec2beffb042e7511a73c89c372e86a6c" datatype="html">
         <source>Register</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/anon.component.ts</context>
           <context context-type="linenumber">17</context>
@@ -17,7 +16,6 @@
       </trans-unit>
       <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
         <source>Login</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/anon.component.ts</context>
           <context context-type="linenumber">23</context>
@@ -30,7 +28,6 @@
       </trans-unit>
       <trans-unit id="69b6ac577a19acc39fc0c22342092f327fff2529" datatype="html">
         <source>Email address</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/login/login.component.ts</context>
           <context context-type="linenumber">17</context>
@@ -39,7 +36,6 @@
       </trans-unit>
       <trans-unit id="c32ef07f8803a223a83ed17024b38e8d82292407" datatype="html">
         <source>Password</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/login/login.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -52,7 +48,6 @@
       </trans-unit>
       <trans-unit id="3a8e04b34236be1cb450987973bcb7b33d483e35" datatype="html">
         <source>Forgot password?</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/login/login.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -61,7 +56,6 @@
       </trans-unit>
       <trans-unit id="fc5d8d0aaf806e14bdeb676b15c1e5f8aa1e1bb5" datatype="html">
         <source>Let&apos;s go</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/login/login.component.ts</context>
           <context context-type="linenumber">33</context>
@@ -70,20 +64,18 @@
       </trans-unit>
       <trans-unit id="c82bcd1b91ad8ef9ad838452b70bc14081907d01" datatype="html">
         <source>Organisation</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/register/register.component.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">68</context>
         </context-group>
         <note priority="1" from="description">Header</note>
       </trans-unit>
       <trans-unit id="ca2283fc765b9f44b69f0175d685dc2443da6011" datatype="html">
         <source>Administrator</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/register/register.component.ts</context>
           <context context-type="linenumber">18</context>
@@ -92,7 +84,6 @@
       </trans-unit>
       <trans-unit id="cff1428d10d59d14e45edec3c735a27b5482db59" datatype="html">
         <source>Name</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -103,7 +94,6 @@
         <source>
       Name is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -112,7 +102,6 @@
       </trans-unit>
       <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
         <source>Email</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">48</context>
@@ -127,7 +116,6 @@
         <source>
       Email is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -136,7 +124,6 @@
       </trans-unit>
       <trans-unit id="63e1d28508d11998ba489a6ea4d8349e837162f5" datatype="html">
         <source>Phone number</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">82</context>
@@ -151,7 +138,6 @@
         <source>
       Phone number is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">98</context>
@@ -160,7 +146,6 @@
       </trans-unit>
       <trans-unit id="20d9489fdbfc121f7c504271b36691515d02f632" datatype="html">
         <source>Job Title</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">116</context>
@@ -175,7 +160,6 @@
         <source>
       Job title is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">132</context>
@@ -186,7 +170,6 @@
         <source>
       Password is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">166</context>
@@ -195,7 +178,6 @@
       </trans-unit>
       <trans-unit id="c1b7e6d75ff4285c7636c67e5ef259629b81725b" datatype="html">
         <source>Confirm Password</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">184</context>
@@ -210,7 +192,6 @@
         <source>
       Password confirmation is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">200</context>
@@ -221,7 +202,6 @@
         <source>
         I agree to the
       </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">209</context>
@@ -230,7 +210,6 @@
       </trans-unit>
       <trans-unit id="d34747ee79222c47096af23735b538c03e9b0da9" datatype="html">
         <source>terms and conditions</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">212</context>
@@ -239,7 +218,6 @@
       </trans-unit>
       <trans-unit id="802222cb4754d74846b18f651b1f94e21576185d" datatype="html">
         <source>Get Started</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">222</context>
@@ -248,7 +226,6 @@
       </trans-unit>
       <trans-unit id="85ab575f4dca3bc1ee0c7a47fc63b9d69b4efea8" datatype="html">
         <source>Passwords do not match!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/admin-form/admin-form.component.ts</context>
           <context context-type="linenumber">228</context>
@@ -257,7 +234,6 @@
       </trans-unit>
       <trans-unit id="fbaed105e9bfc80665bb7e0d5caaeae41f24ea83" datatype="html">
         <source>Organisation Name</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">15</context>
@@ -267,7 +243,6 @@
         <source>
       Organisation name is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -275,7 +250,6 @@
       </trans-unit>
       <trans-unit id="afb605e735bef0cdd46dbff3c3d2be15960cdc2b" datatype="html">
         <source>Website</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -285,7 +259,6 @@
         <source>
           Website is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">65</context>
@@ -295,7 +268,6 @@
         <source>
           Phone number is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">99</context>
@@ -303,7 +275,6 @@
       </trans-unit>
       <trans-unit id="729754dd19eb9ce0670b0aeb5a6ae60574c2c563" datatype="html">
         <source>Address</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">119</context>
@@ -313,7 +284,6 @@
         <source>
       Address is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">134</context>
@@ -321,7 +291,6 @@
       </trans-unit>
       <trans-unit id="73f71f6be8e257467172f45a9e44934f979074e7" datatype="html">
         <source>Zip/Postal Code</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">154</context>
@@ -331,7 +300,6 @@
         <source>
           Zip/Postal Code is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">169</context>
@@ -339,7 +307,6 @@
       </trans-unit>
       <trans-unit id="5c7012b5a926b32d9e45fefdcc8a1a3cb6f023d0" datatype="html">
         <source>City</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">188</context>
@@ -349,7 +316,6 @@
         <source>
           City is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">203</context>
@@ -357,7 +323,6 @@
       </trans-unit>
       <trans-unit id="6568cbdca5aaef2dfbaddce98f646324f2e52642" datatype="html">
         <source>State/Province</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">225</context>
@@ -367,7 +332,6 @@
         <source>
           State/Province is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">240</context>
@@ -375,7 +339,6 @@
       </trans-unit>
       <trans-unit id="a43f25a9ac40e8e2441ff0be7a36b8e5d15534df" datatype="html">
         <source>Country</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">259</context>
@@ -385,7 +348,6 @@
         <source>
           Country is required!
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">274</context>
@@ -393,7 +355,6 @@
       </trans-unit>
       <trans-unit id="40d0657a12a5a487bfec7727a380aff0e02596da" datatype="html">
         <source>Number of Employees</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">294</context>
@@ -403,7 +364,6 @@
         <source>
       Number of Employees is required!
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/organisation-form/organisation-form.component.ts</context>
           <context context-type="linenumber">309</context>
@@ -411,7 +371,6 @@
       </trans-unit>
       <trans-unit id="4c1863667629aca78c9be5e0c39cf268d0eb5579" datatype="html">
         <source>Electric</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">17</context>
@@ -420,7 +379,6 @@
       </trans-unit>
       <trans-unit id="1df57ad93ddec01f897ca99ee3a34c2f17ccd5d8" datatype="html">
         <source>Minicar</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">18</context>
@@ -429,7 +387,6 @@
       </trans-unit>
       <trans-unit id="2c2b7b7812fed33894d7bcc686c4ef63f3fb34ff" datatype="html">
         <source>Sedan</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -438,7 +395,6 @@
       </trans-unit>
       <trans-unit id="341fdbdb5391123a839fa2664a50ca9690001798" datatype="html">
         <source>SUV</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -447,7 +403,6 @@
       </trans-unit>
       <trans-unit id="269c40d042d45e3dfd68187c8019fc8034963257" datatype="html">
         <source>Pickup</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">21</context>
@@ -456,7 +411,6 @@
       </trans-unit>
       <trans-unit id="81396c360c116103d03755c74a27730c219823a1" datatype="html">
         <source>Truck</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -465,7 +419,6 @@
       </trans-unit>
       <trans-unit id="f6e25b3fd7d5db97087a29c086d307408244ba36" datatype="html">
         <source>Minibus</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">23</context>
@@ -474,7 +427,6 @@
       </trans-unit>
       <trans-unit id="d89d2eb960fb7a2efdb8155faae41580d8800a83" datatype="html">
         <source>Bus</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">24</context>
@@ -483,7 +435,6 @@
       </trans-unit>
       <trans-unit id="80c0b0dd6ac907ca5272d513f03addc0d061e219" datatype="html">
         <source>Van</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -492,7 +443,6 @@
       </trans-unit>
       <trans-unit id="c2a9de3714f5767b174d0424bc8abe2dc37acc41" datatype="html">
         <source>Other</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-types-chooser/vehicle-types-chooser.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -503,7 +453,6 @@
         <source>
         Start booking
       </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-card/vehicle-card.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -512,7 +461,6 @@
       </trans-unit>
       <trans-unit id="52c9a103b812f258bcddc3d90a6e3f46871d25fe" datatype="html">
         <source>Save</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/tagsinput/tagsinput.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -525,7 +473,6 @@
       </trans-unit>
       <trans-unit id="e01caade9e74f9cb2b0ee7ed9580af14fbfd873d" datatype="html">
         <source>Manufacturer</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">6</context>
@@ -536,7 +483,6 @@
         <source>
           Manufacturer is required.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">12</context>
@@ -544,7 +490,6 @@
       </trans-unit>
       <trans-unit id="6ec98fa3d6504ba1fd03465194b53706c8263c99" datatype="html">
         <source>Model</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -555,7 +500,6 @@
         <source>
           Model is required.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -563,7 +507,6 @@
       </trans-unit>
       <trans-unit id="6502be18dc241c88d3c9e5763e38ec896ed28783" datatype="html">
         <source>Vehicle Id</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -574,7 +517,6 @@
         <source>
           Vehicle Id is required.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">43</context>
@@ -582,7 +524,6 @@
       </trans-unit>
       <trans-unit id="b0046f96457bd8d2b23ba2b178ef1b1f57786927" datatype="html">
         <source>Tracker Id</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">51</context>
@@ -593,7 +534,6 @@
         <source>
           Tracker Id is required.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">57</context>
@@ -601,7 +541,6 @@
       </trans-unit>
       <trans-unit id="73796d7a3f12d7c3a29a3c8401ea8804f06a4680" datatype="html">
         <source>Select Vehicle Type</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">68</context>
@@ -611,7 +550,6 @@
         <source>
           You must select a vehicle type.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">79</context>
@@ -619,7 +557,6 @@
       </trans-unit>
       <trans-unit id="612c2b9b2b4ce6931ee0b53f29aba2694050a1e8" datatype="html">
         <source>Select Location</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -630,52 +567,32 @@
         <source>
           You must select a location.
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="c5f3aefa8f426d7b84502a85414a00e9806d1e6e" datatype="html">
         <source>Is Available?</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">113</context>
         </context-group>
         <note priority="1" from="description">Vehicle editor</note>
       </trans-unit>
-      <trans-unit id="bc0f2e05c614b2b3d26d20040b73c7afb28fc8e2" datatype="html">
+      <trans-unit id="5068f616c10b1e69d1d09b11cc56aa9275dd67ac" datatype="html">
         <source>
-
-        Do you want to <x id="INTERPOLATION"/> this <x id="INTERPOLATION_1"/>?
-
-      </source>
-        <target/>
+            All vehicles are by default available.
+            If the vehicle is not available for booking, please check off this option.
+            This will remove the vehicle from the booking pool.
+          </source>
         <context-group purpose="location">
-          <context context-type="sourcefile">app/shared/delete-popup/delete-popup.component.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4f20f2d5a6882190892e58b85f6ccbedfa737952" datatype="html">
-        <source>Yes</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/shared/delete-popup/delete-popup.component.ts</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="3d3ae7deebc5949b0c1c78b9847886a94321d9fd" datatype="html">
-        <source>No</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/shared/delete-popup/delete-popup.component.ts</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="sourcefile">app/shared/vehicle-form/vehicle-form.component.ts</context>
+          <context context-type="linenumber">117</context>
         </context-group>
       </trans-unit>
       <trans-unit id="20bfb927a41594dfb6b29588ba17981f10eec9f8" datatype="html">
         <source>Upload File</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/upload-file-popup/upload-file-popup.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -684,7 +601,6 @@
       </trans-unit>
       <trans-unit id="13e6c1905e66a95cab739fdcc93f60bdb0bcf7f1" datatype="html">
         <source>Please upload <x id="INTERPOLATION"/> file!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/upload-file-popup/upload-file-popup.component.ts</context>
           <context context-type="linenumber">15</context>
@@ -692,7 +608,6 @@
       </trans-unit>
       <trans-unit id="4b3972c3e9485218508a95f7a4ce7758e3f09ced" datatype="html">
         <source>Upload</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/upload-file-popup/upload-file-popup.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -701,7 +616,6 @@
       </trans-unit>
       <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
         <source>Cancel</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/shared/upload-file-popup/upload-file-popup.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -714,11 +628,170 @@
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
         <note priority="1" from="description">Button label</note>
+      </trans-unit>
+      <trans-unit id="3d3ae7deebc5949b0c1c78b9847886a94321d9fd" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/confirm-popup/confirm-popup.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4f20f2d5a6882190892e58b85f6ccbedfa737952" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/confirm-popup/confirm-popup.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="628782c684ec84f6aa3db54fde1b5066fd2f1d3a" datatype="html">
+        <source>Most Booked Vehicles</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+      </trans-unit>
+      <trans-unit id="91174aaae0716857d2ad4031f84576bc043fa993" datatype="html">
+        <source>
+                  Image
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">table header</note>
+      </trans-unit>
+      <trans-unit id="972e800ab08019719b69b34c3ebc33efc0836e26" datatype="html">
+        <source>
+                  ID
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">table header</note>
+      </trans-unit>
+      <trans-unit id="4bdc91802fee19481f681d8981e352b82f556460" datatype="html">
+        <source>
+                  Number of bookings
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">table header</note>
+      </trans-unit>
+      <trans-unit id="f2757e3568ceb60343254341d1326ee81bc9472d" datatype="html">
+        <source>There are no vehicles to show!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2bd64a5cf54e15074b41a5d0040e306a416d3876" datatype="html">
+        <source>Failed to get most booked vehicles! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-booked-vehicles/most-booked-vehicles.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="286355bdd43b4e3b03be3149d170c5ac38e9ffbd" datatype="html">
+        <source>
+              Initials
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-active-users/most-active-users.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Users table header</note>
+      </trans-unit>
+      <trans-unit id="e8a6d80521b53ae27e37344e1948e0b136f21762" datatype="html">
+        <source>
+              Name
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-active-users/most-active-users.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Users table header</note>
+      </trans-unit>
+      <trans-unit id="f30e5c30fb2f45e89e764d840444006bcf03e2de" datatype="html">
+        <source>
+              Number of bookings
+            </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-active-users/most-active-users.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Users table header</note>
+      </trans-unit>
+      <trans-unit id="f39804e2a8150bcbbdde35ae35701ce5f2c48a16" datatype="html">
+        <source>There are no users to show!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-active-users/most-active-users.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="37be99ee5b82eaabb28896eb2aa1440aa26364e7" datatype="html">
+        <source>Failed to get list of most active users! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/most-active-users/most-active-users.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="42f68597944eb063fb40fa2792540c47a2bd3ad3" datatype="html">
+        <source>Bookings per day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/bookings-per-day/bookings-per-day.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">statistics title</note>
+      </trans-unit>
+      <trans-unit id="6e3dde18a2cc96f012e044a8b063752e0a800da6" datatype="html">
+        <source>Failed to get data for &quot;Bookings per day&quot; chart! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/bookings-per-day/bookings-per-day.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="47a18e220b446b347a81e87c038f216a60cd667e" datatype="html">
+        <source>Bookings status overview</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/bookings-status-overview/bookings-status-overview.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">statistics title</note>
+      </trans-unit>
+      <trans-unit id="1f92cfbccc6f2cbf4093352fcb8891b77e713159" datatype="html">
+        <source>Failed to get data for &quot;Bookings status overview&quot; chart! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/shared/stats/bookings-status-overview/bookings-status-overview.component.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
         <source>Home</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/footer/footer.component.ts</context>
           <context context-type="linenumber">6</context>
@@ -727,7 +800,6 @@
       </trans-unit>
       <trans-unit id="6255a8674662e55d6ccc3ad46cc1dd0dd6394d75" datatype="html">
         <source>Forgot Password?</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/forget-password/forget-password.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -736,7 +808,6 @@
       </trans-unit>
       <trans-unit id="71c77bb8cecdf11ec3eead24dd1ba506573fa9cd" datatype="html">
         <source>Submit</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/anon/forget-password/forget-password.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -745,7 +816,6 @@
       </trans-unit>
       <trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
         <source>Settings</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -754,7 +824,6 @@
       </trans-unit>
       <trans-unit id="9be320828f2284f8e27f47acbc6bc3d0f8a5cf0d" datatype="html">
         <source>Book Vehicle</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -763,7 +832,6 @@
       </trans-unit>
       <trans-unit id="33629999fd41361c48d5a60a5783dfdbd09276b7" datatype="html">
         <source>Calendar</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
           <context context-type="linenumber">43</context>
@@ -772,7 +840,6 @@
       </trans-unit>
       <trans-unit id="69de13728ad7bb5620bb605aaad873aab6093ab8" datatype="html">
         <source>My Bookings</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
           <context context-type="linenumber">50</context>
@@ -781,28 +848,33 @@
       </trans-unit>
       <trans-unit id="408cb6073e60c5d966296a3207fc596adca75e01" datatype="html">
         <source>Admin</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
           <context context-type="linenumber">58</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
-      <trans-unit id="4d13a9cd5ed3dcee0eab22cb25198d43886942be" datatype="html">
-        <source>Users</source>
-        <target/>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <note priority="1" from="description">Menu button</note>
+      </trans-unit>
+      <trans-unit id="4d13a9cd5ed3dcee0eab22cb25198d43886942be" datatype="html">
+        <source>Users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">71</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
       <trans-unit id="e11a8401adcc5c60df18da01229e4bd3f5ed536e" datatype="html">
         <source>Vehicles</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">71</context>
+          <context context-type="linenumber">74</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
@@ -812,10 +884,9 @@
       </trans-unit>
       <trans-unit id="7cc6e757563c5d10d4ade28a96076c00ee47a091" datatype="html">
         <source>Bookings</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">77</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
@@ -825,28 +896,25 @@
       </trans-unit>
       <trans-unit id="3310ade5c4a1cf05fbceabe74beac19da713c16e" datatype="html">
         <source>Worldtrack Integration</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">77</context>
+          <context context-type="linenumber">80</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
       <trans-unit id="cc2f2c1beb15a2a4f33f652cdc42ff50b1dd4bc6" datatype="html">
         <source>Info / Support</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">86</context>
+          <context context-type="linenumber">89</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
       <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
         <source>Logout</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">93</context>
+          <context context-type="linenumber">96</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
@@ -854,48 +922,108 @@
         <source>
                 Info / Support
               </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">134</context>
+          <context context-type="linenumber">137</context>
         </context-group>
         <note priority="1" from="description">Menu button</note>
       </trans-unit>
       <trans-unit id="56b85c10eedd07bb837ec2b703e35e6bf8baa93b" datatype="html">
         <source>Logged out successfully!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">152</context>
+          <context context-type="linenumber">162</context>
         </context-group>
       </trans-unit>
       <trans-unit id="39f0fbff62528fc132fe9ef1f02a5dd0c56e0224" datatype="html">
         <source>Your organisation has no departments! Please create these under Admin &gt; Organisation.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="0e338bcf9cac7967c8aed7c02e31380861450405" datatype="html">
         <source>Your organisation has no locations! Please create these under Admin &gt; Organisation.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">154</context>
+          <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="95ccea8973484f01b06310959acdf87e32c268d7" datatype="html">
         <source>Your organisation has no vehicles! Please create these under Admin &gt; Vehicles, or integrate your WorldTrack account under Admin &gt; WorldTrack Integration to automatically import these.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/user.component.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">165</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="c5f6664388c08cfc158a6f097208bf760b94663d" datatype="html">
+        <source>Cofirm Logout</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fc5bc71bff82caf6c191eee041ca9454e46d498b" datatype="html">
+        <source>Are you sure about logging out from the application?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">167</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="86022280b7836d1aff7fdc0182415b041ae3625c" datatype="html">
+        <source>Draft</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+        <note priority="1" from="description">Booking status</note>
+      </trans-unit>
+      <trans-unit id="b36e1450940b7f6028d8587568c7d669b53f7a06" datatype="html">
+        <source>Active</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+        <note priority="1" from="description">Booking status</note>
+      </trans-unit>
+      <trans-unit id="a7c328c4773db932ff14a1954e15e43dca58e7b7" datatype="html">
+        <source>Completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <note priority="1" from="description">Booking status</note>
+      </trans-unit>
+      <trans-unit id="4d589b093da58dfb8ac9299aa7a82b5b6ccb87f2" datatype="html">
+        <source>Cancelled</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+        <note priority="1" from="description">Booking status</note>
+      </trans-unit>
+      <trans-unit id="e5d8bb389c702588877f039d72178f219453a72d" datatype="html">
+        <source>Unknown</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/user.component.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <note priority="1" from="description">Booking status</note>
       </trans-unit>
       <trans-unit id="5e420747842373fa99a75a7a18df068cc81e46fb" datatype="html">
         <source>Scheduled</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -904,7 +1032,6 @@
       </trans-unit>
       <trans-unit id="efac3af0b32e953279c25b6519cae256811e0fe8" datatype="html">
         <source>History</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">13</context>
@@ -913,7 +1040,6 @@
       </trans-unit>
       <trans-unit id="5ce395af3a8427d38f127a8b8c48900e6a1f94ca" datatype="html">
         <source>Pick up</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">33</context>
@@ -924,7 +1050,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">22</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/select-vehicle/select-vehicle.component.ts</context>
@@ -938,7 +1064,6 @@
       </trans-unit>
       <trans-unit id="4a0616affe6cad277c518ae67decf34ebab652f7" datatype="html">
         <source>Delivery</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -949,7 +1074,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">35</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/select-vehicle/select-vehicle.component.ts</context>
@@ -963,7 +1088,6 @@
       </trans-unit>
       <trans-unit id="ed31c09fd77c36238c13d83635f3fe5294c733d2" datatype="html">
         <source>Location</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
           <context context-type="linenumber">49</context>
@@ -974,7 +1098,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">58</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
@@ -985,36 +1109,28 @@
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="4d589b093da58dfb8ac9299aa7a82b5b6ccb87f2" datatype="html">
-        <source>Cancelled</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
-          <context context-type="linenumber">101</context>
-        </context-group>
-        <note priority="1" from="description">Booking state</note>
-      </trans-unit>
       <trans-unit id="a44a369c5caa3ad979895c1d2dadc77fe9a3da5c" datatype="html">
         <source>Failed to get your bookings! Please try again.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4b3d242989cbcd940d7ae695278037d2e74d92c4" datatype="html">
         <source>Failed to cancel booking!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/bookings/bookings.component.ts</context>
-          <context context-type="linenumber">118</context>
+          <context context-type="linenumber">120</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="31bfc5aaedf64526865e644d37553ac314d3647c" datatype="html">
         <source>
                   Start
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -1025,7 +1141,6 @@
         <source>
                   End
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">19</context>
@@ -1036,7 +1151,6 @@
         <source>
                   Status
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -1047,7 +1161,6 @@
         <source>
                   Vehicle
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -1058,7 +1171,6 @@
         <source>
                   Location
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -1073,7 +1185,6 @@
         <source>
                   Owner
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -1082,7 +1193,6 @@
       </trans-unit>
       <trans-unit id="030b4423b92167200e39519599f9b863b4f7c62c" datatype="html">
         <source>Actions</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
           <context context-type="linenumber">34</context>
@@ -1097,9 +1207,51 @@
         </context-group>
         <note priority="1" from="description">Bookings table header</note>
       </trans-unit>
+      <trans-unit id="ad8f56e4bcc56b8a8cbc323b4ae8add6d8c91f32" datatype="html">
+        <source>Confirm Booking Cancellation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="22ffaa17b7b2d13552dd32c7e093f1a641cdc4d9" datatype="html">
+        <source>Do you really want to cancel this booking?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0c04a04549b1b681b96f3b58ba54cf49bb21d58a" datatype="html">
+        <source>Failed to find DataTable! This is an unexpected error. Please try again by reloading the page.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7ae59a023da8b97c9b39b03eb4846abb0234495f" datatype="html">
+        <source>Please note that vehicles list has just been extended.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6b50402f1319971140f18647dcb3537628655161" datatype="html">
+        <source>Failed to get vehicles list! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/bookings/bookings.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="b24f1cd32cbc1ec9537af28c4fe1b8204097714b" datatype="html">
         <source>Time</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
           <context context-type="linenumber">11</context>
@@ -1114,30 +1266,42 @@
         </context-group>
         <note priority="1" from="description">Title</note>
       </trans-unit>
-      <trans-unit id="96f4808d2854ce1752b693c088bba9662bb3e378" datatype="html">
+      <trans-unit id="9fbda1cfa409320a515120d60c67883be190aca6" datatype="html">
         <source>
-              <x id="INTERPOLATION"/>
-              hour(s) from <x id="INTERPOLATION_1"/>
+              Total booking time
+              <x id="INTERPOLATION"/>h
+              <x id="INTERPOLATION_1"/>min
             </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">13</context>
         </context-group>
-        <note priority="1" from="description">Booking duration and start, e.g. 2 hours from May 26, 2017 14:00</note>
+        <note priority="1" from="description">Booking duration time, e.g. Total booking time 2h 25min</note>
       </trans-unit>
       <trans-unit id="deee67add7f93e4e06253acc38355c912891a47a" datatype="html">
         <source>Vehicle Type</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
-          <context context-type="linenumber">85</context>
+          <context context-type="linenumber">89</context>
         </context-group>
         <note priority="1" from="description">Title</note>
       </trans-unit>
+      <trans-unit id="caa4a61f9dd64590f91108a13ff34717ba742b4d" datatype="html">
+        <source>Failed to fetch locations! Please try again.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="33b75eb540a0c6e2ae0d79dc04f16fe292f0a583" datatype="html">
+        <source>Please select a location!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/book-vehicle/filter-vehicle/filter-vehicle.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="3a516df5acd06b98edf474e44b6338ac63b90bf5" datatype="html">
         <source>Book a Vehicle</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -1146,7 +1310,6 @@
       </trans-unit>
       <trans-unit id="9dbb346f2d93c7d3298f045962eeb6c33e823bed" datatype="html">
         <source>Use the following steps to book a vehicle.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -1154,7 +1317,6 @@
       </trans-unit>
       <trans-unit id="8c769ad3f644cb16ac566d00a7beb53d61198bb9" datatype="html">
         <source>1. Filter Vehicles</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">82</context>
@@ -1162,7 +1324,6 @@
       </trans-unit>
       <trans-unit id="f7b934814229e849761239d6f7bb68c7a1f934a2" datatype="html">
         <source>2. Select Available Vehicle</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">83</context>
@@ -1170,7 +1331,6 @@
       </trans-unit>
       <trans-unit id="42ecf1b076e0a6ca2af7ed62ef9df015cfa43d53" datatype="html">
         <source>3. Confirm Booking</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">84</context>
@@ -1178,7 +1338,6 @@
       </trans-unit>
       <trans-unit id="f732c304c7433e5a83ffcd862c3dce709a0f4982" datatype="html">
         <source>Next</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">85</context>
@@ -1186,7 +1345,6 @@
       </trans-unit>
       <trans-unit id="680d5c75b7fd8d37961083608b9fcdc4167b4c43" datatype="html">
         <source>Previous</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">86</context>
@@ -1194,7 +1352,6 @@
       </trans-unit>
       <trans-unit id="68e710782ccb5398b3acb8844caf0b199da2c3da" datatype="html">
         <source>Confirm</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">87</context>
@@ -1202,7 +1359,6 @@
       </trans-unit>
       <trans-unit id="379e67f116d143dd84e2896a3c9139f6b54f7020" datatype="html">
         <source>Got no match!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">88</context>
@@ -1210,7 +1366,6 @@
       </trans-unit>
       <trans-unit id="8a5d865df1e46f96abc4c0aae6bf87f00aea24fc" datatype="html">
         <source>Failed to find bookable vehicles!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">89</context>
@@ -1218,7 +1373,6 @@
       </trans-unit>
       <trans-unit id="8cd0387859b2ed5564dd8bb103636bbb35bf5e22" datatype="html">
         <source>Failed to create a booking for the selected vehicle!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">90</context>
@@ -1226,15 +1380,20 @@
       </trans-unit>
       <trans-unit id="9b0e318eb237e41bfa1e5a8bc95fcb1d9e5a90bb" datatype="html">
         <source>Failed to confirm the booking!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
           <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="d0c4957dbf7b6db1e9014a0b46afb85bd12f3cdf" datatype="html">
+        <source>Failed to cancel the drafted booking!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/book-vehicle/book-vehicle.component.ts</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1e5a81f6e91decfe7b4dd2840fb3ad79c01007d6" datatype="html">
         <source>Failed to fetch events!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/calendar/calendar.component.ts</context>
           <context context-type="linenumber">14</context>
@@ -1243,7 +1402,6 @@
       </trans-unit>
       <trans-unit id="7fb1099e29660162f9154d5b2feee7743a423df6" datatype="html">
         <source>Today</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/calendar/calendar.component.ts</context>
           <context context-type="linenumber">15</context>
@@ -1252,7 +1410,6 @@
       </trans-unit>
       <trans-unit id="5bb4a09a669f55893c9a37a8480c8fa3f7ce5702" datatype="html">
         <source>Month</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/calendar/calendar.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -1261,7 +1418,6 @@
       </trans-unit>
       <trans-unit id="73339760fe932d2b494728d4366947755d127e00" datatype="html">
         <source>Week</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/calendar/calendar.component.ts</context>
           <context context-type="linenumber">17</context>
@@ -1270,16 +1426,130 @@
       </trans-unit>
       <trans-unit id="efffb64bda94fa4f4493322c5e3717e845d5dc30" datatype="html">
         <source>Day</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/calendar/calendar.component.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
         <note priority="1" from="description">Calendar</note>
       </trans-unit>
+      <trans-unit id="46d917be4251841b722e1f9d288c804e5129eb35" datatype="html">
+        <source>Select Time Frame</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Title</note>
+      </trans-unit>
+      <trans-unit id="7668986b9f753fcd72ad4a00b1a0c4861d1f7fb8" datatype="html">
+        <source>Last 30 days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="02e0243b60007368f87dc01e083f232dd025096d" datatype="html">
+        <source>Last 7 days</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b09c15db9a5ea2467497cc5244fb2ac39c6efe4f" datatype="html">
+        <source>Last 3 months</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8434d4a28744d7df82cd39ef8da4266fcbc40064" datatype="html">
+        <source>Start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Input label for time frame</note>
+      </trans-unit>
+      <trans-unit id="b68ce78c3f2c548391d812c248217f8a212491e1" datatype="html">
+        <source>End</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Input label for time frame</note>
+      </trans-unit>
+      <trans-unit id="8eb62055dbf5c7b4cca21c0f2c07ea5307ba08c0" datatype="html">
+        <source>Most popular booking time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="89b83a80cfe6dedd96647fbf8c6cbe766a6bd936" datatype="html">
+        <source>Based on the start time of the bookings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca4e77dd853ada46f3e69fe150e2364105de17cf" datatype="html">
+        <source>Failed to fetch the most popular booking time for the selected time frame!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ff55ae0d1a19151a16c314ab53a4399ed0d3398f" datatype="html">
+        <source>Average booking duration</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="29b54ce48bbff6d1be24355a6c299e17aba72d93" datatype="html">
+        <source><x id="INTERPOLATION"/>h <x id="INTERPOLATION_1"/>min</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+        <note priority="1" from="description">average booking duration, e.g. 2h 35min</note>
+      </trans-unit>
+      <trans-unit id="f5b19299ca567301e54df93120e743634436c59a" datatype="html">
+        <source>In the selected time frame</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf894f898ce65861d2a4eaf8925b3a57f4eeecf8" datatype="html">
+        <source>Failed to fetch average booking duration for the selected time frame!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ba7fb83b112273382ed60e6a28df01b488b66b2a" datatype="html">
+        <source>Unused vehicles count</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="25046a48ac442e330b3578635e8ca342627aaa35" datatype="html">
+        <source>Not booked in the selected time frame</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c6b0ed488137c9c4c086243768bba52ae63ef032" datatype="html">
+        <source>Failed to fetch unused vehicles count for the selected time frame!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/dashboard/dashboard.component.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="52e263589b47e27f8daeaab09e4be8a766be5457" datatype="html">
         <source>Organisation Profile</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/organisation.component.ts</context>
           <context context-type="linenumber">9</context>
@@ -1288,7 +1558,6 @@
       </trans-unit>
       <trans-unit id="afa960379d26eb20fd22e6e10537c1c5ec74c5d1" datatype="html">
         <source>Save Changes</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/organisation.component.ts</context>
           <context context-type="linenumber">35</context>
@@ -1297,7 +1566,6 @@
       </trans-unit>
       <trans-unit id="c202a70e8d4ebd291c44a4e99e523bb740a2d3c6" datatype="html">
         <source>Your changes were saved successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/organisation.component.ts</context>
           <context context-type="linenumber">36</context>
@@ -1305,7 +1573,6 @@
       </trans-unit>
       <trans-unit id="90130ff2ea9d17a48987ea0b1da39e24d9239b33" datatype="html">
         <source>Failed to update your organisation profile! Please try again.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/organisation.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -1313,7 +1580,6 @@
       </trans-unit>
       <trans-unit id="d3781ad331fdd0bc9055c45a41664ac467de63af" datatype="html">
         <source>Edit Profile</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/settings.component.ts</context>
           <context context-type="linenumber">8</context>
@@ -1322,7 +1588,6 @@
       </trans-unit>
       <trans-unit id="5edf054f14aa57bc25a28cb7db01956fee53dac8" datatype="html">
         <source>Change Password</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/settings.component.ts</context>
           <context context-type="linenumber">21</context>
@@ -1335,7 +1600,6 @@
       </trans-unit>
       <trans-unit id="84238fe582752e84f74e575ef0e0e48ca96a750b" datatype="html">
         <source>Update User</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/user-editor/user-editor.component.ts</context>
           <context context-type="linenumber">9</context>
@@ -1343,7 +1607,6 @@
       </trans-unit>
       <trans-unit id="b4fa582934423ff841473bc5297edb6bf681b1f0" datatype="html">
         <source>Create User</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/user-editor/user-editor.component.ts</context>
           <context context-type="linenumber">10</context>
@@ -1351,16 +1614,23 @@
       </trans-unit>
       <trans-unit id="9e4bc22373be7ca5186022ac265c22eb3b0dc788" datatype="html">
         <source>Is Admin?</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/user-editor/user-editor.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">22</context>
         </context-group>
         <note priority="1" from="description">User editor</note>
       </trans-unit>
+      <trans-unit id="c2ee7aa4067baf56768f9e46ef63ed818822b8ca" datatype="html">
+        <source>
+                  When a user has admin rights, the user is able to manage data, such as organisation, vehicles, users and GPS integration.
+                </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/users/user-editor/user-editor.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="94be6ae6ec1f87bedc67020629343b27fdbece0a" datatype="html">
         <source>Add User</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">12</context>
@@ -1369,7 +1639,6 @@
       </trans-unit>
       <trans-unit id="d3606d07a214076d4eed37c99efce848e8c93022" datatype="html">
         <source>Upload CSV File</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -1384,7 +1653,6 @@
         <source>
                   Initials
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -1395,7 +1663,6 @@
         <source>
                   Name
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -1406,7 +1673,6 @@
         <source>
                   Email
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">32</context>
@@ -1417,7 +1683,6 @@
         <source>
                   Phone
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">35</context>
@@ -1428,7 +1693,6 @@
         <source>
                   Job Title
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">38</context>
@@ -1439,7 +1703,6 @@
         <source>
                   Department
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">41</context>
@@ -1450,131 +1713,105 @@
         <source>
                     Admin
                   </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="f39804e2a8150bcbbdde35ae35701ce5f2c48a16" datatype="html">
-        <source>There are no users to show!</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="5fd50b309b05302b4423f43db7257c4a7384c4fa" datatype="html">
         <source>CSV File Format</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">103</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">111</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <note priority="1" from="description">Title</note>
       </trans-unit>
       <trans-unit id="6f5190fa7bc894b95060b6f88b799fc445696223" datatype="html">
         <source>Please make sure the format of the CSV file is as shown in the example below:</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">107</context>
+          <context context-type="linenumber">104</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">112</context>
+          <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9a9c490140cf2865dc1c01d03b8eb6de1b8d8b70" datatype="html">
         <source>You can also upload only a list of emails, e.g.:</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">113</context>
+          <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="b84049ea3115f7e2984edde06cdf19c84d286ecb" datatype="html">
         <source>users.csv</source>
-        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+        <note priority="1" from="description">CSV file name for importing users</note>
+      </trans-unit>
+      <trans-unit id="9ef88654aab4b2df4fa2083f33caa0c5419c1a60" datatype="html">
+        <source>Do you really want to delete this user?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d13eb344e7954ae6a7b00cb0acdf28fe087ea4ec" datatype="html">
+        <source>Confirm User Deletion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+        <note priority="1" from="description">Dialog title</note>
+      </trans-unit>
+      <trans-unit id="22aa983a2549c2a11514612414fe37022432a5b8" datatype="html">
+        <source>Please note that users list has just been extended.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">126</context>
         </context-group>
-        <note priority="1" from="description">CSV file name for importing users</note>
       </trans-unit>
-      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
-        <source>Delete</source>
-        <target/>
+      <trans-unit id="bb21ea872f5408adb128fe267a0d9ebd08c6cd08" datatype="html">
+        <source>Failed to get users list! Please try again.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">127</context>
         </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">127</context>
-        </context-group>
-        <note priority="1" from="description">Button label</note>
       </trans-unit>
-      <trans-unit id="0914cbe18bae204217e1851be6d2d24d86e74605" datatype="html">
-        <source>user</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">128</context>
-        </context-group>
-        <note priority="1" from="description">Label</note>
-      </trans-unit>
-      <trans-unit id="22aa983a2549c2a11514612414fe37022432a5b8" datatype="html">
-        <source>Please note that users list has just been extended.</source>
-        <target/>
+      <trans-unit id="40529721f911f9229c8413bb45187b0e7c4cbb4d" datatype="html">
+        <source>Failed to delete the user!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="bb21ea872f5408adb128fe267a0d9ebd08c6cd08" datatype="html">
-        <source>Failed to get users list! Please try again.</source>
-        <target/>
+      <trans-unit id="b18335bbf6b34357020af335d5fba03ca4001c06" datatype="html">
+        <source>File uploaded successfully. However, it will take a while before the users are available in the system.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="40529721f911f9229c8413bb45187b0e7c4cbb4d" datatype="html">
-        <source>Failed to delete the user!</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">132</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="b18335bbf6b34357020af335d5fba03ca4001c06" datatype="html">
-        <source>File uploaded successfully. However, it will take a while before the users are available in the system.</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="3759680b8f8f479039d736eea941de2315776e88" datatype="html">
         <source>Failed to upload the file! Please try again.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/users/users.component.ts</context>
-          <context context-type="linenumber">134</context>
+          <context context-type="linenumber">131</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">134</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="f00d034db6252c316621b0cf3d04f61447873b68" datatype="html">
         <source>Upload Vehicle Image</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">9</context>
@@ -1583,7 +1820,6 @@
       </trans-unit>
       <trans-unit id="41345dbbfbaa57957e5f58a13c58153d60c9334e" datatype="html">
         <source>Upload Image</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -1591,7 +1827,6 @@
       </trans-unit>
       <trans-unit id="5b21f6f0c85817d31e112e1cae5540a9cb179bcb" datatype="html">
         <source>Image Preview</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -1601,7 +1836,6 @@
         <source>
           <x id="INTERPOLATION"/> and Continue
         </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -1609,7 +1843,6 @@
       </trans-unit>
       <trans-unit id="d6b3aa8b8ae12f0871df7b460f0ab0f1c7243669" datatype="html">
         <source><x id="INTERPOLATION"/> Vehicle</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">45</context>
@@ -1618,7 +1851,6 @@
       </trans-unit>
       <trans-unit id="70a67e04629f6d412db0a12d51820b480788d795" datatype="html">
         <source>Create</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">59</context>
@@ -1627,7 +1859,6 @@
       </trans-unit>
       <trans-unit id="eb075d0450deb6f381616f7da4b9244ced843053" datatype="html">
         <source>Skip</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">60</context>
@@ -1636,7 +1867,6 @@
       </trans-unit>
       <trans-unit id="047f50bc5b5d17b5bec0196355953e1a5c590ddb" datatype="html">
         <source>Update</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -1645,7 +1875,6 @@
       </trans-unit>
       <trans-unit id="9bd40a581e46f11f56384fa52fb972d05f2ce719" datatype="html">
         <source>Failed to create the vehicle!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">62</context>
@@ -1653,7 +1882,6 @@
       </trans-unit>
       <trans-unit id="1ec85af9ee3959bc6d30761393209323692cb041" datatype="html">
         <source>Failed to update the Vehicle!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">63</context>
@@ -1661,7 +1889,6 @@
       </trans-unit>
       <trans-unit id="dadfdd32788107cff2a620032313a1e6438cb21f" datatype="html">
         <source>Failed to upload Vehicle Image!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicle-editor/vehicle-editor.component.ts</context>
           <context context-type="linenumber">64</context>
@@ -1669,40 +1896,16 @@
       </trans-unit>
       <trans-unit id="030788fcddce7f163b7a6fea94ea83998f16dda6" datatype="html">
         <source>Add Vehicle</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
         <note priority="1" from="description">button label</note>
       </trans-unit>
-      <trans-unit id="91174aaae0716857d2ad4031f84576bc043fa993" datatype="html">
-        <source>
-                  Image
-                </source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-        <note priority="1" from="description">table header</note>
-      </trans-unit>
-      <trans-unit id="972e800ab08019719b69b34c3ebc33efc0836e26" datatype="html">
-        <source>
-                  ID
-                </source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-        <note priority="1" from="description">table header</note>
-      </trans-unit>
       <trans-unit id="fe0814362b9293dd33b2c08b23a235c82bc8dbd6" datatype="html">
         <source>
                   Tracker ID
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">35</context>
@@ -1713,7 +1916,6 @@
         <source>
                   Type
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">38</context>
@@ -1724,7 +1926,6 @@
         <source>
                   Manufacturer
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">41</context>
@@ -1735,74 +1936,52 @@
         <source>
                   Model
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
         <note priority="1" from="description">table header</note>
       </trans-unit>
-      <trans-unit id="f2757e3568ceb60343254341d1326ee81bc9472d" datatype="html">
-        <source>There are no vehicles to show!</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">75</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="d681e3b64df0a66e2d5ca097d1240dbc0cc5ca79" datatype="html">
         <source>vehicles.csv</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">123</context>
         </context-group>
         <note priority="1" from="description">CSV file name for importing vehicles</note>
       </trans-unit>
-      <trans-unit id="8a6f9a39b87cb841d5aa6e5b7b0b6628e5f7faff" datatype="html">
-        <source>vehicle</source>
-        <target/>
+      <trans-unit id="db6cdfc3a12b895a394e921a5d8e85aa5449b330" datatype="html">
+        <source>Do you really want to delete this vehicle?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">128</context>
+          <context context-type="linenumber">124</context>
         </context-group>
-        <note priority="1" from="description">Label</note>
+        <note priority="1" from="description">Button label</note>
       </trans-unit>
-      <trans-unit id="7ae59a023da8b97c9b39b03eb4846abb0234495f" datatype="html">
-        <source>Please note that vehicles list has just been extended.</source>
-        <target/>
+      <trans-unit id="cc63a36bd3bf818130084048a6962208722fa3a8" datatype="html">
+        <source>Confirm Vehicle Deletion</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+        <note priority="1" from="description">Dialog title</note>
+      </trans-unit>
+      <trans-unit id="25709f98e8f53a3f1cd0d91e357c802e735dc0c9" datatype="html">
+        <source>Failed to delete the vehicle!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="6b50402f1319971140f18647dcb3537628655161" datatype="html">
-        <source>Failed to get vehicles list! Please try again.</source>
-        <target/>
+      <trans-unit id="52aebbbe06deb4a4129d3dff24b9ee2ea60451c3" datatype="html">
+        <source>File uploaded successfully. However, it will take a while before the vehicles are available in the system.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="25709f98e8f53a3f1cd0d91e357c802e735dc0c9" datatype="html">
-        <source>Failed to delete the vehicle!</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">132</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="52aebbbe06deb4a4129d3dff24b9ee2ea60451c3" datatype="html">
-        <source>File uploaded successfully. However, it will take a while before the vehicles are available in the system.</source>
-        <target/>
-        <context-group purpose="location">
-          <context context-type="sourcefile">app/user/admin/vehicles/vehicles.component.ts</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="844976917f353781b4b11e8109ab2f2fff16e256" datatype="html">
         <source>Booked Vehicles</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">20</context>
@@ -1811,7 +1990,6 @@
       </trans-unit>
       <trans-unit id="a5f9ba9bb9faa8284bcadb1cdbc6aaf969e9c4bb" datatype="html">
         <source>Image</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -1820,7 +1998,6 @@
       </trans-unit>
       <trans-unit id="45cc8ca94b5a50842a9a8ef804a5ab089a38ae5c" datatype="html">
         <source>ID</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -1829,7 +2006,6 @@
       </trans-unit>
       <trans-unit id="0b16b62feae2a020989fea947ad2fa9dd5901d6a" datatype="html">
         <source>Tracker ID</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -1838,7 +2014,6 @@
       </trans-unit>
       <trans-unit id="19fb76d235faa5cc61df1380156f165edff649b6" datatype="html">
         <source>None of the vehicles are currenlty booked!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">38</context>
@@ -1846,7 +2021,6 @@
       </trans-unit>
       <trans-unit id="b51d1aae5c81730755b9e37b34503f1f9b0a7043" datatype="html">
         <source>Fetching data...</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">43</context>
@@ -1856,7 +2030,6 @@
         <source>
                   From: <x id="INTERPOLATION"/>, To: <x id="INTERPOLATION_1"/>
                 </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">61</context>
@@ -1865,7 +2038,6 @@
       </trans-unit>
       <trans-unit id="da990348b9cccdb4850b56b1f1e8de586f2eb4fb" datatype="html">
         <source>Error while fetching units from Wilaon for import: <x id="INTERPOLATION"/></source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -1873,7 +2045,6 @@
       </trans-unit>
       <trans-unit id="f6d37369ec929aaeeb482fd476783a7751281924" datatype="html">
         <source>It was not possible to fetch list of booked vehicles!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integration.component.ts</context>
           <context context-type="linenumber">75</context>
@@ -1881,7 +2052,6 @@
       </trans-unit>
       <trans-unit id="f79611b9cc78f612ae8cc2cce08ff9f14581aeb3" datatype="html">
         <source>Selected</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/book-vehicle/confirm-booking/confirm-booking.component.ts</context>
           <context context-type="linenumber">43</context>
@@ -1889,7 +2059,6 @@
       </trans-unit>
       <trans-unit id="b0eb36c39ab0ff3b006757cddb41701f40608402" datatype="html">
         <source>Manage Organisation Departments</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">6</context>
@@ -1898,7 +2067,6 @@
       </trans-unit>
       <trans-unit id="9c96bc50fc888976a14d6f6fea6cbf3166d194f9" datatype="html">
         <source>add new</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">11</context>
@@ -1912,7 +2080,6 @@
         <source>
       Load More
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -1921,7 +2088,6 @@
       </trans-unit>
       <trans-unit id="62d186792d3dbf43ab16c4b89cbff271708d0756" datatype="html">
         <source>Failed to fetch departments!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -1929,7 +2095,6 @@
       </trans-unit>
       <trans-unit id="059dfdea36ec6fa6f4e0c62a142b2c3ffa4aa881" datatype="html">
         <source>Nothing to save!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">26</context>
@@ -1941,7 +2106,6 @@
       </trans-unit>
       <trans-unit id="68839a98e885662c843c5da04d5afb4a6310e46b" datatype="html">
         <source><x id="INTERPOLATION"/> was added successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -1950,7 +2114,6 @@
       </trans-unit>
       <trans-unit id="f942f86ca27235b604595e5e4eadd03f69f55df7" datatype="html">
         <source>Failed to add <x id="INTERPOLATION"/>.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -1959,7 +2122,6 @@
       </trans-unit>
       <trans-unit id="a1f9c8aaf4539c203ae8c3906cf9e3d34476da79" datatype="html">
         <source>Error: <x id="INTERPOLATION"/></source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">29</context>
@@ -1972,7 +2134,6 @@
       </trans-unit>
       <trans-unit id="3e4ed00e18fe232d70ac8a9e911b3a9b7d6cb6d6" datatype="html">
         <source><x id="INTERPOLATION"/> was deleted successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -1981,7 +2142,6 @@
       </trans-unit>
       <trans-unit id="40f0445d3654733ccd4182f68621beb9c8a393cd" datatype="html">
         <source>Failed to delete <x id="INTERPOLATION"/>.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/departments/departments.component.ts</context>
           <context context-type="linenumber">31</context>
@@ -1990,7 +2150,6 @@
       </trans-unit>
       <trans-unit id="e7321022464058e2c388aad53b3160238bc803d3" datatype="html">
         <source>Manage Organisation Locations</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">6</context>
@@ -1999,7 +2158,6 @@
       </trans-unit>
       <trans-unit id="391f554bde41e7be5f5e65e309f2b93c4b33cc23" datatype="html">
         <source>Failed to fetch locations!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -2007,7 +2165,6 @@
       </trans-unit>
       <trans-unit id="01bf94937bdd3517b380c5c0426c8ed6b8b920c9" datatype="html">
         <source><x id="INTERPOLATION"/> was added successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">24</context>
@@ -2016,7 +2173,6 @@
       </trans-unit>
       <trans-unit id="af8fef929cfd786e9fd79ce87b4c1dc640ef0cc4" datatype="html">
         <source>Failed to add <x id="INTERPOLATION"/>.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">25</context>
@@ -2025,7 +2181,6 @@
       </trans-unit>
       <trans-unit id="dc414da723c444a15d462601a5b8073717168ebc" datatype="html">
         <source><x id="INTERPOLATION"/> was deleted successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">27</context>
@@ -2034,7 +2189,6 @@
       </trans-unit>
       <trans-unit id="46f6b3c5134187a1d6ab7d7443b7d2dc5989df97" datatype="html">
         <source>Failed to delete <x id="INTERPOLATION"/>.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/organisation/locations/locations.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -2043,7 +2197,6 @@
       </trans-unit>
       <trans-unit id="dc5ab334cb1c63903fde88cf858a3e2bb50dcff5" datatype="html">
         <source>Select a Department</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/select-department/select-department.component.ts</context>
           <context context-type="linenumber">5</context>
@@ -2051,7 +2204,6 @@
       </trans-unit>
       <trans-unit id="59e4a672fef9399c9982e17b0672094f1c8750c1" datatype="html">
         <source>Initials</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">4</context>
@@ -2060,7 +2212,6 @@
       </trans-unit>
       <trans-unit id="484b0e541230d60ddb5fbd771a34a5c8d90e7a57" datatype="html">
         <source>Full Name</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">10</context>
@@ -2069,7 +2220,6 @@
       </trans-unit>
       <trans-unit id="ec984ab36f1da5f75ba43f9bd4b866ca9c7e6493" datatype="html">
         <source>Email Address</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -2078,7 +2228,6 @@
       </trans-unit>
       <trans-unit id="6934d8edd276d59e050006fe91b695ebad0218f8" datatype="html">
         <source>Phone</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">22</context>
@@ -2089,7 +2238,6 @@
         <source>
     The form contains one or more error! Please correct these.
   </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">37</context>
@@ -2099,7 +2247,6 @@
         <source>
     Save
   </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">46</context>
@@ -2108,7 +2255,6 @@
       </trans-unit>
       <trans-unit id="98f39e25310122445dbb7126800718e632320ddf" datatype="html">
         <source>Failed to get departments!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/user-form/user-form.component.ts</context>
           <context context-type="linenumber">55</context>
@@ -2116,7 +2262,6 @@
       </trans-unit>
       <trans-unit id="c7014c6360e94b236286b869c3fe0ea9911c0387" datatype="html">
         <source>New Password</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/change-password-form/change-password-form.component.ts</context>
           <context context-type="linenumber">3</context>
@@ -2127,7 +2272,6 @@
         <source>
       Password must be atleast 6 characters long
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/change-password-form/change-password-form.component.ts</context>
           <context context-type="linenumber">9</context>
@@ -2137,7 +2281,6 @@
         <source>
       Password must contain atleast one letter and one digit
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/change-password-form/change-password-form.component.ts</context>
           <context context-type="linenumber">16</context>
@@ -2147,7 +2290,6 @@
         <source>
       The two passwords do not match
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/settings/change-password-form/change-password-form.component.ts</context>
           <context context-type="linenumber">28</context>
@@ -2155,7 +2297,6 @@
       </trans-unit>
       <trans-unit id="dddac9a8f3082b7558f17005515aecf250696920" datatype="html">
         <source>Integrator</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">6</context>
@@ -2169,7 +2310,6 @@
       Once clicked, the button will launch a popup window
       with a login form where you can login to your WorldTrack account.
     </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">7</context>
@@ -2180,7 +2320,6 @@
       Your account has been successfully integrated with WorldTrack.
       The following access token is currently being used:
       </source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">15</context>
@@ -2188,7 +2327,6 @@
       </trans-unit>
       <trans-unit id="d046847d4e7f1a5e4d7ced9c292bcf10915b63bf" datatype="html">
         <source>Integrate</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">30</context>
@@ -2197,7 +2335,6 @@
       </trans-unit>
       <trans-unit id="034724d1373522e4422d22ccfd052ed81ae7d681" datatype="html">
         <source>It was not possible to receive token from Wialon! Please try again.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">38</context>
@@ -2205,7 +2342,6 @@
       </trans-unit>
       <trans-unit id="67de53dd2ed5e9e22a8f8e1b328b115abab259fe" datatype="html">
         <source>The token has been stored successfully.</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">39</context>
@@ -2213,7 +2349,6 @@
       </trans-unit>
       <trans-unit id="3314a660ff9ae73eb0ac4e54a272f3c7605c6a96" datatype="html">
         <source>Due to an error, it was not possible to store the token!</source>
-        <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">app/user/admin/wialon-integration/wialon-integrator/wialon-integrator.component.ts</context>
           <context context-type="linenumber">40</context>

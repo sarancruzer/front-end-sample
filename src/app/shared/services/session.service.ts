@@ -23,10 +23,21 @@ export class SessionService {
   }
 
   setUser(userObj: User) {
+	if(userObj){
+
+        localStorage.setItem("user",JSON.stringify(userObj));
+
+    	}else{
+
+        localStorage.setItem("user","");
+        
+    	}
     this.user = userObj;
   }
 
   getUser(): User {
+    var tempUser  = JSON.parse(localStorage.getItem('user'));
+    this.user     = tempUser;	
     return this.user;
   }
 

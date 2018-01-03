@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { AnonModule } from './anon/anon.module';
 import { UserModule } from './user/user.module';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { OrganisationService, SessionService } from './shared/services';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { OrganisationService, SessionService } from './shared/services';
     AnonModule,
     UserModule
   ],
-  providers: [OrganisationService, SessionService],
+  providers: [OrganisationService, SessionService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

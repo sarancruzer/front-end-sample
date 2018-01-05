@@ -1,4 +1,4 @@
-const baseUrl = 'https://word-track.appspot.com/';
+const baseUrl = 'https://word-track.appspot.com';
 
 export const environment = {
   production: true,

@@ -40,12 +40,8 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
-<<<<<<< HEAD
-    "extract-text-webpack-plugin": "^1.0.1",
-=======
     "extract-text-webpack-plugin": "^2.1.2",
->>>>>>> d4c55818f8015292453b2f430aa2a8e1320c4ef4
-    "jasmine-core": "2.5.2",
+  "jasmine-core": "2.5.2",
     "karma": "1.2.0",
     "karma-cli": "^1.0.1",
     "karma-coverage-istanbul-reporter": "^1.2.1",

@@ -1,5 +1,5 @@
 import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'nb-languages',
   templateUrl: './languages.component.html',
@@ -8,9 +8,13 @@ import { Component, OnInit, LOCALE_ID, Inject } from '@angular/core';
 export class LanguagesComponent implements OnInit {
 
   languages: Object[];
+  currentUrl:string;
 
   constructor(
-    @Inject(LOCALE_ID) protected localeId: string
+    @Inject(LOCALE_ID) protected localeId: string,
+    private router:ActivatedRoute
+    
+    
   ) {
     this.languages = [
       { code: 'da', label: 'Dansk' },
@@ -23,6 +27,8 @@ export class LanguagesComponent implements OnInit {
   }
 
   ngOnInit() {
+    // console.log(window.location.hash)
+    this.currentUrl = window.location.hash;    
   }
 
 }

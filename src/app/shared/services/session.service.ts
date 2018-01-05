@@ -54,11 +54,11 @@ export class SessionService {
   }
 
   getUser(): User {
-   /* if (!(this.user)) {
+   if (!(this.user)) {
     var tempUser  = JSON.parse(localStorage.getItem('user'));
     this.user     = tempUser;
     console.log(this.user);
-    } */
+    } 
     return this.user;
   }
 
@@ -77,12 +77,12 @@ export class SessionService {
 
   getOrganisation(): Organisation {
 
-    /* if(!(this.organisation)){    
+    if(!(this.organisation)){    
       var tempUser  = JSON.parse(localStorage.getItem('org'));
       this.organisation     = tempUser;
       console.log(this.organisation);
     }
-    */
+    
     return this.organisation;
 
   }

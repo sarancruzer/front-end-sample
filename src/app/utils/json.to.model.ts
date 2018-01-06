@@ -30,9 +30,9 @@ export default class JsonToModelTransformers {
             isAvailable: obj ? obj.is_available : false,
             key: obj ? obj.vehicle_key : '',
             location: obj && obj.location ? obj.location : null,
-            manufacturer: obj ? obj.manufacturer : '',
-            model: obj ? obj.model : '',
-            trackerId: obj ? obj.tracker_id : '',
+            manufacturer: obj && obj.manufacturer ? obj.manufacturer : '',
+            model: obj && obj.model ? obj.model : '',
+            trackerId: obj && obj.tracker_id ? obj.tracker_id : '',
             type: obj ? VehicleTypesService.find(obj.type) : VehicleTypesService.find('OTHER'),
             vehicleId: obj ? obj.vehicle_id : ''
         };

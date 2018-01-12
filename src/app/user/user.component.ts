@@ -1,6 +1,6 @@
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import {
   Router,
   ActivatedRoute,
@@ -40,8 +40,8 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
 
   confirmLogoutMsg: string;
 
-  @ViewChild(ConfirmPopupComponent)
-  private confirmPopupComponent: ConfirmPopupComponent;
+  @ViewChild(ConfirmPopupComponent) 
+  private cpcomponent: ConfirmPopupComponent;
 
   constructor(
     private route: ActivatedRoute,
@@ -52,7 +52,8 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
     private locationsService: LocationsService,
     private vehiclesService: VehiclesService,
     private lang: LangService,
-    private mdp: MaterialDashboardProService
+    private mdp: MaterialDashboardProService,
+    private cd: ChangeDetectorRef
   ) {
     router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
@@ -66,26 +67,33 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
     this.updateActivatedRouteData();
-    this.user = this.sessionService.getUser();
-
+    this.user = this.sessionService.getUser();    
     if (this.user.isAdmin) {
       this.notifyAdmin();
     }
   }
 
   ngAfterViewInit() {
-    this.confirmLogoutTitle = this.lang.get('ttl_confirm_logout');
-    this.confirmLogoutMsg = this.lang.get('msg_confirm_logout');
+    
+    setTimeout(() => {
+      this.confirmLogoutTitle = this.lang.get('ttl_confirm_logout');
+      this.confirmLogoutMsg = this.lang.get('msg_confirm_logout');
+  });
+    
   }
 
   ngOnDestroy() {
     if (this.departmentListSubscription) {
       this.departmentListSubscription.unsubscribe();
-    }
+    }    
   }
 
   logout() {
-    this.confirmPopupComponent.show();
+    setTimeout(() => {
+      this.confirmLogoutTitle = this.lang.get('ttl_confirm_logout');
+      this.confirmLogoutMsg = this.lang.get('msg_confirm_logout');
+  });    
+    this.cpcomponent.show();
   }
 
   onLogoutConfirmed() {

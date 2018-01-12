@@ -132,9 +132,11 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    setTimeout(() => {
     this.deleteDialogTitle = this.lang.get('ttl_v_delete_confirm');
     this.deleteConfirmationMsg = this.lang.get('msg_v_delete_confirm');
     this.uploadActionText = this.lang.get('vehicles_csv');
+    });
   }
 
   onEditorShown() {
@@ -183,8 +185,13 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
 
   deleteVehicle(vehicle: Vehicle) {
     this.vehicle = vehicle;
-    this.confirmPopupComponent.show();
-  }
+    setTimeout(() => {
+      this.deleteDialogTitle = this.lang.get('ttl_v_delete_confirm');
+      this.deleteConfirmationMsg = this.lang.get('msg_v_delete_confirm');
+      this.uploadActionText = this.lang.get('vehicles_csv');
+      this.confirmPopupComponent.show();
+      });
+     }
 
   onFileUpload(event: File) {
     this.isBusy = true;
@@ -194,7 +201,11 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
         this.isBusy = false;
         const msg = this.lang.get('msg_csv_file_uploaded_v');
         this.notificationService.notifySuccess(msg, true);
-        this.getVehicles();
+        this.vehiclesService.reset();
+        setTimeout(() => {
+          this.getVehicles();
+        }, 5000);
+        
       },
       err => {
         this.isBusy = false;

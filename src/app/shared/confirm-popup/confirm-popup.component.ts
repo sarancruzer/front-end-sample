@@ -1,5 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy, SimpleChanges } from '@angular/core';
+import { Message } from '@angular/compiler/src/i18n/i18n_ast';
+/* ,
+  changeDetection: ChangeDetectionStrategy.OnPush */
 @Component({
   selector: 'nb-confirm-popup',
   templateUrl: './confirm-popup.component.html',
@@ -18,11 +20,12 @@ export class ConfirmPopupComponent implements OnInit {
   private modal: any;
 
   constructor() {
-    this.onConfirm = new EventEmitter<void>();
-    this.onCancel = new EventEmitter<void>();
+        
+    this.onConfirm = new EventEmitter<void>(true);
+    this.onCancel = new EventEmitter<void>(true);
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     const modal = $('#confirmPopup');
     if (modal) {
       this.modal = (<any>modal);
@@ -30,15 +33,25 @@ export class ConfirmPopupComponent implements OnInit {
     }
   }
 
+  
+  //ngOnChanges(changes: SimpleChanges) {
+    // changes.prop contains the old and the new value...
+    //this.ngOnInit()
+  //}
+
   show() {
+    
     if (!this.modal) {
       return;
     }
-
+    console.log(this.title);
+    console.log(this.message);
     this.modal.modal({
       show: true,
       backdrop: 'static'
     });
+  
+
   }
 
   hide() {
@@ -47,6 +60,7 @@ export class ConfirmPopupComponent implements OnInit {
     }
 
     this.modal.modal('hide');
+    
   }
 
   confirm() {

@@ -132,7 +132,7 @@ export class UsersService extends BackendService {
       'cursor': this.cursor,
       'size': 20
     };
-
+    console.log('hi');
     this.fetching = true;
     this.post('/list', body)
       .map(response => {

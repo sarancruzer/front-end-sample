@@ -1,6 +1,6 @@
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
 
 import { User } from './../../../models';
 import {
@@ -51,7 +51,8 @@ export class UsersComponent implements OnInit, OnDestroy, AfterViewInit {
     private usersService: UsersService,
     private uploadService: UploadService,
     private notificationService: NotificationService,
-    private lang: LangService
+    private lang: LangService,
+    private cd: ChangeDetectorRef
   ) {
     this.users = [];
     this.editorToggler = false;
@@ -121,19 +122,23 @@ export class UsersComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit() {
-    this.getUsers();
+    this.getUsers();    
   }
 
   ngOnDestroy() {
     if (this.usersListSubscription) {
       this.usersListSubscription.unsubscribe();
     }
+    
   }
 
   ngAfterViewInit() {
-    this.deleteDialogTitle = this.lang.get('ttl_delete_confirm');
-    this.deleteConfirmationMsg = this.lang.get('msg_delete_confirm');
-    this.uploadActionText = this.lang.get('users_csv');
+    setTimeout(() => {
+      this.deleteDialogTitle = this.lang.get('ttl_delete_confirm');
+      this.deleteConfirmationMsg = this.lang.get('msg_delete_confirm');
+      this.uploadActionText = this.lang.get('users_csv');
+  });
+  // this.cd.detectChanges();
   }
 
   addUser() {
@@ -150,6 +155,11 @@ export class UsersComponent implements OnInit, OnDestroy, AfterViewInit {
 
   deleteUser(user: User) {
     this.user = user;
+    setTimeout(() => {
+      this.deleteDialogTitle = this.lang.get('ttl_delete_confirm');
+      this.deleteConfirmationMsg = this.lang.get('msg_delete_confirm');
+      this.uploadActionText = this.lang.get('users_csv');
+  });    
     this.confirmPopupComponent.show();
   }
 
@@ -194,7 +204,11 @@ export class UsersComponent implements OnInit, OnDestroy, AfterViewInit {
         this.isBusy = false;
         const msg = this.lang.get('msg_csv_file_uploaded');
         this.notificationService.notifySuccess(msg, true);
-        this.getUsers();
+        this.usersService.reset();      
+        setTimeout(() => {
+                          this.getUsers();
+                        }, 5000);
+
       },
       err => {
         this.isBusy = false;

@@ -102,8 +102,10 @@ export class VehicleEditorComponent implements OnInit, OnChanges, AfterViewInit 
   }
 
   ngAfterViewInit() {
+    setTimeout(() => {
     this.buttonText = this.lang.get('btn_create');
     this.imageButtonText = this.lang.get('btn_skip');
+    })
   }
 
   show() {

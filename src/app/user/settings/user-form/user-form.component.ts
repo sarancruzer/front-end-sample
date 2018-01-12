@@ -31,11 +31,10 @@ export class UserFormComponent implements OnInit, OnChanges {
 
   @Input() user: User;
 
-
   @Input() buttonText: string;
 
   @Output() done: EventEmitter<any>;
- 
+
   @ViewChild(SelectDepartmentComponent)
   private selectDepartmentComponent: SelectDepartmentComponent;
 
@@ -45,14 +44,12 @@ export class UserFormComponent implements OnInit, OnChanges {
 
   loggedInUser: User;
 
-  editMode: boolean;
-
   constructor(
     private formBuilder: FormBuilder,
     private sessionService: SessionService,
     private departmentsService: DepartmentsService,
     private notificationService: NotificationService,
-    private lang: LangService    
+    private lang: LangService
   ) {
     this.done = new EventEmitter<any>();
     this.loggedInUser = this.sessionService.getUser();
@@ -61,11 +58,6 @@ export class UserFormComponent implements OnInit, OnChanges {
   ngOnInit() {
     this.getDepartments();
     this.buildForm();
-    if(this.user.email){
-      this.editMode =true;
-    }else{
-      this.editMode =false;
-    }
   }
 
   getDepartments() {

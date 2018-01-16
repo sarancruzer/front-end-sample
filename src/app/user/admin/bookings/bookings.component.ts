@@ -111,13 +111,15 @@ export class BookingsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.confirmDialogTitle = this.lang.get('ttl_b_confirm_cancel');
-    this.confirmDialogMsg = this.lang.get('msg_b_confirm_cancel');
+   /* this.confirmDialogTitle = this.lang.get('ttl_b_confirm_cancel');
+    this.confirmDialogMsg = this.lang.get('msg_b_confirm_cancel');*/
   }
 
   cancelBooking(booking: Booking) {
     this.booking = booking;
-    this.confirmPopupComponent.show();
+    this.confirmDialogTitle = this.lang.get('ttl_b_confirm_cancel');
+    this.confirmDialogMsg = this.lang.get('msg_b_confirm_cancel');
+    this.confirmPopupComponent.show(this.confirmDialogTitle,this.confirmDialogMsg );
   }
 
   onDeletionConfirmed() {

@@ -28,9 +28,14 @@ export class ConfirmPopupComponent implements OnInit {
   ngOnInit() {    
     const modal = $('#confirmPopup');
     if (modal) {
+ 
       this.modal = (<any>modal);
       this.modal.appendTo('body');
+
     }
+    this.title="";
+    this.message = "";
+
   }
 
   
@@ -39,17 +44,19 @@ export class ConfirmPopupComponent implements OnInit {
     //this.ngOnInit()
   //}
 
-  show() {
-    
+  show( title:any, message:any) {
+   
     if (!this.modal) {
       return;
     }
-    console.log(this.title);
-    console.log(this.message);
+    this.title=title;
+    this.message = message;
+    setTimeout(() => {
     this.modal.modal({
       show: true,
       backdrop: 'static'
     });
+    })
   
 
   }

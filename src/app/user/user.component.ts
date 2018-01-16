@@ -89,11 +89,19 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   logout() {
-    setTimeout(() => {
+   
+   /* setTimeout(() => {
       this.confirmLogoutTitle = this.lang.get('ttl_confirm_logout');
       this.confirmLogoutMsg = this.lang.get('msg_confirm_logout');
-  });    
-    this.cpcomponent.show();
+      this.cpcomponent.show(this.confirmLogoutTitle,this.confirmLogoutMsg );
+  }); */    
+  
+    this.sessionService.reset(new Date().getTime());
+    const msg = this.lang.get('msg_logged_out');
+    this.router.navigate(['/']).then(() => {
+      this.notificationService.notifySuccess(msg);
+    });  
+
   }
 
   onLogoutConfirmed() {

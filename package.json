@@ -32,6 +32,7 @@
     "@types/jquery.datatables": "^1.10.36",
     "angular2-moment": "^1.0.0",
     "core-js": "^2.4.1",
+    "ngx-bootstrap": "^2.0.0-rc.0",
     "rxjs": "^5.4.0",
     "zone.js": "^0.8.11"
   },
@@ -41,7 +42,7 @@
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
     "extract-text-webpack-plugin": "^2.1.2",
-  "jasmine-core": "2.5.2",
+    "jasmine-core": "2.5.2",
     "karma": "1.2.0",
     "karma-cli": "^1.0.1",
     "karma-coverage-istanbul-reporter": "^1.2.1",

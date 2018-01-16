@@ -160,7 +160,7 @@ export class UsersComponent implements OnInit, OnDestroy, AfterViewInit {
       this.deleteConfirmationMsg = this.lang.get('msg_delete_confirm');
       this.uploadActionText = this.lang.get('users_csv');
   });    
-    this.confirmPopupComponent.show();
+    this.confirmPopupComponent.show(this.deleteDialogTitle,this.deleteConfirmationMsg);
   }
 
   onEditorShown() {

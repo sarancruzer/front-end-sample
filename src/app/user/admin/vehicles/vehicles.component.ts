@@ -132,11 +132,12 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
+   /* setTimeout(() => {
     this.deleteDialogTitle = this.lang.get('ttl_v_delete_confirm');
     this.deleteConfirmationMsg = this.lang.get('msg_v_delete_confirm');
     this.uploadActionText = this.lang.get('vehicles_csv');
     });
+    */
   }
 
   onEditorShown() {
@@ -189,7 +190,7 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
       this.deleteDialogTitle = this.lang.get('ttl_v_delete_confirm');
       this.deleteConfirmationMsg = this.lang.get('msg_v_delete_confirm');
       this.uploadActionText = this.lang.get('vehicles_csv');
-      this.confirmPopupComponent.show();
+      this.confirmPopupComponent.show(this.deleteDialogTitle,this.deleteConfirmationMsg);
       });
      }
 

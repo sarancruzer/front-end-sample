@@ -114,7 +114,8 @@ export class UserEditorComponent implements OnInit, OnChanges {
           this.hide();
         },
         err => {
-          this.notificationService.notifyError('Failed to create an user!');
+          console.log(err)
+          this.notificationService.notifyError('Email already registered!');
         }
       );
     } else {
@@ -124,6 +125,7 @@ export class UserEditorComponent implements OnInit, OnChanges {
           this.hide();
         },
         err => {
+         
           this.notificationService.notifyError('Failed to update the user');
         }
       );

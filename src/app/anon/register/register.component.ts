@@ -92,11 +92,11 @@ export class RegisterComponent implements AfterViewInit {
         },
         error => {
           this.isBusy = false;
+          let temp =error.json()
           let msg = 'Registration was not possible due to an error! Please try again. '
-            + ' Error to report:' + JSON.stringify(error);
-            let temp =error.json()
-          //console.log(temp.error.message)
-          this.notificationService.notifyError(temp.error.message);
+            + ' Error to report:' + temp.error.message;
+          // console.log(temp.error.message)
+          this.notificationService.notifyError(msg);
           this.forms.organisation = true;
         }
       );

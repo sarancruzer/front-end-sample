@@ -65,7 +65,7 @@ export class WialonIntegrationComponent implements OnInit, OnDestroy {
   onIntegrated() {
     this.isIntegrated = true;
     this.organisation = this.sessionService.getOrganisation();
-
+    this.sessionService.setOrganisation(this.organisation );
     this.importVehiclesFromWialon();
   }
 

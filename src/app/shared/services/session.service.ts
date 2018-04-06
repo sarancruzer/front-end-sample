@@ -55,8 +55,12 @@ export class SessionService {
 
   getUser(): User {
    if (!(this.user)) {
+    if(localStorage.getItem('user')) {
     var tempUser  = JSON.parse(localStorage.getItem('user'));
     this.user     = tempUser;
+    }else{
+      this.user =null;
+    }
     console.log(this.user);
     } 
     return this.user;

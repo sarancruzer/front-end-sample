@@ -25,7 +25,7 @@ export class LoginComponent {
   ) {
     this.popupToggler = false;
     let curUser = this.sessionService.getUser();
-    if (curUser.email) {
+    if (curUser) {
       this.router.navigate(['/me/book-vehicle']);
     }
   }

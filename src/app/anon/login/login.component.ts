@@ -24,8 +24,8 @@ export class LoginComponent {
     private sessionService: SessionService,
   ) {
     this.popupToggler = false;
-    console.log(this.sessionService.getUserLogged());
-    if (this.sessionService.getUserLogged()) {
+    console.log(this.sessionService.getUser());
+    if (this.sessionService.getUser()) {
       this.router.navigate(['/me/book-vehicle']);
     }
   }

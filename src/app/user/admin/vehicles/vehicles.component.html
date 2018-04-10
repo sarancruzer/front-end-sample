@@ -47,7 +47,7 @@
                 <th i18n="table header">
                   Location
                 </th>
-                <th i18n="table header" class="disabled-sorting text-right" style="width: 10%">Actions</th>
+                <th  i18n="table header" class="disabled-sorting text-right" style="width: 10%">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -63,10 +63,10 @@
                 <td>{{vehicle.model}}</td>
                 <td>{{vehicle.location}}</td>
                 <td class="text-right">
-                  <a (click)="editVehicle(vehicle)" class="btn btn-simple btn-primary btn-icon edit">
+                  <a *ngIF="vehicle.type.name != 'OTHER'" (click)="editVehicle(vehicle)" class="btn btn-simple btn-primary btn-icon edit">
                     <i class="material-icons">mode_edit</i>
                   </a>
-                  <a (click)="deleteVehicle(vehicle)" class="btn btn-simple btn-danger btn-icon remove">
+                  <a *ngIF="vehicle.type.name != 'OTHER'" (click)="deleteVehicle(vehicle)" class="btn btn-simple btn-danger btn-icon remove">
                     <i class="material-icons">delete</i>
                   </a>
                 </td>

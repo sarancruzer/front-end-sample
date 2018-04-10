@@ -63,10 +63,10 @@
                 <td>{{vehicle.model}}</td>
                 <td>{{vehicle.location}}</td>
                 <td class="text-right">
-                  <a *ngIF="vehicle.type.name != 'OTHER'" (click)="editVehicle(vehicle)" class="btn btn-simple btn-primary btn-icon edit">
+                  <a *ngIf="vehicle.type.name != 'OTHER'" (click)="editVehicle(vehicle)" class="btn btn-simple btn-primary btn-icon edit">
                     <i class="material-icons">mode_edit</i>
                   </a>
-                  <a *ngIF="vehicle.type.name != 'OTHER'" (click)="deleteVehicle(vehicle)" class="btn btn-simple btn-danger btn-icon remove">
+                  <a *ngIf="vehicle.type.name != 'OTHER'" (click)="deleteVehicle(vehicle)" class="btn btn-simple btn-danger btn-icon remove">
                     <i class="material-icons">delete</i>
                   </a>
                 </td>

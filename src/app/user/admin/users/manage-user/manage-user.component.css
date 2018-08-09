@@ -1,0 +1,7 @@
+.pagination > li > a {
+    cursor: pointer;
+}
+
+.btn {
+     padding: 2px 6px;   
+}

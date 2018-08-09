@@ -142,6 +142,7 @@ export class BookVehicleComponent implements OnInit, AfterViewInit {
         },
         err => {
           this.isBusy = false;
+          this.wizard.moveForward();
           this.notificationService.notifyError(this.lang.get('err_no_bookable_vehicles'));
         }
       )

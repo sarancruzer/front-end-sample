@@ -1,0 +1,12 @@
+td > ul.list-unstyled i {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+table .btn-simple.btn-icon {
+    padding: 3px;
+}
+
+.btn {
+    padding: 2px 6px;   
+}

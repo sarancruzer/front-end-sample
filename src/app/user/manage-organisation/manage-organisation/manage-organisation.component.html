@@ -1,0 +1,25 @@
+
+
+    <div class="row" *ngIf="!isIntegrated">
+        <div class="col-md-12">
+          <!-- <nb-wialon-integrator (integrated)="onIntegrated()"></nb-wialon-integrator> -->
+          <nb-organisation-wialon-integrator (integrated)="onIntegrated()"></nb-organisation-wialon-integrator>
+        </div>
+      </div>
+      
+      <div class="row" *ngIf="isIntegrated">
+        <div class="col-md-12">
+          <!-- <nb-wialon-map></nb-wialon-map> -->
+          <nb-organisation-wialon-map></nb-organisation-wialon-map>
+        </div>
+      </div> 
+
+
+      <!-- <nb-loader *ngIf="isBusy"></nb-loader> -->
+
+     
+  <div nbLang hidden>
+    <span id="err_wialon_units_import" i18n>Error while fetching units from Wilaon for import: {{'{err_msg}'}}</span>
+    <span id="err_fetching_booked_vehicles" i18n>It was not possible to fetch list of booked vehicles!</span>
+  </div>
+  

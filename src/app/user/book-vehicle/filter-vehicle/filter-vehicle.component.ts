@@ -61,7 +61,9 @@ export class FilterVehicleComponent implements OnInit, AfterViewInit {
       this.locationsService.list()
         .subscribe(
           data => {
-            this.locations = data;
+            console.log(data);
+            const res = data['result']['info'];
+            this.locations = res;
           },
           error => {
             let err = this.lang.get('err_locations_fetch');

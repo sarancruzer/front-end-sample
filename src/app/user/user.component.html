@@ -1,15 +1,72 @@
 <div class="wrapper" id="wrapper" nbMdpActivator>
-  <div class="sidebar" id="sidebar-wrapper" data-background-color="black">
+
+
+  <div class="sidebar" id="sidebar-wrapper" data-background-color="azure" *ngIf="user?.user_type == 1" >
     <div class="logo">
       <a routerLink="/me/book-vehicle" class="simple-text">
         WorldTrack Booking
       </a>
+      <p class="portal">Super Admin Portal</p>
     </div>
     <div class="logo logo-mini">
       <a routerLink="/me/book-vehicle" class="simple-text">
         WB
       </a>
     </div>
+    <div class="sidebar-wrapper">
+      <div class="user">
+        <div class="photo">
+          <img src="assets/img/default-avatar.png" />
+        </div>
+        <div class="info">
+          <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+            {{user?.name || '...'}}
+            <b class="caret"></b>
+           
+          </a>
+          <div class="collapse" id="collapseExample">
+            <ul class="nav">
+              <li>
+                <a routerLink="/me/settings" i18n="Menu button">Settings</a>
+              </li>
+            </ul>
+          </div>
+         
+        </div>
+       
+      </div>
+      <ul class="nav">      
+        
+        <li routerLinkActive="active">
+            <a routerLink="/me/manage-organisation">
+              <i class="material-icons">account_circle</i>
+              <p i18n="Menu button">Organisation</p>
+            </a>
+          </li>
+
+        <li>
+          <a (click)="logout()">
+            <i class="material-icons">lock</i>
+            <p i18n="Menu button">Logout</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <div class="sidebar" id="sidebar-wrapper" data-background-color="black" *ngIf="user?.user_type == 2" >
+    <div class="logo">
+      <a routerLink="/me/book-vehicle" class="simple-text">
+        WorldTrack Booking
+      </a>
+      <p class="portal">Organisation Portal</p>
+    </div>
+    <div class="logo logo-mini">
+      <a routerLink="/me/book-vehicle" class="simple-text">
+        WB
+      </a>
+    </div>z
     <div class="sidebar-wrapper">
       <div class="user">
         <div class="photo">
@@ -31,64 +88,25 @@
       </div>
       <ul class="nav">
         <li routerLinkActive="active">
-          <a routerLink="/me/book-vehicle">
+          <a routerLink="/me/admin/dashboard">
             <i class="material-icons">book</i>
-            <p i18n="Menu button">Book Vehicle</p>
+            <p i18n="Menu button">Dashboard</p>
           </a>
         </li>
-
+        
         <li routerLinkActive="active">
-          <a routerLink="/me/calendar">
-            <i class="material-icons">date_range</i>
-            <p i18n="Menu button">Calendar</p>
-          </a>
-        </li>
+            <a routerLink="/me/admin/manage-local-admin">
+              <i class="material-icons">account_circle</i>
+              <p i18n="Menu button">Local Admin</p>
+            </a>
+          </li>
 
-        <li routerLinkActive="active">
-          <a routerLink="/me/bookings">
-            <i class="material-icons">history</i>
-            <p i18n="Menu button">My Bookings</p>
-          </a>
-        </li>
-
-        <li *ngIf="user?.isAdmin">
-          <a data-toggle="collapse" href="#admin-menu">
-            <i class="material-icons">supervisor_account</i>
-            <p>
-              <ng-container i18n="Menu button">Admin</ng-container>
-              <b class="caret"></b>
-            </p>
-          </a>
-          <div class="collapse" id="admin-menu">
-            <ul class="nav">
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/dashboard" i18n="Menu button">Dashboard</a>
-              </li>
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/organisation" i18n="Menu button">Organisation</a>
-              </li>
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/users" i18n="Menu button">Users</a>
-              </li>
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/vehicles" i18n="Menu button">Vehicles</a>
-              </li>
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/bookings" i18n="Menu button">Bookings</a>
-              </li>
-              <li routerLinkActive="active">
-                <a routerLink="/me/admin/wialon-integration" i18n="Menu button">Worldtrack Integration</a>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <li>
-          <a href="http://booking.worldtrackgroup.com/support" target="__blank">
-            <i class="material-icons">info</i>
-            <p i18n="Menu button">Info / Support</p>
-          </a>
-        </li>
+          <li routerLinkActive="active">
+              <a routerLink="/me/admin/organisation" i18n="Menu button">
+                <i class="material-icons">account_circle</i>
+                <p i18n="Menu button">Profile</p>
+              </a>
+          </li>             
 
         <li>
           <a (click)="logout()">
@@ -99,6 +117,178 @@
       </ul>
     </div>
   </div>
+
+  <div class="sidebar" id="sidebar-wrapper" data-background-color="black" *ngIf="user?.user_type == 3" >
+      <div class="logo">
+        <a routerLink="/me/book-vehicle" class="simple-text">
+          WorldTrack Booking
+        </a>
+      </div>
+      <div class="logo logo-mini">
+        <a routerLink="/me/book-vehicle" class="simple-text">
+          WB
+        </a>
+        <p class="portal">Local Admin Portal</p>
+      </div>
+      <div class="sidebar-wrapper">
+        <div class="user">
+          <div class="photo">
+            <img src="assets/img/default-avatar.png" />
+          </div>
+          <div class="info">
+            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+              {{user?.name || '...'}}
+              <b class="caret"></b>
+            </a>
+            <div class="collapse" id="collapseExample">
+              <ul class="nav">
+                <li>
+                  <a routerLink="/me/settings" i18n="Menu button">Settings</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <ul class="nav">
+
+            <li routerLinkActive="active">
+                <a routerLink="/me/admin/dashboard">
+                  <i class="material-icons">book</i>
+                  <p i18n="Menu button">Dashboard</p>
+                </a>
+              </li>         
+  
+          <li routerLinkActive="active">
+            <a routerLink="/me/calendar">
+              <i class="material-icons">date_range</i>
+              <p i18n="Menu button">Calendar</p>
+            </a>
+          </li>
+  
+          <li routerLinkActive="active">
+            <a routerLink="/me/bookings">
+              <i class="material-icons">history</i>
+              <p i18n="Menu button">All Bookings</p>
+            </a>
+          </li>
+
+          <li routerLinkActive="active">
+              <a routerLink="/me/admin/manage-user">
+                <i class="material-icons">history</i>
+                <p i18n="Menu button">Users</p>
+              </a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a routerLink="/me/admin/manage-vehicle">
+                  <i class="material-icons">history</i>
+                  <p i18n="Menu button">Vehicles</p>
+                </a>
+              </li>
+
+              <li routerLinkActive="active">
+                  <a routerLink="/me/admin/wialon-integration">
+                    <i class="material-icons">history</i>
+                    <p i18n="Menu button">Worldtrack Integration</p>
+                  </a>
+                </li>  
+         
+          <li>
+            <a href="http://booking.worldtrackgroup.com/support" target="__blank">
+              <i class="material-icons">info</i>
+              <p i18n="Menu button">Info / Support</p>
+            </a>
+          </li>
+  
+          <li>
+            <a (click)="logout()">
+              <i class="material-icons">lock</i>
+              <p i18n="Menu button">Logout</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar-wrapper" data-background-color="black" *ngIf="user?.user_type == 4" >
+        <div class="logo">
+          <a routerLink="/me/book-vehicle" class="simple-text">
+            WorldTrack Booking
+          </a>
+        </div>
+        <div class="logo logo-mini">
+          <a routerLink="/me/book-vehicle" class="simple-text">
+            WB
+          </a>
+          <p class="portal">Users Portal</p>
+        </div>
+        <div class="sidebar-wrapper">
+          <div class="user">
+            <div class="photo">
+              <img src="assets/img/default-avatar.png" />
+            </div>
+            <div class="info">
+              <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                {{user?.name || '...'}}
+                <b class="caret"></b>
+              </a>
+              <div class="collapse" id="collapseExample">
+                <ul class="nav">
+                  <li>
+                    <a routerLink="/me/settings" i18n="Menu button">Settings</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <ul class="nav">
+            <li routerLinkActive="active">
+              <a routerLink="/me/book-vehicle">
+                <i class="material-icons">book</i>
+                <p i18n="Menu button">Book Vehicle</p>
+              </a>
+            </li>
+    
+            <li routerLinkActive="active">
+              <a routerLink="/me/calendar">
+                <i class="material-icons">date_range</i>
+                <p i18n="Menu button">Calendar</p>
+              </a>
+            </li>
+    
+            <li routerLinkActive="active">
+              <a routerLink="/me/bookings">
+                <i class="material-icons">history</i>
+                <p i18n="Menu button">My Bookings</p>
+              </a>
+            </li>
+
+            <li routerLinkActive="active">
+                <a routerLink="/me/admin/organisation" i18n="Menu button">
+                  <i class="material-icons">account_circle</i>
+                  <p i18n="Menu button">Profile</p>
+                </a>
+            </li>                
+    
+            <li>
+              <a href="http://booking.worldtrackgroup.com/support" target="__blank">
+                <i class="material-icons">info</i>
+                <p i18n="Menu button">Info / Support</p>
+              </a>
+            </li>
+    
+            <li>
+              <a (click)="logout()">
+                <i class="material-icons">lock</i>
+                <p i18n="Menu button">Logout</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
   <div class="main-panel" id="page-content-wrapper">
     <nav class="navbar navbar-transparent navbar-absolute">
       <div class="container-fluid">
@@ -129,7 +319,7 @@
       </div>
     </div>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container-fluid">
         <nav class="pull-left">
           <ul>
@@ -147,7 +337,7 @@
           <a href="http://booking.worldtrackgroup.com">WorldTrack Booking</a>
         </p>
       </div>
-    </footer>
+    </footer> -->
 
   </div>
 </div>

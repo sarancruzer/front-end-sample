@@ -1,3 +1,4 @@
+import { LocalAdmin } from './../../models/local-admin';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
@@ -11,7 +12,11 @@ export class SessionService {
 
   private organisation: Organisation;
 
+  private localAdmin: LocalAdmin;
+
   private redirectUrl: string;
+
+  private wialontoken: string;
 
   onReset = new Subject<number>();
 
@@ -21,6 +26,7 @@ export class SessionService {
     this.onReset.next(date);
     this.setUser(null);
     this.setOrganisation(null);
+    this.setLocalAdmin(null);
   }
   
 
@@ -53,28 +59,37 @@ export class SessionService {
 
   }
 
+  // getUser(): User {
+  //  if (!(this.user)) {
+  //   if(localStorage.getItem('user')) {
+  //   var tempUser  = JSON.parse(localStorage.getItem('user'));
+  //   this.user     = tempUser;
+  //   }else{
+  //     this.user =null;
+  //   }
+  //   console.log(this.user);
+  //   } 
+  //   return this.user;
+  // }
+
   getUser(): User {
-   if (!(this.user)) {
-    if(localStorage.getItem('user')) {
-    var tempUser  = JSON.parse(localStorage.getItem('user'));
-    this.user     = tempUser;
-    }else{
-      this.user =null;
-    }
-    console.log(this.user);
-    } 
-    return this.user;
-  }
+    if (!(this.user)) {
+     if(localStorage.getItem('user')) {
+     var tempUser  = JSON.parse(localStorage.getItem('user'));
+     this.user     = tempUser;
+     }else{
+       this.user =null;
+     }
+     console.log(this.user);
+     } 
+     return this.user;
+   }
 
   setOrganisation(org: Organisation) {
     if(org){
-
       localStorage.setItem("org",JSON.stringify(org));
-
     }else{
-
       localStorage.setItem("org","");
-
     }
     this.organisation = org;
   }
@@ -82,13 +97,53 @@ export class SessionService {
   getOrganisation(): Organisation {
 
     if(!(this.organisation)){    
-      var tempUser  = JSON.parse(localStorage.getItem('org'));
-      this.organisation     = tempUser;
+      this.organisation  = JSON.parse(localStorage.getItem('org'));
       console.log(this.organisation);
     }
     
     return this.organisation;
 
+  }
+
+  setWialonToken(wialontoken) {
+    if(wialontoken){
+      localStorage.setItem("wialontoken",wialontoken);
+    }else{
+      localStorage.setItem("wialontoken","");
+    }
+    this.wialontoken = wialontoken;
+  }
+
+  getWialonToken() {
+    if(!(this.wialontoken)){    
+      this.wialontoken  = localStorage.getItem('wialontoken');
+      console.log(this.wialontoken);
+    }    
+    return this.wialontoken;
+  }
+  
+
+  setLocalAdmin(localAdmin: Organisation) {
+    if(localAdmin){
+
+      localStorage.setItem("localAdmin",JSON.stringify(localAdmin));
+
+    }else{
+
+      localStorage.setItem("localAdmin","");
+
+    }
+    this.localAdmin = localAdmin;
+  }
+
+  getLocalAdmin(): Organisation {
+
+    if(!(this.localAdmin)){    
+      this.localAdmin  = JSON.parse(localStorage.getItem('localAdmin'));
+      console.log(this.localAdmin);
+    }
+    
+    return this.localAdmin;
   }
 
   setRedirectUrl(url: string) {

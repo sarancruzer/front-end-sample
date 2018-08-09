@@ -10,3 +10,4 @@ export class Location extends Tag {
         this.value = newName;
     }
 }
+

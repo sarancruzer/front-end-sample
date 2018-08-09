@@ -37,11 +37,11 @@ export class DepartmentsComponent implements OnInit, OnDestroy {
 
   getDepartments() {
     this.isBusy = true;
-    this.departmentListSubscription = this.departmentService.collection
+    this.departmentListSubscription = this.departmentService.list()
       .subscribe(
         data => {
           this.isBusy = false;
-          this.departments = data;
+          this.departments = data['result']['info'];
         },
         err => {
           this.isBusy = false;

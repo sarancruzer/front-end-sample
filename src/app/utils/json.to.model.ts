@@ -135,18 +135,17 @@ export default class JsonToModelTransformers {
     }
 
     static jsonToOrganisation(obj: any): Organisation {
-        const org: Organisation = {};
-        org.key = obj.organisation_key;
+        const org: Organisation = {};       
         org.name = obj.name;
         org.website = obj.website;
         org.phone = obj.phone;
         org.address = obj.address;
-        org.province = obj.state;
+        org.state = obj.state;
         org.city = obj.city;
-        org.zipCode = obj.postal_code;
+        org.postal_code = obj.postal_code;
         org.country = obj.country;
-        org.numberOfEmployees = obj.number_of_employees;
-        org.wialonToken = obj.wialon_token;
+        org.no_of_employees = obj.no_of_employees;
+        org.wialon_token = obj.wialon_token;
 
         return org;
     }

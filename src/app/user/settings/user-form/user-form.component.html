@@ -30,8 +30,12 @@
   </div>
 
   <!-- Department -->
-  <div class="form-group label-floating" *ngIf="loggedInUser.isAdmin">
-    <nb-select-department (done)="onSelectDeperatmentDone($event)"></nb-select-department>
+  <div class="form-group label-floating" >
+    <!-- <nb-select-department (done)="onSelectDeperatmentDone($event)"></nb-select-department> -->
+
+    <select class="form-control" formControlName="department" >
+      <option value="{{dept.value}}" *ngFor="let dept of departments">{{dept.name}}</option>
+    </select>
   </div>
 
   <div *ngIf="userForm.errors" i18n>
@@ -39,8 +43,7 @@
   </div>
 
   <button
-    type="submit"
-    [disabled]="!userForm.valid"
+    type="submit"    
     class="btn btn-primary pull-right"
     i18n="Button label"
   >

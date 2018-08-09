@@ -11,7 +11,7 @@ import JsonToModelTransformers from '../../utils/json.to.model';
 @Injectable()
 export class LocationsService extends BackendService {
 
-  static endpointName = '/organisations/locations';
+  static endpointName = '/api';
 
   locations: Location[];
 
@@ -38,13 +38,12 @@ export class LocationsService extends BackendService {
 
   create(location: Location): Observable<Location> {
     const body: any = {
-      'admin_key': this.sessionService.getUser().userKey,
       'name': location.name
     };
 
-    return this.post('/create', body)
+    return this.post('/location/create', {"info":body})
       .map(response => {
-        location.key = response.json().location_key;
+        location.key = response.json().id;
         this.locations.push(location);
 
         return location;
@@ -74,18 +73,27 @@ export class LocationsService extends BackendService {
     ;
   }
 
+  masters(): Observable<Location[]> {
+    // const body: any = {
+    //   'user_key': this.sessionService.getUser().userKey
+    // };
+
+    return this.post('/location/masters', '')
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
+    ;
+  }
+
   list(): Observable<Location[]> {
-    const body: any = {
-      'user_key': this.sessionService.getUser().userKey
-    };
+    // const body: any = {
+    //   'user_key': this.sessionService.getUser().userKey
+    // };
 
-    return this.get('/list', body)
-      .map(response => {
-        this.locations = JsonToModelTransformers.jsonToLocations(
-          response.json().locations || []
-        );
-
-        return this.locations;
+    return this.post('/location/masters', '')
+      .map(response => {        
+        return response.json();
       })
       .catch(error => Observable.throw(error))
     ;

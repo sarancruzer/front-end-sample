@@ -1,0 +1,74 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header card-header-info">
+            <h4 class="card-title">Local Admin</h4>           
+          </div>
+
+
+          <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="submit(form)">
+              <!-- Organisation Name -->
+              <div class="input-group form-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">business</i>
+                </span>
+                <input type="text" class="form-control" i18n-placeholder placeholder="Organisation Name" formControlName="name" />
+                <span class="err" *ngIf="!form.controls.name.valid  && (form.controls.name.dirty || submitAttempt)">
+                    <p class="blinking">Please enter a name.</p>
+                  </span>              
+              </div>
+
+              <div class="input-group form-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">web</i>
+                  </span>
+                  <input type="text" class="form-control" i18n-placeholder placeholder="email" formControlName="email" />
+                  <span class="err" *ngIf="!form.controls.email.valid  && (form.controls.email.dirty || submitAttempt)">
+                      <p class="blinking">Please enter a email.</p>
+                    </span>  
+                </div>
+
+                <div class="input-group form-group">
+                    <span class="input-group-addon">
+                      <i class="material-icons">web</i>
+                    </span>
+                    <input type="text" class="form-control" i18n-placeholder placeholder="phone" formControlName="phone" />
+                    <span class="err" *ngIf="!form.controls.phone.valid  && (form.controls.phone.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a phone.</p>
+                      </span>  
+                  </div>
+                  
+                  <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">web</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="job_title" formControlName="job_title" />
+                      <span class="err" *ngIf="!form.controls.job_title.valid  && (form.controls.job_title.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a job_title.</p>
+                        </span>  
+                    </div>
+
+                    
+
+                         
+              <div class="pull-right">
+                <button type="submit" class="btn btn-fill btn-primary" >
+                 Submit
+                </button>
+              </div>
+
+              <div class="clearfix"></div>
+            </form>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

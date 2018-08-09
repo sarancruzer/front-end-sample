@@ -1,0 +1,137 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="card">
+          <div class="card-header card-header-info">
+            <h4 class="card-title">Create Organisation</h4>           
+          </div>
+          
+          <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="submit(form)">
+              <!-- Organisation Name -->
+              <div class="input-group form-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">business</i>
+                </span>
+                <input type="text" class="form-control" i18n-placeholder placeholder="Organisation Name" formControlName="name" />
+                <span class="err" *ngIf="!form.controls.name.valid  && (form.controls.name.dirty || submitAttempt)">
+                    <p class="blinking">Please enter a name.</p>
+                  </span>              
+              </div>
+
+              <div class="input-group form-group">
+                  <span class="input-group-addon">
+                    <i class="material-icons">mail</i>
+                  </span>
+                  <input type="text" class="form-control" i18n-placeholder placeholder="email" formControlName="email" />
+                  <span class="err" *ngIf="!form.controls.email.valid  && (form.controls.email.dirty || submitAttempt)">
+                      <p class="blinking">Please enter a email.</p>
+                    </span>  
+                </div>
+
+                <div class="input-group form-group">
+                    <span class="input-group-addon">
+                      <i class="material-icons">web</i>
+                    </span>
+                    <input type="text" class="form-control" i18n-placeholder placeholder="website" formControlName="website" />
+                    <span class="err" *ngIf="!form.controls.website.valid  && (form.controls.website.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a website.</p>
+                      </span>  
+                  </div>
+                  
+                  <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">contact_phone</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="phone" formControlName="phone" />
+                      <span class="err" *ngIf="!form.controls.phone.valid  && (form.controls.phone.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a phone.</p>
+                        </span>  
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">edit_location</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="address" formControlName="address" />
+                      <span class="err" *ngIf="!form.controls.address.valid  && (form.controls.address.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a address.</p>
+                        </span>  
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">edit</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="postal_code" formControlName="postal_code" />
+                      <span class="err" *ngIf="!form.controls.postal_code.valid  && (form.controls.postal_code.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a postal_code.</p>
+                        </span>  
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">edit_location</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="city" formControlName="city" />
+                      <span class="err" *ngIf="!form.controls.city.valid  && (form.controls.city.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a city.</p>
+                        </span>  
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">edit_location</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="state" formControlName="state" />
+                      <span class="err" *ngIf="!form.controls.state.valid  && (form.controls.state.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a state.</p>
+                        </span>  
+                    </div>
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">flag</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="country" formControlName="country" />
+                      <span class="err" *ngIf="!form.controls.country.valid  && (form.controls.country.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a country.</p>
+                        </span>  
+                    </div>
+
+
+                    <div class="input-group form-group">
+                      <span class="input-group-addon">
+                        <i class="material-icons">people</i>
+                      </span>
+                      <input type="text" class="form-control" i18n-placeholder placeholder="no_of_employees" formControlName="no_of_employees" />
+                      <span class="err" *ngIf="!form.controls.no_of_employees.valid  && (form.controls.no_of_employees.dirty || submitAttempt)">
+                          <p class="blinking">Please enter a no_of_employees.</p>
+                        </span>  
+                    </div>
+
+                    
+
+                         
+              <div class="pull-right">
+                <button type="submit" class="btn btn-fill btn-primary" >
+                 Submit
+                </button>
+                <button type="button" class="btn btn-fill btn-default" (click)="manageOrganisation()">
+                 Cancel
+                </button>
+              </div>
+
+              <div class="clearfix"></div>
+            </form>
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

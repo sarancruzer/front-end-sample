@@ -39,7 +39,7 @@ export class WialonIntegratorComponent implements OnInit {
     this.isBusy = false;
 
     if (this.sessionService.getOrganisation()) {
-      this.wialonAccessToken = this.sessionService.getOrganisation().wialonToken;
+      this.wialonAccessToken = this.sessionService.getOrganisation().wialon_token;
     }
   }
 
@@ -88,7 +88,7 @@ export class WialonIntegratorComponent implements OnInit {
         response => {
           this.isBusy = false;
           if (this.sessionService.getOrganisation()) {
-            this.sessionService.getOrganisation().wialonToken = token;
+            this.sessionService.getOrganisation().wialon_token = token;
           }
           this.notificationService.notifySuccess(this.lang.get('msg_wialon_token_stored'));
           this.integrated.emit(token);

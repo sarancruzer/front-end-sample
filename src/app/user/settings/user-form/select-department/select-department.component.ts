@@ -32,20 +32,23 @@ export class SelectDepartmentComponent implements OnInit {
 
   ngOnInit() {
     this.getDepartments();
+
+    (<any>$)('.selectpicker').selectpicker();
+
   }
 
   getDepartments() {
-    if (this.departments.length > 0) {
-      this.selectedDepartment = this.departments[0];
-
-      return;
-    }
+    // if (this.departments.length > 0) {
+    //   this.selectedDepartment = this.departments[0];
+    //   return;
+    // }
 
     this.isBusy = true;
-    this.departmentsService.list().subscribe(
+    this.departmentsService.getAll().subscribe(
       data => {
         this.isBusy = false;
-        this.departments = data;
+        this.departments = data['result']['info'];
+        console.log(this.departments);
         this.selectedDepartment = this.departments[0];
       },
       error => {

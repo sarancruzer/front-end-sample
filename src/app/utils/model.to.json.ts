@@ -20,9 +20,9 @@ export default class ModelToJsonTransformers {
             'phone': '' + obj.phone,
             'address': obj.address,
             'city': obj.city,
-            'state': obj.province,
-            'postal_code': obj.zipCode,
-            'number_of_employees': obj.numberOfEmployees,
+            'state': obj.state,
+            'postal_code': obj.postal_code,
+            'number_of_employees': obj.no_of_employees,
             'country': obj.country
         };
     }

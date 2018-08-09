@@ -1,0 +1,128 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">people_outline</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title">Manage Users</h4>
+        <div class="toolbar">
+          <button class="btn btn-primary btn-sm btn-simple" (click)="addUser()">
+            <i class="fa fa-plus-circle"></i>
+            <ng-container i18n="Button label">Add User</ng-container>
+          </button>        
+        </div>
+        <div class="material-datatables">
+          <table id="users-datatable" class="table table-striped table-no-bordered table-hover"
+                cellspacing="0"
+                width="100%"
+                style="width:100%">
+            <thead>
+              <tr>
+                <th i18n="Users table header">
+                  Initials
+                </th>
+                <th i18n="Users table header">
+                  Name
+                </th>
+                <th i18n="Users table header">
+                  Email
+                </th>
+                <th i18n="Users table header">
+                  Phone
+                </th>
+                <th i18n="Users table header">
+                  Job Title
+                </th>
+                <th i18n="Users table header">
+                  Department
+                </th>
+                <th i18n="Users table header" class="disabled-sorting text-right" style="width: 10%">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of items">
+                <td>{{item.initials}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.job_title}}</td>
+                <td>{{item.department}}</td>
+                <td class="text-right">
+                  <a (click)="edit(item)"  class="btn btn-simple btn-primary btn-icon edit">
+                    <i class="material-icons">mode_edit</i>
+                  </a>
+                  <a (click)="delete(item)" class="btn btn-simple btn-danger btn-icon remove">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
+              </tr>                
+            </tbody>
+
+            <tbody *ngIf="!pages.length">
+                <tr>
+                    <td colspan="7"><div class="talign" >There are no record to show!</div></td>
+                  </tr>
+            </tbody>
+          </table>
+
+
+          <!--Pagination -->
+<nav aria-label="pagination example">
+  <ul class="pagination pagination-circle pg-blue mb-0" *ngIf="pages && pages.length" >
+
+      <!--First-->
+      <li class="page-item " [ngClass]="{disabled:currentPage === 1}"><a class="page-link" (click)="init(1)">First</a></li>
+
+      <!--Arrow left-->
+      <li class="page-item "  [ngClass]="{disabled:currentPage === 1}">
+          <a class="page-link" aria-label="Previous" (click)="init(currentPage - 1)">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+          </a>
+      </li>
+
+      <!--Numbers-->
+      <li class="page-item " *ngFor="let page of pages" [ngClass]="{active:currentPage === page}"><a class="page-link" (click)="init(page)">{{page}}</a></li>
+      
+
+      <!--Arrow right-->
+      <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}">
+          <a class="page-link" aria-label="Next" (click)="init(currentPage + 1)">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+          </a>
+      </li>
+
+      <!--Last-->
+      <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}"><a class="page-link" (click)="init(lastPage)">Last</a></li>
+
+  </ul>
+</nav>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nb-confirm-popup
+  [title]="deleteDialogTitle"
+  [message]="deleteConfirmationMsg"
+  (onConfirm)="onDeletionConfirmed()"
+></nb-confirm-popup>
+
+
+<div nbLang hidden>
+  <span id="users_csv" i18n="CSV file name for importing users">users.csv</span>
+  <span id="msg_delete_confirm" i18n>Do you really want to delete this user?</span>
+  <span id="ttl_delete_confirm" i18n="Dialog title">Confirm User Deletion</span>
+  <span id="msg_users_list_expanded" i18n>Please note that users list has just been extended.</span>
+  <span id="err_failed_fetching_users" i18n>Failed to get users list! Please try again.</span>
+  <span id="err_failed_finding_datatable" i81n>Failed to find DataTable! This is an unexpected error. Please try again by reloading the page.</span>
+  <span id="err_failed_deleting_user" i18n>Failed to delete the user!</span>
+  <span id="msg_csv_file_uploaded" i18n>File uploaded successfully. However, it will take a while before the users are available in the system.</span>
+  <span id="err_failed_uploading_csv_file" i18n>Failed to upload the file! Please try again.</span>
+</div>

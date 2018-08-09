@@ -141,8 +141,8 @@
       <!-- Zip/Postal Code -->
       <div
         class="input-group form-group"
-        [ngClass]="{'has-error': !isFormControlValid('zipCode') && isFormControlDirty('zipCode'),
-                    'has-success': isFormControlValid('zipCode')}"
+        [ngClass]="{'has-error': !isFormControlValid('postal_code') && isFormControlDirty('postal_code'),
+                    'has-success': isFormControlValid('postal_code')}"
       >
         <span class="input-group-addon">
           <i class="material-icons">edit</i>
@@ -152,19 +152,19 @@
           class="form-control"
           i18n-placeholder
           placeholder="Zip/Postal Code"
-          formControlName="zipCode"
+          formControlName="postal_code"
         />
         <span
           class="material-icons form-control-feedback"
-          *ngIf="isFormControlValid('zipCode') && isFormControlDirty('zipCode')"
+          *ngIf="isFormControlValid('postal_code') && isFormControlDirty('postal_code')"
         >done</span>
         <span
           class="material-icons form-control-feedback"
-          *ngIf="isFormControlDirty('zipCode') && !isFormControlValid('zipCode')"
+          *ngIf="isFormControlDirty('postal_code') && !isFormControlValid('postal_code')"
         >clear</span>
         <p
           class="text-danger"
-          *ngIf="!isFormControlValid('zipCode') && isFormControlDirty('zipCode')"
+          *ngIf="!isFormControlValid('postal_code') && isFormControlDirty('postal_code')"
           i18n
         >
           Zip/Postal Code is required!
@@ -212,8 +212,8 @@
       <!-- State/Province -->
       <div
         class="input-group form-group"
-        [ngClass]="{'has-error': !isFormControlValid('province') && isFormControlDirty('province'),
-                    'has-success': isFormControlValid('province')}"
+        [ngClass]="{'has-error': !isFormControlValid('state') && isFormControlDirty('state'),
+                    'has-success': isFormControlValid('state')}"
       >
         <span class="input-group-addon">
           <i class="material-icons">edit_location</i>
@@ -223,19 +223,19 @@
           class="form-control"
           i18n-placeholder
           placeholder="State/Province"
-          formControlName="province"
+          formControlName="state"
         />
         <span
           class="material-icons form-control-feedback"
-          *ngIf="isFormControlValid('province') && isFormControlDirty('province')"
+          *ngIf="isFormControlValid('state') && isFormControlDirty('state')"
         >done</span>
         <span
           class="material-icons form-control-feedback"
-          *ngIf="isFormControlDirty('province') && !isFormControlValid('province')"
+          *ngIf="isFormControlDirty('state') && !isFormControlValid('state')"
         >clear</span>
         <p
           class="text-danger"
-          *ngIf="!isFormControlValid('province') && isFormControlDirty('province')"
+          *ngIf="!isFormControlValid('state') && isFormControlDirty('state')"
           i18n
         >
           State/Province is required!
@@ -281,8 +281,8 @@
   <!-- Number of Employees -->
   <div
     class="input-group form-group"
-    [ngClass]="{'has-error': !isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees'),
-                'has-success': isFormControlValid('numberOfEmployees')}"
+    [ngClass]="{'has-error': !isFormControlValid('no_of_employees') && isFormControlDirty('no_of_employees'),
+                'has-success': isFormControlValid('no_of_employees')}"
   >
     <span class="input-group-addon">
       <i class="material-icons">people</i>
@@ -292,19 +292,19 @@
       class="form-control"
       i18n-placeholder
       placeholder="Number of Employees"
-      formControlName="numberOfEmployees"
+      formControlName="no_of_employees"
     />
     <span
       class="material-icons form-control-feedback"
-      *ngIf="isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees')"
+      *ngIf="isFormControlValid('no_of_employees') && isFormControlDirty('no_of_employees')"
     >done</span>
     <span
       class="material-icons form-control-feedback"
-      *ngIf="isFormControlDirty('numberOfEmployees') && !isFormControlValid('numberOfEmployees')"
+      *ngIf="isFormControlDirty('no_of_employees') && !isFormControlValid('no_of_employees')"
     >clear</span>
     <p
       class="text-danger"
-      *ngIf="!isFormControlValid('numberOfEmployees') && isFormControlDirty('numberOfEmployees')"
+      *ngIf="!isFormControlValid('no_of_employees') && isFormControlDirty('no_of_employees')"
       i18n
     >
       Number of Employees is required!

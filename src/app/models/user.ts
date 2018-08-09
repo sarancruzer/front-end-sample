@@ -5,9 +5,10 @@ export interface User {
     department?: string;
     jobTitle?: string;
     isAdmin: boolean;
-    userKey?: string;
+    id?: string;
     initials?: string;
     numberOfBookings?: number;
+    userKey?: string;
 }
 
 export interface AdminRegistrationData extends User {

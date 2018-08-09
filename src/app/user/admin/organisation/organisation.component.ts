@@ -26,16 +26,21 @@ export class OrganisationComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.organisation = this.sessionService.getOrganisation();
+     //this.organisation = this.sessionService.getOrganisation();
+   
+     this.organisation = this.sessionService.getOrganisation();
+    
   }
 
   onOrganisationFormDone(event: any) {
+
+    console.log(event);
+
     this.isBusy = true;
     this.organisation = <Organisation>event;
     this.organisationService.update(this.organisation).subscribe(
       data => {
-        this.isBusy = false;
-        this.sessionService.setOrganisation(this.organisation);
+        this.isBusy = false;        
         this.notificationService.notifySuccess(this.lang.get('msg_changes_saved'));
       },
       err => {

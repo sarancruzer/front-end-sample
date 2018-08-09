@@ -34,6 +34,19 @@ import { VehicleEditorComponent } from './admin/vehicles/vehicle-editor/vehicle-
 import { WialonMapComponent } from './admin/wialon-integration/wialon-map/wialon-map.component';
 import { WialonIntegratorComponent } from './admin/wialon-integration/wialon-integrator/wialon-integrator.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ManageOrganisationComponent } from './manage-organisation/manage-organisation/manage-organisation.component';
+import { EditOrganisationComponent } from './manage-organisation/edit-organisation/edit-organisation.component';
+import { AddOrganisationComponent } from './manage-organisation/add-organisation/add-organisation.component';
+import { WialonOrganisationComponent } from './manage-organisation/wialon-organisation/wialon-organisation.component';
+import { WialonInitOrganisationComponent } from './manage-organisation/wialon-init-organisation/wialon-init-organisation.component';
+import { OrganisationWialonIntegratorComponent } from './manage-organisation/organisation-wialon-integrator/organisation-wialon-integrator.component';
+import { OrganisationWialonMapComponent } from './manage-organisation/organisation-wialon-map/organisation-wialon-map.component';
+import { AddUserComponent } from './admin/users/add-user/add-user.component';
+import { EditUserComponent } from './admin/users/edit-user/edit-user.component';
+import { ManageUserComponent } from './admin/users/manage-user/manage-user.component';
+import { ManageVehicleComponent } from './admin/vehicles/manage-vehicle/manage-vehicle.component';
+import { AddVehicleComponent } from './admin/vehicles/add-vehicle/add-vehicle.component';
+import { EditVehicleComponent } from './admin/vehicles/edit-vehicle/edit-vehicle.component';
 
 @NgModule({
   imports: [
@@ -67,7 +80,20 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     VehicleEditorComponent,
     WialonMapComponent,
     WialonIntegratorComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManageOrganisationComponent,
+    AddOrganisationComponent,
+    EditOrganisationComponent,
+    WialonOrganisationComponent,
+    WialonInitOrganisationComponent,
+    OrganisationWialonIntegratorComponent,
+    OrganisationWialonMapComponent,
+    AddUserComponent,
+    EditUserComponent,
+    ManageUserComponent,
+    ManageVehicleComponent,
+    AddVehicleComponent,
+    EditVehicleComponent
   ],
   providers: [
     BookVehicleWizardService,

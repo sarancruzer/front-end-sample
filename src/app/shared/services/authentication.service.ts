@@ -10,7 +10,7 @@ import { OrganisationService } from './organisation.service';
 @Injectable()
 export class AuthenticationService extends BackendService {
 
-  static endpointName: string = '/organisations';
+  static endpointName: string = '/api';
 
   constructor(http: Http) {
     super(http, OrganisationService.endpointName);
@@ -18,7 +18,7 @@ export class AuthenticationService extends BackendService {
 
   login(email: string, password: string): Observable<any> {
     let body: any = { 'email': email, 'password': password };
-    return this.post('/users/login', body)
+    return this.post('/authenticate', body)
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);

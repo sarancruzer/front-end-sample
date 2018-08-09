@@ -1,13 +1,13 @@
 export interface Organisation {
-    key?: string;
     name?: string;
     website?: string;
     phone?: string;
     address?: string;
-    province?: string;
+    state?: string;
     city?: string;
-    zipCode?: string;
+    postal_code?: string;
     country?: string;
-    numberOfEmployees?: number;
-    wialonToken?: string;
+    no_of_employees?: number;
+    wialon_token?: string;
+    id?:number;
 }

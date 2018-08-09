@@ -8,7 +8,6 @@ import { NbSharedModule } from '../shared/nb-shared.module';
 import { AnonComponent } from './anon.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { AuthenticationService } from '../shared/services';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
@@ -23,7 +22,6 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
     AnonComponent,
     LoginComponent,
     FooterComponent,
-    RegisterComponent,
     ForgetPasswordComponent
   ],
   providers: [AuthenticationService]

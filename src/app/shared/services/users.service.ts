@@ -12,7 +12,7 @@ import ModelToJsonTransformers from '../../utils/model.to.json';
 @Injectable()
 export class UsersService extends BackendService {
 
-  static endpointName = '/organisations/users';
+  static endpointName = '/api';
 
   collection: ReplaySubject<User[]>;
 
@@ -58,10 +58,11 @@ export class UsersService extends BackendService {
     this.events = [];
   }
 
-  update(user: User) {
-    const body: any = ModelToJsonTransformers.userToJson(user);
-
-    return this.post('/profile/update', body)
+  update(params: any,id:any) {
+    // const body: any = ModelToJsonTransformers.userToJson(user);
+    const body: any = {"info":params};
+    
+    return this.post('/users/update/'+id, body)
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);
@@ -81,11 +82,10 @@ export class UsersService extends BackendService {
     ;
   }
 
-  delete(user: User): Observable<any> {
-    const body: any = ModelToJsonTransformers.userToJson(user);
-    body.admin_key = this.sessionService.getUser().userKey;
+  delete(params: any,id:any): Observable<any> {
+    const body: any = { info:params };
 
-    return this.post('/delete', body)
+    return this.post('/users/delete/'+id, body)
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);
@@ -95,9 +95,8 @@ export class UsersService extends BackendService {
 
   create(user: User) {
     const body: any =  ModelToJsonTransformers.userToJson(user);
-    body.admin_key = this.sessionService.getUser().userKey;
 
-    return this.post('/create', body)
+    return this.post('/users/create', {'info':user})
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);
@@ -116,10 +115,27 @@ export class UsersService extends BackendService {
     ;
   }
 
-  list(): Observable<User[]> {
-    this.fetch();
+  list(page: any,params: any): Observable<Location[]> {
+    // const body: any = {
+    //      'info': params
+    // };
+    return this.post('/users/list?page='+page, params)
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
+    ;
+  }
 
-    return this.collection.asObservable();
+  edit(id: any): Observable<User> {      
+    
+    return this.post('/users/edit/'+id, '')
+      .map(response => {
+        
+        return response.json();
+      })
+      .catch((err: any) => Observable.throw(err))
+    ;
   }
 
   fetch() {
@@ -130,11 +146,12 @@ export class UsersService extends BackendService {
     const body: any = {
       'admin_key': this.sessionService.getUser().userKey,
       'cursor': this.cursor,
-      'size': 20
+      'size': 20,
+      'q':''
     };
     console.log('hi');
     this.fetching = true;
-    this.post('/list', body)
+    this.post('/users/list', body)
       .map(response => {
         const jsonString = response.json();
         const users = jsonString.users ? jsonString.users : [];

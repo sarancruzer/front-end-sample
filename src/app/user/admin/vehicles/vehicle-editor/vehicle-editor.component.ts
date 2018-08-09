@@ -154,7 +154,7 @@ export class VehicleEditorComponent implements OnInit, OnChanges, AfterViewInit 
         }
       );
     } else if (vehicle.key) {
-      this.vehicleService.update(vehicle).subscribe(
+      this.vehicleService.update(vehicle,1).subscribe(
         data => {
           this.isBusy = false;
           vehicle.location = (typeof vehicle.location === 'string') ? vehicle.location : vehicle.location.name;

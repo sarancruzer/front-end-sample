@@ -216,7 +216,7 @@ export class VehiclesComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   onDeletionConfirmed() {
-    this.vehiclesService.delete(this.vehicle).subscribe(
+    this.vehiclesService.delete(this.vehicle,2).subscribe(
       data => {
         const index: number = this.vehicles.indexOf(this.vehicle);
         if (index > -1) {

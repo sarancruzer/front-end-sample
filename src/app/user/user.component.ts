@@ -43,6 +43,12 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild(ConfirmPopupComponent) 
   private cpcomponent: ConfirmPopupComponent;
 
+  isDesc: boolean = true;
+  column: string = 'id';
+  orderby:string = "desc";
+
+  q:any;
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -61,6 +67,8 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
         this.mdp.scrollToTop();
       }
     });
+
+    this.q = "";
 
     this.year = new Date().getFullYear();
   }
@@ -152,7 +160,8 @@ export class UserComponent implements OnInit, OnDestroy, AfterViewInit {
 
     // notify if organisation has no vehicles
     let vehiclesCount = 0;
-    this.vehiclesService.list().subscribe(
+    let params = {column:this.column,orderby:this.orderby,q:this.q};
+    this.vehiclesService.list(1,params).subscribe(
       list => {
         if (list.length === 0) {
           return this.vehiclesService.fetch();

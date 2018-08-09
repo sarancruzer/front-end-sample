@@ -38,7 +38,7 @@ export class SettingsComponent implements OnInit {
 
   updateUser(user: User) {
     this.isBusy = true;
-    this.usersService.update(user)
+    this.usersService.update(user,'')
       .subscribe(
       data => {
         this.isBusy = false;

@@ -44,7 +44,7 @@ export class OrganisationFormComponent implements OnInit {
           Validators.required
         ]
       ],
-      'province': [this.organisation.province, [
+      'state': [this.organisation.state, [
           Validators.required
         ]
       ],
@@ -52,7 +52,7 @@ export class OrganisationFormComponent implements OnInit {
           Validators.required
         ]
       ],
-      'zipCode': [this.organisation.zipCode, [
+      'postal_code': [this.organisation.postal_code, [
           Validators.required
         ]
       ],
@@ -60,7 +60,7 @@ export class OrganisationFormComponent implements OnInit {
           Validators.required
         ]
       ],
-      'numberOfEmployees': [this.organisation.numberOfEmployees, [
+      'no_of_employees': [this.organisation.no_of_employees, [
           Validators.required
         ]
       ]
@@ -90,6 +90,7 @@ export class OrganisationFormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log("onsubmit");
     this.organisation = this.organisationForm.value;
     this.done.emit(this.organisation);
   }

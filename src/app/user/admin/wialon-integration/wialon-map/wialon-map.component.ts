@@ -32,7 +32,7 @@ export class WialonMapComponent implements OnInit {
       return this.notificationService.notifyError('An unexpected error occurred! Please try again.');
     }
 
-    const token = this.sessionService.getOrganisation().wialonToken;
+    const token = this.sessionService.getOrganisation().wialon_token;
     this.wialonService.loginToken(token)
       .then(response => {
         this.isBusy = false;

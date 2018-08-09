@@ -30,6 +30,7 @@ export class BackendService {
 
   post(endpoint: string, body: any, headers: any = {'Content-Type': 'application/json'}, custom = false): Observable<Response> {
     const headersObj = new Headers();
+    headersObj.append('Authorization', localStorage.getItem('token'));
     let finalUrl = this.buildEndpoint(endpoint);
     if (custom) {
       finalUrl = endpoint;

@@ -1,0 +1,177 @@
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">people_outline</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title">Manage Organisation</h4>
+
+        <button mat-raised-button type="button" class="btn btn-info btn-block btn-fill pull-right" style="width: 100px;" (click)="createOrganisation()">
+          <i class="fa fa-plus-circle"></i>
+          <ng-container i18n="Button label">Create</ng-container>
+        </button>
+
+        <div class="material-datatables">
+          <table class="table table-striped">
+            <thead class=" text-primary">
+              <th>
+                ID
+              </th>
+              <th>
+                Contact
+              </th>
+              <th>
+                Organisation
+              </th>
+              <th>
+                Created
+              </th>
+              <th>
+                Subscription
+              </th>
+              <th>
+                Actions
+              </th>
+            </thead>
+            <tbody>
+
+              <tr class="odd" role="row" *ngFor="let item of items let i = index" [attr.data-index]="i">
+                <td class="text-center sorting_1" tabindex="0">
+                  <h3>{{i+1}}</h3>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="material-icons">business</i>
+                      <span class="text-muted">{{item.name}}</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">web</i>
+                      <span class="text-muted">{{item.website}}</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">phone</i>
+                      <span class="text-muted">{{item.phone}}</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">language</i>
+                      <span class="text-muted">{{item.phone}}</span>
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <ul class="list-unstyled">
+                    <li>
+                      <i class="material-icons">business</i>
+                      <span class="text-muted">{{item.department_count}} departments</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">place</i>
+                      <span class="text-muted">{{item.location_count}} locations</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">directions_car</i>
+                      <span class="text-muted">{{item.vehicle_count}} vehicles</span>
+                    </li>
+                    <li>
+                      <i class="material-icons">group</i>
+                      <span class="text-muted">
+                        {{item.admin_count}} admins
+                      </span>
+                    </li>
+                  </ul>
+                </td>
+                <td>{{item.created_at}}</td>
+                <td>
+
+                  <div class="text-muted">N/A</div>
+
+                </td>
+                <td class="text-right" data-customer-id="1">
+
+                  <button type="button" class="btn btn-fill btn-primary" (click)="integrate(item)" i18n="Button label">Integrate</button>
+
+                  <a href="#" class="btn btn-simple btn-primary btn-icon subscription" data-toggle="tooltip" title="Manage Organisation Subscription"
+                    data-original-title="Manage Organisation Subscription">
+                    <i class="material-icons">payment</i>
+                  </a>
+
+
+                  <a href="#" class="btn btn-simple btn-warning btn-icon freeze" data-toggle="tooltip" title="Freeze Organisation" data-original-title="Freeze Organisation">
+                    <i class="material-icons">block</i>
+                  </a>
+
+
+
+
+                  <a href="#" class="btn btn-simple btn-danger btn-icon remove" data-toggle="tooltip" title="Remove Organisation and All Related Data"
+                    data-original-title="Remove Organisation and All Related Data">
+                    <i class="material-icons">delete_forever</i>
+                  </a>
+
+
+
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+
+          <!--Pagination -->
+          <nav aria-label="pagination example">
+            <ul class="pagination pagination-circle pg-blue mb-0" *ngIf="pages && pages.length">
+
+              <!--First-->
+              <li class="page-item " [ngClass]="{disabled:currentPage === 1}">
+                <a class="page-link" (click)="init(1)">First</a>
+              </li>
+
+              <!--Arrow left-->
+              <li class="page-item " [ngClass]="{disabled:currentPage === 1}">
+                <a class="page-link" aria-label="Previous" (click)="init(currentPage - 1)">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+
+              <!--Numbers-->
+              <li class="page-item " *ngFor="let page of pages" [ngClass]="{active:currentPage === page}">
+                <a class="page-link" (click)="init(page)">{{page}}</a>
+              </li>
+
+
+              <!--Arrow right-->
+              <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}">
+                <a class="page-link" aria-label="Next" (click)="init(currentPage + 1)">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+
+              <!--Last-->
+              <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}">
+                <a class="page-link" (click)="init(lastPage)">Last</a>
+              </li>
+
+            </ul>
+          </nav>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nb-loader *ngIf="isBusy"></nb-loader>
+
+<div nbLang hidden>
+  <span id="err_wialon_access_token" i18n>It was not possible to receive token from Wialon! Please try again.</span>
+  <span id="msg_wialon_token_stored" i18n>The token has been stored successfully.</span>
+  <span id="err_storing_wialon_token" i18n>Due to an error, it was not possible to store the token!</span>
+</div>

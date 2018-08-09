@@ -1,0 +1,19 @@
+.sidebar .nav li.active > a, .sidebar .nav li.active > a i, .off-canvas-sidebar .nav li.active > a, .off-canvas-sidebar .nav li.active > a i {
+     color: #3C4858; 
+}
+
+.sidebar .nav li > a, .off-canvas-sidebar .nav li > a {
+ cursor:pointer;
+}
+
+.sidebar .sidebar-wrapper, .off-canvas-sidebar .sidebar-wrapper {
+    height: calc(100vh - 100px);
+ }
+
+ .portal {
+    font-size: 12px;
+    text-align: center;
+    margin: -6px 60px 0px 60px;
+    color: #525d6b;
+    font-weight: 500;
+ }

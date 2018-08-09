@@ -5,10 +5,12 @@
 
 //const baseUrl = 'https://nextbooking-backend-staging.appspot.com';
 //const baseUrl = 'http://localhost:41585';
-const baseUrl = 'http://localhost:8080';
+const baseUrl = 'http://localhost:8001';
 
 export const environment = {
   production: false,
   baseUrl: baseUrl,
-  apiBaseUrl: baseUrl + '/_ah/api/default/v1'
+  //apiBaseUrl: baseUrl + '/_ah/api/default/v1'
+  apiBaseUrl: baseUrl 
 };
+

@@ -12,7 +12,7 @@ import { SessionService } from './session.service';
 @Injectable()
 export class VehiclesService extends BackendService {
 
-  static endpointName = '/organisations/vehicles';
+  static endpointName = '/api';
 
   collection: ReplaySubject<Vehicle[]>;
 
@@ -53,10 +53,33 @@ export class VehiclesService extends BackendService {
     this.fetching = false;
   }
 
-  list(): Observable<Vehicle[]> {
-    this.fetch();
+  // list(): Observable<Vehicle[]> {
+  //   this.fetch();
 
-    return this.collection.asObservable();
+  //   return this.collection.asObservable();
+  // }
+
+  list(page: any,params: any): Observable<Vehicle[]> {
+    // const body: any = {
+    //      'info': params
+    // };
+    return this.post('/vehicle/list?page='+page, params)
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
+    ;
+  }
+
+  edit(id: any): Observable<Vehicle> {      
+    
+    return this.post('/vehicle/edit/'+id, '')
+      .map(response => {
+        
+        return response.json();
+      })
+      .catch((err: any) => Observable.throw(err))
+    ;
   }
 
   fetch() {
@@ -69,7 +92,7 @@ export class VehiclesService extends BackendService {
     }
 
     const body: any = {
-      'admin_key': this.sessionService.getUser().userKey,
+      'id': this.sessionService.getUser().id,
       'cursor': this.cursor,
       'size': 20
     };
@@ -108,11 +131,11 @@ export class VehiclesService extends BackendService {
     return this.more;
   }
 
-  create(vehicle: Vehicle): Observable<any> {
+  create(vehicle: any): Observable<any> {
     const body: any = ModelToJsonTransformers.vehicleToJson(vehicle);
-    body.admin_key = this.sessionService.getUser().userKey;
+    // body.id = this.sessionService.getOrganisation().id;
 
-    return this.post('/create', body)
+    return this.post('/vehicle/create', {info:vehicle})
       .map(response => {
         return response.json();
       })
@@ -122,11 +145,9 @@ export class VehiclesService extends BackendService {
     ;
   }
 
-  delete(vehicle: Vehicle): Observable<any> {
-    const body: any = ModelToJsonTransformers.vehicleToJson(vehicle);
-    body.admin_key = this.sessionService.getUser().userKey;
+  createBuilkVechile(vehicle: any): Observable<any> {
 
-    return this.post('/delete', body)
+    return this.post('/vehicle/create/bulk', {info:vehicle})
       .map(response => {
         return response.json();
       })
@@ -136,16 +157,55 @@ export class VehiclesService extends BackendService {
     ;
   }
 
-  update(vehicle: Vehicle): Observable<any> {
-    const body: any = ModelToJsonTransformers.vehicleToJson(vehicle);
-    body.admin_key = this.sessionService.getUser().userKey;
+  // delete(vehicle: Vehicle): Observable<any> {
+  //   const body: any = ModelToJsonTransformers.vehicleToJson(vehicle);
+  //   body.id = this.sessionService.getUser().id;
 
-    return this.post('/update', body)
-      .map(response => {
-        return response.json();
+  //   return this.post('/delete', body)
+  //     .map(response => {
+  //       return response.json();
+  //     })
+  //     .catch(err => {
+  //       return Observable.throw(err);
+  //     })
+  //   ;
+  // }
+
+  
+  delete(params: any,id:any): Observable<any> {
+    const body: any = { info:params };
+
+    return this.post('/vehicle/delete/'+id, body)
+      .map(response => response.json())
+      .catch(error => {
+        return Observable.throw(error);
       })
-      .catch(err => {
-        return Observable.throw(err);
+    ;
+  }
+
+  // update(vehicle: Vehicle): Observable<any> {
+  //   const body: any = ModelToJsonTransformers.vehicleToJson(vehicle);
+  //   body.id = this.sessionService.getUser().id;
+
+  //   return this.post('/update', body)
+  //     .map(response => {
+  //       return response.json();
+  //     })
+  //     .catch(err => {
+  //       return Observable.throw(err);
+  //     })
+  //   ;
+  // }
+
+
+  update(params: any,id:any) {
+    // const body: any = ModelToJsonTransformers.userToJson(user);
+    const body: any = {"info":params};
+    
+    return this.post('/vehicle/update/'+id, body)
+      .map(response => response.json())
+      .catch(error => {
+        return Observable.throw(error);
       })
     ;
   }
@@ -168,7 +228,7 @@ export class VehiclesService extends BackendService {
 
   findBookable(filter: BookVehicleFilter): Observable<Vehicle[]> {
     const body: any = ModelToJsonTransformers.bookVehicleFilterToJson(filter);
-    body.user_key = this.sessionService.getUser().userKey;
+    body.id = this.sessionService.getUser().id;
 
     return this.post('/bookable/list', body)
       .map(response => {

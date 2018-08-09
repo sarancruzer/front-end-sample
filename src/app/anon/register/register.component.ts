@@ -58,47 +58,48 @@ export class RegisterComponent implements AfterViewInit {
   ngAfterViewInit() {
   }
 
-  onOrganisationFormDone(event: any) {
-    this.organisation = <Organisation>event;
-    this.forms.organisation = false;
-    this.forms.admin = true;
-  }
+  
+  // onOrganisationFormDone(event: any) {
+  //   this.organisation = <Organisation>event;
+  //   this.forms.organisation = false;
+  //   this.forms.admin = true;
+  // }
 
-  onAdminFormDone(event: any) {
-    this.admin = <AdminRegistrationData>event;
-    this.forms.admin = false;
-    this.doRegister();
-  }
+  // onAdminFormDone(event: any) {
+  //   this.admin = <AdminRegistrationData>event;
+  //   this.forms.admin = false;
+  //   this.doRegister();
+  // }
 
-  private doRegister() {
-    this.isBusy = true;
-    this.organisationService.create(this.organisation, this.admin)
-      .subscribe(
-        data => {
-          this.isBusy = false;
+  // private doRegister() {
+  //   this.isBusy = true;
+  //   this.organisationService.create(this.organisation, this.admin)
+  //     .subscribe(
+  //       data => {
+  //         this.isBusy = false;
 
-          this.organisation.key = data.organisation_key;
+  //         this.organisation.key = data.organisation_key;
 
-          this.user = <User>this.admin;
-          this.user.userKey = data.admin_key;
-          this.user.isAdmin = true;
+  //         this.user = <User>this.admin;
+  //         this.user.userKey = data.admin_key;
+  //         this.user.isAdmin = true;
 
-          this.sessionService.setOrganisation(this.organisation);
-          this.sessionService.setUser(this.user);
+  //         this.sessionService.setOrganisation(this.organisation);
+  //         this.sessionService.setUser(this.user);
 
-          this.notificationService.notifySuccess('You have been successfully registered.');
+  //         this.notificationService.notifySuccess('You have been successfully registered.');
 
-          this.router.navigate(['/me/admin/organisation']);
-        },
-        error => {
-          this.isBusy = false;
-          let temp =error.json()
-          let msg = 'Registration was not possible due to an error! Please try again. '
-            + ' Error to report:' + temp.error.message;
-          // console.log(temp.error.message)
-          this.notificationService.notifyError(msg);
-          this.forms.organisation = true;
-        }
-      );
-  }
+  //         this.router.navigate(['/me/admin/organisation']);
+  //       },
+  //       error => {
+  //         this.isBusy = false;
+  //         let temp =error.json()
+  //         let msg = 'Registration was not possible due to an error! Please try again. '
+  //           + ' Error to report:' + temp.error.message;
+  //         // console.log(temp.error.message)
+  //         this.notificationService.notifyError(msg);
+  //         this.forms.organisation = true;
+  //       }
+  //     );
+  // }
 }

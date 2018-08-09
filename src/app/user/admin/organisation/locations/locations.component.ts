@@ -39,7 +39,9 @@ export class LocationsComponent implements OnInit {
     this.locationsService.list().subscribe(
       data => {
         this.isBusy = false;
-        this.locations = data;
+        console.log("getLocations");
+        console.log(data);
+        this.locations = data['result']['info'];
       },
       error => {
         this.isBusy = false;

@@ -1,0 +1,125 @@
+<div class="row">
+  <!-- Organisation Profile -->
+  <div class="col-md-10">
+    <div class="card">
+      <div class="card-header card-header-icon" data-background-color="blue">
+        <i class="material-icons">business</i>
+      </div>
+      <div class="card-content">
+        <h4 class="card-title" i18n="Title">Organisation Profile</h4>
+        <form [formGroup]="form" (ngSubmit)="submit(form)">
+          <!-- Organisation Name -->
+          <div class="input-group form-group">
+            <span class="input-group-addon">
+              <i class="material-icons">local_library</i>
+            </span>
+            <input type="text" class="form-control" i18n-placeholder placeholder="Initials" formControlName="initials" />           
+            <span class="err" *ngIf="!form.controls.initials.valid  && (form.controls.initials.dirty || submitAttempt)">
+              <p class="blinking">Please enter a initials.</p>
+            </span>       
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <!-- Website -->
+              <div class="input-group form-group" >
+                  <span class="input-group-addon">
+                    <i class="material-icons">business</i>
+                  </span>
+                <input type="text" class="form-control" i18n-placeholder placeholder="Full Name" formControlName="name" />
+                <span class="err" *ngIf="!form.controls.name.valid  && (form.controls.name.dirty || submitAttempt)">
+                  <p class="blinking">Please enter a name.</p>
+                </span>       
+              </div>
+            </div>
+           
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+          
+            <!-- Phone number -->
+            <div class="input-group form-group">
+              <span class="input-group-addon">
+                <i class="material-icons">web</i>
+              </span>
+              <input type="email" class="form-control" i18n-placeholder placeholder="Email Address" formControlName="email" />             
+              <span class="err" *ngIf="!form.controls.email.valid  && (form.controls.email.dirty || submitAttempt)">
+                <p class="blinking">Please enter a email.</p>
+              </span>       
+            </div>
+          </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+          
+            <!-- Phone number -->
+            <div class="input-group form-group" >
+              <span class="input-group-addon">
+                <i class="material-icons">perm_contact_calendar</i>
+              </span>
+              <input type="number" class="form-control" i18n-placeholder placeholder="Phone " formControlName="phone" />             
+              <span class="err" *ngIf="!form.controls.phone.valid  && (form.controls.phone.dirty || submitAttempt)">
+                <p class="blinking">Please enter a phone.</p>
+              </span>       
+            </div>
+          </div>
+          </div>
+
+          <!-- Address -->
+          <div class="input-group form-group">
+            <span class="input-group-addon">
+              <i class="material-icons">payment</i>
+            </span>
+            <input type="text" class="form-control" i18n-placeholder placeholder="Job Title" formControlName="job_title" />           
+            <span class="err" *ngIf="!form.controls.job_title.valid  && (form.controls.job_title.dirty || submitAttempt)">
+              <p class="blinking">Please enter a job_title.</p>
+            </span>       
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <!-- Zip/Postal Code -->
+              <div class="input-group form-group">
+                <span class="input-group-addon">
+                  <i class="material-icons">event_seat</i>
+                </span>            
+                <select class="form-control" formControlName="department">
+                  <option [value]="dept.id"  *ngFor="let dept of departments">{{dept.name}}</option>
+                </select>                
+                <span class="err" *ngIf="!form.controls.department.valid  && (form.controls.department.dirty || submitAttempt)">
+                  <p class="blinking">Please select a department.</p>
+                </span>       
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="pull-right">
+            <button type="submit" class="btn btn-fill btn-primary" >
+              Submit
+            </button>
+            <button type="button" class="btn btn-fill btn-primary" (click)="cancel()" >
+              Cancel
+            </button>
+          </div>
+          
+          <div class="clearfix"></div>
+        </form>
+
+        <nb-loader *ngIf="isBusy"></nb-loader>
+      </div>
+    </div>
+  </div>
+  <!-- END Organisation Profile -->
+
+</div>
+
+<div nbLang hidden>
+  <span id="org_save_changes" i18n="Button label">Save Changes</span>
+  <span id="msg_changes_saved" i18n>Your changes were saved successfully.</span>
+  <span id="err_failed_saving_changes" i18n>Failed to update your organisation profile! Please try again.</span>
+</div>
+

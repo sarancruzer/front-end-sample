@@ -22,7 +22,7 @@
                 width="100%"
                 style="width:100%">
             <thead>
-              <tr>
+              <tr >
                 <th i18n="Users table header">
                   Initials
                 </th>
@@ -45,7 +45,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let user of users">
+              <tr *ngFor="let user of items">
                 <td>{{user.initials}}</td>
                 <td>
                   {{user.name}}
@@ -71,6 +71,42 @@
               </tr>
             </tbody>
           </table>
+
+             <!--Pagination -->
+<nav aria-label="pagination example">
+  <ul class="pagination pagination-circle pg-blue mb-0" *ngIf="pages && pages.length" >
+
+      <!--First-->
+      <li class="page-item " [ngClass]="{disabled:currentPage === 1}"><a class="page-link" (click)="init(1)">First</a></li>
+
+      <!--Arrow left-->
+      <li class="page-item "  [ngClass]="{disabled:currentPage === 1}">
+          <a class="page-link" aria-label="Previous" (click)="init(currentPage - 1)">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+          </a>
+      </li>
+
+      <!--Numbers-->
+      <li class="page-item " *ngFor="let page of pages" [ngClass]="{active:currentPage === page}"><a class="page-link" (click)="init(page)">{{page}}</a></li>
+      
+
+      <!--Arrow right-->
+      <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}">
+          <a class="page-link" aria-label="Next" (click)="init(currentPage + 1)">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+          </a>
+      </li>
+
+      <!--Last-->
+      <li class="page-item" [ngClass]="{disabled:currentPage === lastPage}"><a class="page-link" (click)="init(lastPage)">Last</a></li>
+
+  </ul>
+</nav>
+
+
+
         </div>
       </div>
     </div>

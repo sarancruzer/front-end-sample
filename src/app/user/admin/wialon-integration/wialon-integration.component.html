@@ -1,6 +1,8 @@
 <div class="row" *ngIf="!isIntegrated">
   <div class="col-md-12">
     <nb-wialon-integrator (integrated)="onIntegrated()"></nb-wialon-integrator>
+
+    <p *ngIf="!isIntegrated"> Your organisation didn't integrated </p>
   </div>
 </div>
 

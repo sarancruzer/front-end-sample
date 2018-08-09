@@ -10,7 +10,7 @@ import JsonToModelTransformers from '../../utils/json.to.model';
 
 @Injectable()
 export class DepartmentsService extends BackendService {
-  static endpointName: string = '/organisations/departments';
+  static endpointName: string = '/api';
 
   private departments: Department[];
 
@@ -51,10 +51,10 @@ export class DepartmentsService extends BackendService {
     this.fetching = false;
   }
 
-  list(): Observable<Department[]> {
-    this.fetch();
-    return this.collection;
-  }
+  // list(): Observable<Department[]> {
+  //   this.fetch();
+  //   return this.collection;
+  // }
 
   fetch() {
     if (this.fetching) return;
@@ -62,13 +62,13 @@ export class DepartmentsService extends BackendService {
     if (!this.more) return;
 
     let body: any = {
-      'user_key': this.sessionService.getUser().userKey,
+     
       'cursor': this.cursor,
       'size': 10
     };
 
     this.fetching = true;
-    this.post('/list', body)
+    this.post('/department/master', body)
       .map(response => {
         let jsonString = response.json();
         let departments = jsonString.departments ? jsonString.departments : [];
@@ -101,12 +101,11 @@ export class DepartmentsService extends BackendService {
   }
 
   create(department: Department): Observable<Department> {
-    const body: any = {
-      'admin_key': this.sessionService.getUser().userKey,
+    const body: any = {     
       'name': department.name
     };
 
-    return this.post('/create', body)
+    return this.post('/department/create', {"info":body})
       .map(response => {
         department.key = response.json().department_key;
         this.departments.push(department);
@@ -114,6 +113,30 @@ export class DepartmentsService extends BackendService {
         return department;
       })
       .catch((err: any) => Observable.throw(err))
+    ;
+  }
+
+  list(): Observable<Department[]> {
+    // const body: any = {
+    //   'user_key': this.sessionService.getUser().userKey
+    // };
+    return this.post('/department/masters', '')
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
+    ;
+  }
+
+  getAll(): Observable<Department[]> {
+    // const body: any = {
+    //   'user_key': this.sessionService.getUser().userKey
+    // };
+    return this.post('/department/getAll', '')
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
     ;
   }
 

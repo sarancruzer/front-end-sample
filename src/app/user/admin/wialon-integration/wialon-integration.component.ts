@@ -48,15 +48,23 @@ export class WialonIntegrationComponent implements OnInit, OnDestroy {
     this.organisation = this.sessionService.getOrganisation();
 
     if (this.organisation) {
-      this.isIntegrated = this.organisation.wialonToken != null;
+      this.isIntegrated = this.organisation.wialon_token != null;
     }
+
+    
+    console.log('this.isIntegrated');
+
+    console.log(this.isIntegrated);
 
     if (!this.isIntegrated) {
       return;
     }
 
-    this.fetchActiveBookings();
+    
+
+  //  this.fetchActiveBookings();
   }
+
 
   ngOnDestroy() {
     this.wialonService.logout();

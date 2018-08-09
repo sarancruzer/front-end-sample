@@ -13,19 +13,18 @@ import { SessionService } from './session.service';
 @Injectable()
 export class OrganisationService extends BackendService {
 
-  static endpointName: string = '/organisations';
+  static endpointName: string = '/api';
 
   constructor(http: Http, private sessionService: SessionService) {
     super(http, OrganisationService.endpointName);
   }
 
-  create(organisation: Organisation, admin: AdminRegistrationData): Observable<any> {
+  create(organisation: Organisation): Observable<any> {
     const body: any = {
-      'organisation': ModelToJsonTransformers.organisationToJson(organisation),
-      'admin': ModelToJsonTransformers.userToJson(admin)
+      'info': organisation,
     };
 
-    return this.post('/create', body)
+    return this.post('/organisation/create', body)
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);
@@ -34,10 +33,11 @@ export class OrganisationService extends BackendService {
   }
 
   update(organisation: Organisation): Observable<any> {
-    const body: any = ModelToJsonTransformers.organisationToJson(organisation);
-    body.admin_key = this.sessionService.getUser().userKey;
+    const body: any = organisation;
+    const userId = this.sessionService.getUser().id;
+    const orgId = this.sessionService.getOrganisation().id;
 
-    return this.post('/update', body)
+    return this.post('/organisation/update/'+userId+'/'+orgId, {info:body})
       .map(response => response.json())
       .catch(error => {
         return Observable.throw(error);
@@ -45,10 +45,32 @@ export class OrganisationService extends BackendService {
     ;
   }
 
+  list(page: any,params: any): Observable<Location[]> {
+    // const body: any = {
+    //      'info': params
+    // };
+
+    return this.post('/organisation/list?page='+page, params)
+      .map(response => {        
+        return response.json();
+      })
+      .catch(error => Observable.throw(error))
+    ;
+  }
+
   updateWialonAccessToken(token: string): Observable<any> {
-    let body: any = {
-      'admin_key': this.sessionService.getUser().userKey,
-      'token': token
+    let body: any = {      
+      'token': token,
+      'org_id': this.sessionService.getOrganisation().id
+    };
+
+    return this.post('/integrations/wialon/token', body);
+  }
+
+  updateWialonAccessTokenNew(token: string,id: number): Observable<any> {
+    let body: any = {      
+      'token': token,
+      'org_id': id 
     };
 
     return this.post('/integrations/wialon/token', body);

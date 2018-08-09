@@ -1,0 +1,149 @@
+<div class="row">
+    <!-- Organisation Profile -->
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header card-header-icon" data-background-color="blue">
+          <i class="material-icons">business</i>
+        </div>
+        <div class="card-content">
+          <h4 class="card-title" i18n="Title">Organisation Profile</h4>
+
+
+          <form [formGroup]="form" (ngSubmit)="submit(form)">
+
+              <div class="row">
+                <div class="col-md-6 col-xs-12">
+               
+                  <div class="form-group">
+                    <label class="control-label" i18n="Vehicle property">Manufacturer</label>
+                    <input type="text" formControlName="manufacturer" class="form-control">
+                    <span class="err" *ngIf="!form.controls.manufacturer.valid  && (form.controls.manufacturer.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a Manufacturer.</p>
+                      </span>   
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                
+                  <div class="form-group">
+                    <label class="control-label" i18n="Vehicle property">Model</label>
+                    <input type="text" formControlName="model" class="form-control">
+                    <span class="err" *ngIf="!form.controls.model.valid  && (form.controls.model.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a Model.</p>
+                      </span>   
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <div class="col-md-6 col-xs-12">
+                
+                  <div class="form-group">
+                    <label class="control-label" i18n="Vehicle property">Vehicle Id</label>
+                    <input type="text" formControlName="vehicle_id" class="form-control">
+                    <span class="err" *ngIf="!form.controls.vehicle_id.valid  && (form.controls.vehicle_id.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a Vehicle Id.</p>
+                      </span>   
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">               
+                  <div class="form-group">
+                    <label class="control-label" i18n="Vehicle property">Tracker Id</label>
+                    <input type="text" formControlName="tracker_id" class="form-control">
+                    <span class="err" *ngIf="!form.controls.tracker_id.valid  && (form.controls.tracker_id.dirty || submitAttempt)">
+                        <p class="blinking">Please enter a Tracker Id.</p>
+                      </span>   
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <div class="col-md-6 col-xs-12">
+                
+                  <div class="form-group">
+                    <label class="control-label" i18n>Select Vehicle Type</label>
+                    <select
+                      class="selectpicker"
+                      data-style="btn btn-primary btn-round"                      
+                      formControlName="type"
+                    >
+                    <option [ngValue]="null" selected>N/A</option>
+                      <option *ngFor="let vehicleType of vehicleTypes" [ngValue]="vehicleType.key">
+                        {{vehicleType.name}}
+                      </option>
+                    </select>
+                    <span class="err" *ngIf="!form.controls.type.valid  && (form.controls.type.dirty || submitAttempt)">
+                        <p class="blinking">Please Select Vehicle Type.</p>
+                      </span>   
+                  </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+               
+                  <div class="form-group">
+                    <label class="control-label" i18n="Vehicle property">Select Location</label>
+                    <select
+                      class="form-control"
+                      data-style="btn btn-primary btn-round"                   
+                      formControlName="location"
+                    >
+                      <option [ngValue]="null" selected>N/A</option>
+                      <option *ngFor="let location of locations" [ngValue]="location.id">
+                        {{location.name}}
+                      </option>
+                    </select>
+                    <span class="err" *ngIf="!form.controls.location.valid  && (form.controls.location.dirty || submitAttempt)">
+                        <p class="blinking">Please Select Location.</p>
+                      </span>   
+                  </div>
+                </div>
+              </div>
+            
+            
+              <!-- <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" formControlName="isAvailable" />
+                        <ng-container i18n="Vehicle editor">Is Available?</ng-container>
+                      </label>
+                    </div>
+                    <span class="text-muted">
+                      <strong i18n>
+                        All vehicles are by default available.
+                        If the vehicle is not available for booking, please check off this option.
+                        This will remove the vehicle from the booking pool.
+                      </strong>
+                    </span>
+                  </div>
+                </div>
+              </div>   -->
+            
+              <button type="submit" class="btn btn-primary pull-right">Update</button>
+              <button type="button" class="btn btn-primary pull-right" (click)="cancel()">Cancel</button>
+            
+              <div class="clearfix"></div>
+            </form> 
+        
+  
+          <nb-loader *ngIf="isBusy"></nb-loader>
+        </div>
+      </div>
+    </div>
+    <!-- END Organisation Profile -->
+  
+  </div>
+  
+  <div nbLang hidden>
+    <span id="org_save_changes" i18n="Button label">Save Changes</span>
+    <span id="msg_changes_saved" i18n>Your changes were saved successfully.</span>
+    <span id="err_failed_saving_changes" i18n>Failed to update your organisation profile! Please try again.</span>
+  </div>
+  
+
+  
+
+
+
+
+  

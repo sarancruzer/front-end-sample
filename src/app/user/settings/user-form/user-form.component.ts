@@ -61,9 +61,9 @@ export class UserFormComponent implements OnInit, OnChanges {
   }
 
   getDepartments() {
-    this.departmentsService.list().subscribe(
+    this.departmentsService.getAll().subscribe(
       data => {
-        this.departments = data;
+        this.departments = data['result']['info'];
       },
       error => {
         this.notificationService.notifyError(this.lang.get('err_failed_fetching_departments'));
@@ -95,9 +95,9 @@ export class UserFormComponent implements OnInit, OnChanges {
     });
 
     // disable the `Job Title` field if logged in user is not an admin
-    if (!this.loggedInUser.isAdmin) {
-      this.userForm.get('jobTitle').disable();
-    }
+    // if (!this.loggedInUser.isAdmin) {
+    //   this.userForm.get('jobTitle').disable();
+    // }
   }
 
   ngOnChanges() {
@@ -111,8 +111,6 @@ export class UserFormComponent implements OnInit, OnChanges {
 
   onSubmit() {
     const user = this.userForm.value;
-    user.userKey = this.user.userKey;
-    user.isAdmin = this.user.isAdmin;
     this.done.emit(user);
   }
 
